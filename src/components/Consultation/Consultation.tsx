@@ -313,7 +313,7 @@ export default function Consultation() {
 
             <div className="">
               <ReCAPTCHA
-                sitekey="6LeFeRUrAAAAADyqkSnEtC_NOaBgReVOawCaExWI" 
+                sitekey="6LdeeEIrAAAAAEFyT7KIdl3yplK6-zdKFezUdFda" 
                 onChange={handleCaptchaChange}
               />
             </div>

@@ -290,7 +290,7 @@ export default function JobApplicationForm() {
                           <ReCAPTCHA
                             ref={recaptchaRef}
                             sitekey={
-                            "6LeCeRUrAAAAAAL4NYgskHMET7rIipz7liZgv02z"
+                            "6LeTeEIrAAAAABaoQdUrFPlanoO-Xf-iTnYfgW_T"
                             }
                             onChange={handleCaptchaChange}
                           />
