@@ -7,17 +7,28 @@ const page = () => {
     <section>
       <div>
         <Header
-          title="Insurance Accepted"
+          title="Insurance and Self-Pay Pricing Information"
           subtitle="We are committed to making healthcare accessible."
         />
-        <div className="container mt-[60px] pb-[60px]">
+        <div className="container mt-[60px]">
+          <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-[#A66A47] mb-8">Insurance Plans Accepted</h2>
           <h5 className="text-base text-[#A66A47] font-midium ">
-            We are committed to making healthcare accessible. Below is our
-            current list of accepted insurances. Please note that details are
-            being updated regularly. For any inquiries, our team is here to
-            help.
+            We accept a variety of insurance plans. Please be advised that most HMO plans 
+            require a referral from your primary care provider prior to your visit. 
+            Kindly confirm with your insurance carrier or contact our office for assistance 
+            with referral requirements.
           </h5>
-
+        </div>
+        <div className="container mt-[60px]">
+          <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-[#A66A47] mb-8">Self-Pay Pricing for Uninsured Patients</h2>
+          <h4 className="text-base text-[#A66A47] font-midium ">
+            •	Office Visit: $150.00 <br />
+          </h4>
+          <h5 className="text-base text-[#A66A47] font-midium"><i>(Note: This fee does not include any procedures such as biopsies or cryotherapy.)</i></h5>
+          <h4 className="text-base text-[#A66A47] font-midium ">Additional Procedure Fees</h4>
+        </div>
+        
+        <div className="container mt-[60px] pb-[60px]">
           <p className="text-base text-[#333333] font-normal leading-[150%] mt-[60px] text-justify md:text-start">
             Lorem ipsum dolor sit amet consectetur. Semper lectus eu tincidunt
             semper non non id nulla. Amet elementum lacus semper augue maecenas

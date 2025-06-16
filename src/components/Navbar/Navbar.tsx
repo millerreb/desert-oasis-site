@@ -280,7 +280,7 @@ export default function Navbar() {
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
                     }}
                   >
-                    Insurance Accepted
+                    Insurances & Cash Prices
                   </Link>
                   <Link
                     href="/recommended-products"
