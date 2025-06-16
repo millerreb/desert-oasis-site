@@ -25,7 +25,94 @@ const page = () => {
             •	Office Visit: $150.00 <br />
           </h4>
           <h5 className="text-base text-[#A66A47] font-midium"><i>(Note: This fee does not include any procedures such as biopsies or cryotherapy.)</i></h5>
-          <h4 className="text-base text-[#A66A47] font-midium ">Additional Procedure Fees</h4>
+          <h4 className="text-base text-[#A66A47] mt-[20px] font-midium ">Additional Procedure Fees</h4>
+          <ul style={{listStyleType: "disc"}}>
+            <li>
+              <p className="text-base text-[#333333] font-normal leading-[150%] mt-[20px] text-justify md:text-start"><b>Cryotherapy (freezing of lesions): </b> $100.00 for up to 10 lesions</p>
+            </li>
+            <li>
+              <p className="text-base text-[#333333] font-normal leading-[150%] mt-[20px] text-justify md:text-start"><b>Biopsy or Lesion Removal: </b>$150.00</p>
+              <p className="text-base text-[#333333] font-normal leading-[150%] text-justify md:text-start"><i>(Pathology fees are not included. Specimens will be processed by Derm Path Diagnostics and billed separately at Medicare rates.)</i></p>
+            </li>
+            <li>
+              <p className="text-base text-[#333333] font-normal leading-[150%] mt-[20px]  text-justify md:text-start"><b>Surgical Excision: </b>$500.00</p>
+              <p className="text-base text-[#333333] font-normal leading-[150%] text-justify md:text-start"><i>(Excludes pathology fees. Speciments will be processed by Derm Path Diagnostics and billed separately at Medicare rates.)</i></p>
+            </li>
+            <li>
+              <p className="text-base text-[#333333] font-normal leading-[150%] mt-[20px] text-justify md:text-start"><b>Mohs Micrographic Surgery: </b>$1,000.00</p>
+              <p className="text-base text-[#333333] font-normal leading-[150%] text-justify md:text-start"><i>(Includes the first stage and closure. Each additional stage is $300.00.)</i></p>
+            </li>
+          </ul>
+          <p>If you have any questions regarding pricing or insurance, please contact our office. We are happy to assist you.</p>
+        </div>
+        <div className="container mt-[60px] pb-[60px]">
+          <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-[#A66A47] mb-8">List of Accepted Insurance Plans</h2>
+          <h5 className="text-base text-[#A66A47] font-midium ">
+            We accept all major insurances including:
+          </h5>
+          <ul>
+            <li>Aetna Commercial - Select/HMO/Managed Choice POS/Open Choice PPO/QPOS/Open Access/EOP/POS/PPO</li>
+            <li>Aetna Banner - HMO/Open ACCESS/POS/PPO</li>
+            <li>Aetna Medicare - Eagle PPO/Platinum HMO-POS/Premier HMO-POS/Elite PPO/Freedom PPO</li>
+            <li>ACPN PPO 1</li>
+            <li>Ameriplan Discount Card</li>
+            <li>Antidote PPO</li>
+            <li>CorVel Auto/PPO/Workers Comp</li>
+            <li>Fusion PPO</li>
+            <li>Galaxy Health PPO/Savings Card/Workers Comp</li>
+            <li>Gold Kidney</li>
+            <li>HealthSmart ACCEL/Auto/HPO/PPO/Workers Comp</li>
+            <li>IHP Auto/Discount Card/PPO/Workers Comp</li>
+            <li>Imperial Alignment PPO</li>
+            <li>Imperial Amerigroup</li>
+            <li>Imperial HealthCosmos Medical Group</li>
+            <li>Imperial Marketplace Plan</li>
+            <li>Imperial Medicare</li>
+            <li>Molina/Magellan AHCCCS</li>
+            <li>Multiplan Auto/Medicare Advantage/PPO/ValuePoint/Workers Comp</li>
+            <li>Prime Health/Personal Injury Network/PPO/AUTO/Workers Comp/Telemedicine Program/WTC</li>
+            <li>ASPA - Prospect Scan Desert Health</li>
+            <li>ASPA - Provider Network of America Primary PPO/Supplemental/Workers Comp</li>
+            <li>ASPA - Provider Select Inc</li>
+            <li>ASPA - Three Rivers Provider Network PPO</li>
+            <li>ASPA – UPMC</li>
+            <li>ASPA - USA AUTO Medical/Managed Care PPO/Workers Comp</li>
+            <li>ASPA - Velocity National Provider Network Auto/PPO/Workers Comp</li>
+            <li>ASPA - Zelis Healthcare Auto/Medicaid-AHCCCS/Medicare/Primary Plan PPO/Supplemental/Workers Comp</li>
+            <li>Banner Health Network</li>
+            <li>Banner University Health Plan</li>
+            <li>Blue Cross Blue Shield of Arizona</li>
+            <li>Cigna Commercial (HMO, OPEN ACCESS, PPO)</li>
+            <li>Community Care Network (CCN) - VA/TRIWEST</li>
+            <li>Emblem Health (Previously GHI) - through First Health Network</li>
+            <li>Innovation Care Partners (Needs HH CVO credentialing approval)</li>
+            <li>Medicare</li>
+            <li>Oscar + CIGNA</li>
+            <li>Tricare West</li>
+          </ul>
+          <h5 className="text-base text-[#A66A47] font-midium ">
+           We soon hope to accept these plans:
+          </h5>
+          <ul>
+            <li>AHCCCS</li>
+            <li>Allwell</li>
+            <li>Ambetter</li>
+            <li>Arizona Care Network</li>
+            <li>Arizona Complete Care</li>
+            <li>Health Choice AHCCCS/Medicare</li>
+            <li>Blue Cross Blue Shield Advantage Medicare</li>
+            <li>Caremore</li>
+            <li>Cigna Medicare Advantage</li>
+            <li>CMDP - through Mercy Care</li>
+            <li>Devoted</li>
+            <li>Arizona Priority Care Network - Eternal Health</li>
+            <li>Arizona Priority Care Network – SCAN</li>
+            <li>Arizona Priority Care Network – Alignment</li>
+            <li>Arizona Priority Care Network – BCBSAZ</li>
+            <li>First Health Network - need credentialing approved with AETNA first</li>
+            <li>Health Net AZ - now AZ Complete Health</li>
+            <li>Humana</li>
+          </ul>
         </div>
         
         <div className="container mt-[60px] pb-[60px]">
