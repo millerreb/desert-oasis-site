@@ -17,7 +17,7 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
     {
-        rating: 2,
+        rating: 5,
         quote:
             "Dr.Lavian's expertise and compassionate approach immediately put me at ease during my skin cancer screening. I felt well-informed and truly cared for every step of the way.",
         name: "Sarah",
@@ -41,7 +41,7 @@ const testimonials: TestimonialProps[] = [
         avatarSrc: "/placeholder.svg?height=40&width=40",
     },
     {
-        rating: 4,
+        rating: 5,
         quote:
             "The care I received was exceptional. Dr. Lavian took the time to explain everything thoroughly and answer all my questions.",
         name: "Michael",
@@ -58,13 +58,13 @@ const testimonials: TestimonialProps[] = [
     },
 ]
 
-function TestimonialCard({ rating, quote,}: TestimonialProps) {
+function TestimonialCard({ rating, quote, name, location}: TestimonialProps) {
     return (
         <Card className="border border-[#A66A47] rounded-lg h-full hover:shadow-4xl hover:border-transparent duration-500 transition-all">
 
             <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex gap-x-7">
-                    <Image src={reveiwimge} alt="Avatar" width={40} height={40} className="w-10 h-10" />
+                    {/* <Image src={reveiwimge} alt="Avatar" width={40} height={40} className="w-10 h-10" /> */}
                     <div>
                         <div className="flex items-center mb-4">
                             {Array.from({ length: 5 }).map((_, i) => (
@@ -72,7 +72,7 @@ function TestimonialCard({ rating, quote,}: TestimonialProps) {
                             ))}
                         </div>
                         <p className="text-gray-700 flex-grow mb-4 h-[220px] md:h-[168px]">{quote}</p>  
-                        <p className="text-base text-[#A66A47] font-normal">Sarah, AZ</p>
+                        <p className="text-base text-[#A66A47] font-normal">{name}, {location}</p>
                  </div>
                 </div>
             </CardContent>

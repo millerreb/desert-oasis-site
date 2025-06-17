@@ -82,7 +82,7 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="mt-6 sm:mt-8 pt-4 border-t border-gray-200">
           <p className="text-center text-xs sm:text-sm text-gray-600">
-            © Copyright 2022, All Rights Reserved by DESERT OASIS DERMATOLOGY
+            © Copyright 2025, All Rights Reserved by DESERT OASIS DERMATOLOGY
           </p>
         </div>
       </div>
