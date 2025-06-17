@@ -2,8 +2,8 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, } from "@/components/ui/carousel"
 import { ArrowRight, Star } from "lucide-react"
-import Image from "next/image"
-import reveiwimge from "@/../../Public/image/reveiw-image.png"
+// import Image from "next/image"
+// import reveiwimge from "@/../../Public/image/reveiw-image.png"
 import { Button } from "../ui/button"
 import Link from "next/link"
 
@@ -19,7 +19,7 @@ const testimonials: TestimonialProps[] = [
     {
         rating: 5,
         quote:
-            "Dr.Lavian's expertise and compassionate approach immediately put me at ease during my skin cancer screening. I felt well-informed and truly cared for every step of the way.",
+            "Dr. Lavian's expertise and compassionate approach immediately put me at ease during my skin cancer screening. I felt well-informed and truly cared for every step of the way.",
         name: "Sarah",
         location: "AZ",
         avatarSrc: undefined,
@@ -27,7 +27,7 @@ const testimonials: TestimonialProps[] = [
     {
         rating: 5,
         quote:
-            "Dr. Lavian's expertise and compassionate approach immediately put me at ease during my skin cancer screening. I felt well-informed and truly cared for every step of the way.",
+            "Dr. Lavian removed my skin cancer with precision and care, and the scar is barely visible. I’m so grateful to have found a dermatologist I can trust with my health and peace of mind.",
         name: "Josh",
         location: "AZ",
         avatarSrc: "/placeholder.svg?height=40&width=40",
@@ -51,7 +51,7 @@ const testimonials: TestimonialProps[] = [
     {
         rating: 5,
         quote:
-            "I couldn't be more grateful for the attentive care I received. The entire team made a stressful situation much more manageable.",
+            "My acne had been a struggle for years, but Dr. Lavian created a treatment plan that finally cleared my skin. I wish I'd come here sooner!",
         name: "Jessica",
         location: "AZ",
         avatarSrc: "/placeholder.svg?height=40&width=40",
