@@ -3,9 +3,9 @@ import Homepage from "./(website)/homepage/page";
 
 export default function Home() {
   return (
-    <div>
+    <main role="main">
       <Homepage />
      
-  </div>
+  </main>
   );
 }
