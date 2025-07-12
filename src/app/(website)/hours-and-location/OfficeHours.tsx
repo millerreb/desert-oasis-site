@@ -2,11 +2,11 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function BusinessHours() {
     const schedule = [
-        { day: "Monday", open: "8:00 AM", close: "5:00 PM" },
-        { day: "Tuesday", open: "8:00 AM", close: "5:00 PM" },
-        { day: "Wednesday", open: "8:00 AM", close: "5:00 PM" },
-        { day: "Thursday", open: "8:00 AM", close: "5:00 PM" },
-        { day: "Friday", open: "8:00 AM", close: "5:00 PM" },
+        { day: "Monday", open: "8:30 AM", close: "4:30 PM" },
+        { day: "Tuesday", open: "8:30 AM", close: "4:30 PM" },
+        { day: "Wednesday", open: "8:30 AM", close: "4:30 PM" },
+        { day: "Thursday", open: "8:30 AM", close: "4:30 PM" },
+        { day: "Friday*", open: "8:30 AM", close: "4:30 PM" },
         { day: "Saturday (Closed)", open: "Closed", close: "Closed" },
         { day: "Sunday (Closed)", open: "Closed", close: "Closed" },
     ]
@@ -46,8 +46,8 @@ export default function BusinessHours() {
             </Card>
 
             <div className="mt-10 space-y-2 text-[#C7925B] px-2">
-                <p className="text-sm sm:text-base">Front office open Monday-Friday 8:00AM-5:00PM, but appointments will initially only be available Friday.</p>
-                <p className="text-sm sm:text-base">More appointment days coming soon.</p>
+                <p className="text-sm sm:text-base">*Front office open Monday-Friday 8:30AM-4:30PM, but appointments will initially only be available Friday.</p>
+                <p className="text-sm sm:text-base"> More appointment days coming soon.</p>
             </div>
         </div>
     )
