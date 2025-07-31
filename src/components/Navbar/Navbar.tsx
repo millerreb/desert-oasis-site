@@ -214,7 +214,7 @@ export default function Navbar() {
               >
                 <div className="flex flex-col gap-2">
                   <a
-                    href="https://forms.gle/nyXeSuvA7sgZ7juz9"
+                    href="https://l.klara.com/9dpX5HB6CLyjfDF2"
                     target="_blank"
                     className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
                     rel="noreferrer"
@@ -253,7 +253,9 @@ export default function Navbar() {
                     Chat With Us
                   </Link>
                   <Link
-                    href="/patient-portal"
+                    href="https://dodermatology.ema.md"
+                    target="_blank"
+                    rel="noreferrer"
                     className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
@@ -312,7 +314,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <div className="hidden md:block">
             <div className="flex flex-col lg:flex-row gap-1">
-              <a href="https://forms.gle/nyXeSuvA7sgZ7juz9" target="_blank" rel="noreferrer">
+              <a href="https://l.klara.com/9dpX5HB6CLyjfDF2" target="_blank" rel="noreferrer">
                 <Button
                   variant="outline"
                   size="sm"
@@ -321,13 +323,13 @@ export default function Navbar() {
                   Schedule Appointment
                 </Button>
               </a>
-              <Link href="/chat-with-us">
+              <Link href="https://dodermatology.ema.md/ema/pay/onlinepayments" rel="noreferrer" target="_blank">
                 <Button
                   variant="outline"
                   size="sm"
                   className="h-7 text-xs lg:text-sm border-[#C7925B] text-[#C7925B] hover:bg-amber-50 hover:text-amber-900 hover:border-amber-700"
                 >
-                  Chat With Us
+                  Pay Online
                 </Button>
               </Link>
             </div>
@@ -498,7 +500,7 @@ export default function Navbar() {
                     </Link>
                     <div className="flex flex-col pl-4 gap-2">
                       <a
-                        href="https://forms.gle/nyXeSuvA7sgZ7juz9"
+                        href="https://l.klara.com/9dpX5HB6CLyjfDF2"
                         target="_blank"
                         className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
                         onClick={() => setIsOpen(false)}
@@ -529,7 +531,9 @@ export default function Navbar() {
                         Chat With Us
                       </Link>
                       <Link
-                        href="/patient-portal"
+                        href="https://dodermatology.ema.md"
+                        rel="noreferrer"
+                        target="_blank"
                         className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
                         onClick={() => setIsOpen(false)}
                       >
@@ -568,7 +572,7 @@ export default function Navbar() {
                 </nav>
 
                 <div className="flex flex-col gap-3">
-                  <a href="https://forms.gle/nyXeSuvA7sgZ7juz9" target="_blank" rel="noreferrer">
+                  <a href="https://l.klara.com/9dpX5HB6CLyjfDF2" target="_blank" rel="noreferrer">
                     <Button className="w-full bg-[#C7925B] text-white hover:bg-[#C7925B]/80">
                       Schedule Appointment
                     </Button>

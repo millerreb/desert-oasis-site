@@ -1,4 +1,5 @@
 import Header from "@/components/Headers/Header";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -34,8 +35,9 @@ const page = () => {
                           </p>
                       </div>
                   </div>
-                  <Button className="text-sm md:text-base text-white font-medium px-6 py-2 bg-[#C7925B] hover:bg-[#C7925B]/80">
-                      Pay with Card
+
+                  <Button asChild className="text-sm md:text-base text-white font-medium px-6 py-2 bg-[#C7925B] hover:bg-[#C7925B]/80">
+                     <Link href="https://dodermatology.ema.md/ema/pay/onlinepayments" rel="noreferrer" target="_blank">Pay with Card </Link>
                   </Button>
               </div>
           </div>
