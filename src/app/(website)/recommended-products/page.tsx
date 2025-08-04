@@ -1,23 +1,19 @@
 // import Consultation from '@/components/Consultation/Consultation'
-// import Header from '@/components/Headers/Header'
 // import { Button } from '@/components/ui/button'
 import React from 'react';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import Header from '@/components/Headers/Header'
 
 const page = () => {
   return (
-    <div>
-          <div className='container py-[60px] md:py-[340px]'>
-              <h3 className='text-[28px] md:text-[40px] text-[#A66A47] font-bold text-center'>Feature coming soon</h3>
-              <div className='flex  justify-center mt-10'>
-                  <Link href='/' className='border border-[#A66A47] p-2 px-7  rounded-sm flex items-center gap-2'>
-                      <ArrowLeft />
-                      <span className='text-sm font-semibold '>Go Back</span>
-                  </Link>
-              </div>
-          </div>
-    </div>
+    <section>
+      <Header
+          title="Chat With Us"
+          subtitle="We're here to help—ask your questions and get personalized support in real-time."
+      />
+      <div className='container py-[60px] md:py-[270px]'>
+      <h3 className='text-[28px] md:text-[40px] text-[#A66A47] font-bold text-center'>Feature coming soon</h3>
+      </div>
+    </section>
     // <div>
     //       <div>
     //           <Header title='Recommended Products' subtitle='Discover our curated selection of skincare essentials and wellness products. Shop with confidence from our trusted partners.' />
