@@ -13,7 +13,7 @@ const page = () => {
       <section className="">
           <Header
               title="Pay Bill"
-              subtitle="Select your preferred payment method below to securely manage your billing online."
+              subtitle="Select your preferred payment method below to securely manage your billing."
           />
           {/* ==========card1========== */}
           <div className="container mx-auto mt-10 max-w-[1170px]">
@@ -28,16 +28,16 @@ const page = () => {
                       />
                       <div>
                           <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">
-                              Credit/Debit Card
+                              Pay online
                           </h5>
                           <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                              Pay with your credit or debit card.
+                              Make a secure online payment with your credit or debit card.
                           </p>
                       </div>
                   </div>
 
                   <Button asChild className="text-sm md:text-base text-white font-medium px-6 py-2 bg-[#C7925B] hover:bg-[#C7925B]/80">
-                     <Link href="https://dodermatology.ema.md/ema/pay/onlinepayments" rel="noreferrer" target="_blank">Pay with Card </Link>
+                     <Link href="https://dodermatology.ema.md/ema/pay/onlinepayments" rel="noreferrer" target="_blank">Pay Online </Link>
                   </Button>
               </div>
           </div>
@@ -54,16 +54,17 @@ const page = () => {
                       />
                       <div>
                           <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">
-                              Pay by Zelle
+                              Pay by check
                           </h5>
                           <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                              Quick and secure payments with your digital wallet.
+                              Pay your bill by mailing a check to: <br />
+                              Desert Oasis Dermatology <br />
+                              13835 N Tatum Blvd ste 9-268 <br />
+                              Phoenix, AZ 85032 <br />
+                            Please include your full name and date of birth in the memo line.
                           </p>
                       </div>
                   </div>
-                  <Button className="text-sm md:text-base text-white font-medium px-6 py-2 bg-[#C7925B] hover:bg-[#C7925B]/80">
-                      Pay with Wallet
-                  </Button>
               </div>
           </div>
           {/* ==========card3========== */}
@@ -79,16 +80,13 @@ const page = () => {
                       />
                       <div>
                           <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">
-                              Pay by Phone
+                              Pay by phone
                           </h5>
                           <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                              Follow instructions to complete an ACH bank transfer.
+                              Call us at (480)418-3314 to pay your bill over the phone with a credit or debit card.
                           </p>
                       </div>
                   </div>
-                  <Button className="text-sm md:text-base text-white font-medium px-6 py-2 bg-[#C7925B] hover:bg-[#C7925B]/80">
-                      Pay by Calling (480)418-3314
-                  </Button>
               </div>
           </div>
 

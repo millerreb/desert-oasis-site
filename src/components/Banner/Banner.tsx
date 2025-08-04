@@ -20,6 +20,7 @@ interface SlideContent {
   image: StaticImageData
   buttonText: string
   buttonLink: string
+  target?: string
 }
 
 export default function Banner() {
@@ -38,6 +39,7 @@ export default function Banner() {
       image: banner,
       buttonText: "Schedule an Appointment",
       buttonLink: "https://l.klara.com/9dpX5HB6CLyjfDF2",
+      target: "_blank",
     },
     {
       id: 2,
@@ -47,6 +49,8 @@ export default function Banner() {
       image: banner2,
       buttonText: "Book Your Visit Today",
       buttonLink: "https://l.klara.com/9dpX5HB6CLyjfDF2",
+      target: "_blank",
+
     },
     {
       id: 3,
@@ -109,7 +113,7 @@ export default function Banner() {
                       asChild
                       className="bg-[#A66A47] w-[250px] md:w-[300px] h-[40px] md:h-[54px] hover:bg-[#A66A47]/80 mt-10 md:mt-[66px] py-4 text-base md:text-[18px]"
                     >
-                      <Link href={slide.buttonLink}>{slide.buttonText}</Link>
+                      <Link href={slide.buttonLink} target={slide.target ? slide.target : "_self"}>{slide.buttonText}</Link>
                     </Button>
                   </div>
                 </div>
