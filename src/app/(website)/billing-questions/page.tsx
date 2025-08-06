@@ -1,7 +1,6 @@
+import React from 'react';
 import Consultation from '@/components/Consultation/Consultation'
 import Header from '@/components/Headers/Header'
-import { Button } from '@/components/ui/button'
-import React from 'react'
 
 const page = () => {
   return (
