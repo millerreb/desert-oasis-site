@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
@@ -33,8 +34,18 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        
         <Footer />
+         <Script id="klara-config" strategy="afterInteractive">
+          {`
+            window.klaraWidget = window.klaraWidget || [];
+            window.klaraWidget.push(["setWidgetId", "d0c1e4c8-cd86-4d39-bf00-7a6543266904"]);
+          `}
+        </Script>
+        <Script
+          src="https://s3.amazonaws.com/widget-frontend.klara.com/bundle.js"
+          strategy="afterInteractive"
+        />
+
       </body>
     </html>
   );
