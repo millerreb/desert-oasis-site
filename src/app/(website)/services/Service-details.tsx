@@ -5,25 +5,57 @@ import { Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ServiceData } from "@/lib/mokdata"
 import serviceimage from "@/../../Public/image/sevicesDetais.png"
+import eczemaservice from "@/../../Public/image/eczema.jpg"
+import molloscumservice from "@/../../Public/image/molloscum.jpg"
 import Consultation from "@/components/Consultation/Consultation"
 import Link from "next/link"
 
 export default function ServicesDetailsCard({ serviceData }: { serviceData: ServiceData }) {
+    const serviceImage = () => {
+        switch(serviceData.id) {
+            case "eczema":
+                return (
+                <Image
+                    src={eczemaservice}
+                    alt={serviceData.serviceName}
+                    width={500}
+                    height={400}
+                    className="w-full h-auto object-cover rounded-lg"
+                    priority
+                />
+            )
+            case "molluscum": 
+                return (
+                <Image
+                    src={molloscumservice}
+                    alt={serviceData.serviceName}
+                    width={500}
+                    height={400}
+                    className="w-full h-auto object-cover rounded-lg"
+                    priority
+                />
+            )
+            default:
+                return (
+                <Image
+                    src={serviceimage}
+                    alt={serviceData.serviceName}
+                    width={500}
+                    height={400}
+                    className="w-full h-auto object-cover rounded-lg"
+                    priority
+                />
+            )
+        }
+    }
+
     return (
         <section>
         <div className="container mx-auto px-4 py-8 mt-[60px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
                 {/* Left column - Image */}
                 <div className="relative w-full h-auto rounded-lg overflow-hidden text-center">
-                    <Image
-                        src={ serviceimage}
-                        alt={serviceData.serviceName}
-                        width={500}
-                        height={400}
-                        className="w-full h-auto object-cover rounded-lg"
-                        priority
-                    />
-
+                    {serviceImage()}
                     {/* Call to Action Section */}
                     <div className="mt-[60px] text-center ">
                         <h2 className="text-2xl md:text-[32px] font-semibold text-[#A66A47] mb-2 ">{serviceData.callToAction.heading}</h2>
