@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { MapPin, Phone } from "lucide-react"
+import { MapPin, Phone, Printer } from "lucide-react"
 import Link from "next/link"
 import { useState, type FormEvent } from "react"
 import socailicon1 from "@/../../Public/image/white-goole.png"
@@ -174,7 +174,12 @@ export default function Consultation() {
 
           <div className="flex items-center gap-4 text-xl mt-[150px]">
             <Phone className="h-6 w-6 shrink-0" />
-            <span className="font-medium">Please: (480) 418-3314</span>
+            <span className="font-medium">Phone: (480) 418-3314</span>
+          </div>
+          
+          <div className="flex items-center gap-4 text-xl mt-[18px]">
+            <Printer className="h-6 w-6 shrink-0" />
+            <span className="font-medium">Fax: (480) 923-6586</span>
           </div>
 
           <div className="flex items-start gap-4 mt-[30px]">
