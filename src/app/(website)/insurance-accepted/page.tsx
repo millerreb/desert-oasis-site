@@ -73,24 +73,19 @@ const page = () => {
           We soon hope to accept these plans:
           </h5>
           <ul>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">AHCCCS</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Allwell</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Ambetter</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Arizona Care Network</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Arizona Complete Care</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Health Choice AHCCCS/Medicare</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Blue Cross Blue Shield Advantage Medicare</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Caremore</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Cigna Medicare Advantage</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">CMDP - through Mercy Care</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Devoted</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Arizona Priority Care Network - Eternal Health</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Arizona Priority Care Network – SCAN</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Arizona Priority Care Network – Alignment</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Arizona Priority Care Network – BCBSAZ</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">First Health Network - need credentialing approved with AETNA first</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Health Net AZ - now AZ Complete Health</p></li>
-            <li><p className="text-base text-[#A66A47]  font-normal leading-[150%] text-justify md:text-start">Humana</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Allwell</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Ambetter</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Arizona Care Network</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Arizona Complete Care</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Arizona Complete Health</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Banner Health Network</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Banner University Health Plan</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Blue Cross Blue Shield Health Choice AHCCCS/Medicare</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Cigna Medicare Advantage</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">CMDP</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Mercycare/Mercy Maricopa</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Optum</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Sanford Health Plan</p></li>
           </ul>
         </div>
         <div className="container mt-[60px] pb-[60px]">
