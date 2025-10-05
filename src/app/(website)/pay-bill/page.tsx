@@ -83,7 +83,7 @@ const page = () => {
                               Pay by phone
                           </h5>
                           <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                              Call us at (480)418-3314 to pay your bill over the phone with a credit or debit card.
+                              Call us at (480) 454-7100 to pay your bill over the phone with a credit or debit card.
                           </p>
                       </div>
                   </div>

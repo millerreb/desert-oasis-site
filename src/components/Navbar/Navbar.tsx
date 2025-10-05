@@ -361,7 +361,7 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </Link>
-              <Link href="https://www.instagram.com/desert_oasis_dermatology/" aria-label="Instagram">
+              <Link href="https://www.instagram.com/desert_oasis_dermatology_?igsh=eDE3Y2N6NWc3bGtj&utm_source=qr" aria-label="Instagram">
                 <Image
                   src={social3 || "/placeholder.svg"}
                   alt="Instagram Business Profile"
@@ -370,7 +370,7 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </Link>
-              <Link href="future-comming-soon" aria-label="Yelp">
+              <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" aria-label="Yelp">
                 <Image
                   src={social4 || "/placeholder.svg"}
                   alt="Yelp Business Profile"
