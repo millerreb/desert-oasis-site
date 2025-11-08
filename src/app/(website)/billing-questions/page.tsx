@@ -11,10 +11,10 @@ const page = () => {
       />
       <div className='container mt-[60px] py-[60px] md:py-[270px]'>
           <p className='w-full md:w-[1160px] mx-auto text-[18px] md:text-[22px] text-[#333333] font-normal leading-[150%] text-center '>
-          Call our billing department directly:  <span className='text-[#A66A47]'>(480) 454-7100</span>
+          Call us at <span className='text-[#A66A47]'>(480) 418-3314 </span>, press extension 2 and then press 4 to speak to our billing team.
           <br /> 
           <br />
-          If you have any difficulties reaching our billing department, please call our main number, (480) 418-3314,  and ask to speak to our clinical department who can help connect you. 
+          If you have any difficulties reaching our billing extension, please call our main number, (480) 418-3314, and press extension 2 and then 3 to speak with someone in our clinical department.
           </p>
       </div>
       <Consultation/>

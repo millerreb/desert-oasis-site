@@ -1,5 +1,5 @@
 import Image from "next/image"
-import doctor from "@/../../Public/image/doctor2.png"
+import doctor from "@/../../Public/image/doctor-cropped.png"
 import logo1 from "@/../../Public/image/about-logo-1.png"
 import logo2 from "@/../../Public/image/about-logo-2.png"
 import logo3 from "@/../../Public/image/about-logo-3.png"
@@ -19,7 +19,7 @@ export default function DoctorProfileForAbout() {
                     <div className="rounded-lg overflow-hidden">
                         <Image
                             src={doctor}
-                            alt="Dr. Lavian"
+                            alt="Dr. Jonathan Lavian"
                             width={340}
                             height={100}
                             className="w-full h-[300px] object-cover"
@@ -32,7 +32,7 @@ export default function DoctorProfileForAbout() {
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#A06A44] mb-10 pt-[50px]">Meet Dr. Lavian </h1>
 
                     <p className="text-[#333333]  text-base md:text-lg font-medium leading-[150%] mb-6 text-justify">
-                        Dr. Lavian is a highly accomplished physician with a passion for patient care and medical research. He earned his undergraduate degree from UC Berkeley, graduating Summa Cum Laude with highest honors in Integrative Biology. He then pursued his medical degree at the Zucker School of Medicine at Hofstra/Northwell in New York, where he was inducted into the prestigious Alpha Omega Alpha Honor Society.
+                        Dr. Jonathan Lavian is a highly accomplished physician with a passion for patient care and medical research. He earned his undergraduate degree from UC Berkeley, graduating Summa Cum Laude with highest honors in Integrative Biology. He then pursued his medical degree at the Zucker School of Medicine at Hofstra/Northwell in New York, where he was inducted into the prestigious Alpha Omega Alpha Honor Society.
                     </p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export default function DoctorProfileForAbout() {
                     </p>
 
                     <p className="text-[#333333] text-base md:text-lg leading-[150%] mt-6 text-justify font-medium ">
-                        A dedicated researcher, Dr. Lavian has been published in numerous esteemed peer-reviewed journals and has presented at various medical conferences. Outside of medicine, he enjoys spending time with his family and staying active through yoga, Pilates, and basketball.
+                        A dedicated researcher, Dr. Jonathan Lavian has been published in numerous esteemed peer-reviewed journals and has presented at various medical conferences. Outside of medicine, he enjoys spending time with his family and staying active through yoga, Pilates, and basketball.
                     </p>
                 </div>
 

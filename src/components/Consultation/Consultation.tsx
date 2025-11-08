@@ -164,37 +164,73 @@ export default function Consultation() {
       <div className="container  grid md:grid-cols-2 gap-8">
         {/* Left Column */}
         <div className="text-white ">
-          <div className="space-y-2">
-            <h1 className="text-[30px] md:text-[48px] font-bold leading-tight">
-              Schedule a
-              <br />
-              Consultation
-            </h1>
+          <div className="text-center space-y-6">
+
+            <div className="space-y-2">
+              <h1 className="text-[24px] md:text-[40px] font-bold leading-tight">
+                Schedule a Consultation
+              </h1>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex items-center gap-4 text-xl">
+              <Phone className="h-6 w-6 shrink-0" />
+              <span className="font-medium">Phone: (480) 418-3314</span>
+            </div>
+
+            <div className="flex items-center gap-4 text-xl">
+              <Printer className="h-6 w-6 shrink-0" />
+              <span className="font-medium">Fax: (480) 923-6586</span>
+            </div>
+            </div>
           </div>
 
-          <div className="flex items-center gap-4 text-xl mt-[150px]">
-            <Phone className="h-6 w-6 shrink-0" />
-            <span className="font-medium">Phone: (480) 418-3314</span>
-          </div>
-          
-          <div className="flex items-center gap-4 text-xl mt-[18px]">
-            <Printer className="h-6 w-6 shrink-0" />
-            <span className="font-medium">Fax: (480) 923-6586</span>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-[60px]">
 
-          <div className="flex items-start gap-4 mt-[30px]">
-            <MapPin className="h-6 w-6 shrink-0 mt-1" />
-            <span className="font-medium">21300 N John Wayne Pkwy STE 108, Maricopa, AZ 85139</span>
-          </div>
+            {/* Maricopa */}
+            <div className="flex items-start">
+              <MapPin className="h-6 w-6 shrink-0 mt-1" />
+              <div className="ml-3">
+                <span className="font-semibold block">Maricopa Office</span>
+                <span className="text-sm leading-relaxed block mt-1">
+                  21300 N John Wayne Pkwy STE 108<br />
+                  Maricopa, AZ 85139
+                </span>
+              </div>
+            </div>
 
-          <div className="rounded-lg mt-7 overflow-hidden border-2 border-white/20">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.8634452736515!2d-112.04917711882933!3d33.075172293480286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872afb13db300289%3A0xa1cbdb5513efe36f!2sDesert%20Oasis%20Dermatology!5e0!3m2!1sen!2sbd!4v1743574353740!5m2!1sen!2sbd"
-              className="w-full h-[350px] md:h-[350px] border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            {/* Chandler */}
+            <div className="flex items-start">
+              <MapPin className="h-6 w-6 shrink-0 mt-1" />
+              <div className="ml-3">
+                <span className="font-semibold block">Chandler Office</span>
+                <span className="text-sm leading-relaxed block mt-1">
+                  2860 S Alma School Rd STE 33<br />
+                  Chandler, AZ 85286
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div className="rounded-lg overflow-hidden border-2 border-white/20">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.0959852664564!2d-111.86323182384797!3d33.263979358940205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b007930373701%3A0x7a2b046099685ec1!2s2860%20S%20Alma%20School%20Rd%2C%20Chandler%2C%20AZ%2085286!5e0!3m2!1sen!2sus!4v1762636791619!5m2!1sen!2sus"
+                className="w-full h-[350px] border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <div className="rounded-lg overflow-hidden border-2 border-white/20">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.8634452736515!2d-112.04917711882933!3d33.075172293480286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872afb13db300289%3A0xa1cbdb5513efe36f!2sDesert%20Oasis%20Dermatology!5e0!3m2!1sen!2sbd!4v1743574353740!5m2!1sen!2sbd"
+                className="w-full h-[350px] border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
 
@@ -397,16 +433,16 @@ export default function Consultation() {
             >
               <Image
                 src={socailicon3 || "/placeholder.svg"}
-                alt=" instragram Business Profile"
+                alt="Instragram Business Profile"
                 width={20}
                 height={20}
                 className="object-contain"
               />
             </Link>
-            <Link href="future-comming-soon" className="text-white hover:opacity-80 transition-opacity">
+            <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" className="text-white hover:opacity-80 transition-opacity">
               <Image
                 src={socailicon4 || "/placeholder.svg"}
-                alt="Facebook Business Profile"
+                alt="Yelp Business Profile"
                 width={20}
                 height={20}
                 className="object-contain"
@@ -418,7 +454,7 @@ export default function Consultation() {
             >
               <Image
                 src={socailicon5 || "/placeholder.svg"}
-                alt="Facebook Business Profile"
+                alt="TikTok Profile"
                 width={18}
                 height={18}
                 className="object-contain"
@@ -430,7 +466,7 @@ export default function Consultation() {
             >
               <Image
                 src={socailicon6 || "/placeholder.svg"}
-                alt="Facebook Business Profile"
+                alt="Youtube channel"
                 width={25}
                 height={25}
                 className="object-contain"

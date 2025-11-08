@@ -61,6 +61,7 @@ const page = () => {
                               Desert Oasis Dermatology <br />
                               13835 N Tatum Blvd ste 9-268 <br />
                               Phoenix, AZ 85032 <br />
+                              <br />
                             Please include your full name and date of birth in the memo line.
                           </p>
                       </div>
@@ -83,7 +84,7 @@ const page = () => {
                               Pay by phone
                           </h5>
                           <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                              Call us at (480) 454-7100 to pay your bill over the phone with a credit or debit card.
+                              Call us at (480) 418-3314 to pay your bill over the phone with a credit or debit card.
                           </p>
                       </div>
                   </div>

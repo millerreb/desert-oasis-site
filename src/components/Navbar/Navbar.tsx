@@ -214,7 +214,7 @@ export default function Navbar() {
               >
                 <div className="flex flex-col gap-2">
                   <a
-                    href="https://l.klara.com/9dpX5HB6CLyjfDF2"
+                    href="https://l.klara.com/praBhJcLPeQC8Gbn"
                     target="_blank"
                     className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
                     rel="noreferrer"
@@ -314,7 +314,7 @@ export default function Navbar() {
         <div className="flex items-center">
           <div className="hidden md:block">
             <div className="flex flex-col lg:flex-row gap-1">
-              <a href="https://l.klara.com/9dpX5HB6CLyjfDF2" target="_blank" rel="noreferrer">
+              <a href="https://l.klara.com/praBhJcLPeQC8Gbn" target="_blank" rel="noreferrer">
                 <Button
                   variant="outline"
                   size="sm"
@@ -500,7 +500,7 @@ export default function Navbar() {
                     </Link>
                     <div className="flex flex-col pl-4 gap-2">
                       <a
-                        href="https://l.klara.com/9dpX5HB6CLyjfDF2"
+                        href="https://l.klara.com/praBhJcLPeQC8Gbn"
                         target="_blank"
                         className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
                         onClick={() => setIsOpen(false)}

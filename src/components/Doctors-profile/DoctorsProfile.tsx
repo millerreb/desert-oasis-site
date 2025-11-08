@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import doctorsimge from "@/../../Public/image/doctors.png";
+import doctorsimge from "@/../../Public/image/tall.png";
 import Link from "next/link";
 
 export default function DoctorProfile() {
@@ -27,7 +27,7 @@ export default function DoctorProfile() {
             <h1 className="text-4xl md:text-5xl font-bold">Meet Dr. Lavian </h1>
 
             <p className="text-base md:text-lg text-justify">
-              Dr. Lavian is a double board-certified specialist in Dermatology
+              Dr. Jonathan Lavian is a double board-certified specialist in Dermatology
               and Mohs Micrographic Surgery, offering expertise across medical,
               surgical, and cosmetic dermatology. With extensive training and a
               commitment to excellence, he provides patient-centered,
@@ -45,7 +45,7 @@ export default function DoctorProfile() {
             </p>
 
             <p className="text-base md:text-lg text-justify">
-              A respected researcher, Dr. Lavian has authored numerous
+              A respected researcher, Dr. Jonathan Lavian has authored numerous
               publications in peer- reviewed medical journals and has presented
               his work at national conferences. His expertise, combined with a
               personalized approach, ensures the highest quality of dermatologic
