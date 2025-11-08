@@ -173,19 +173,18 @@ export default function Consultation() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex items-center gap-4 text-xl">
-              <Phone className="h-6 w-6 shrink-0" />
-              <span className="font-medium">Phone: (480) 418-3314</span>
-            </div>
+                <Phone className="h-6 w-6 shrink-0" />
+                <span className="font-medium">Phone: (480) 418-3314</span>
+              </div>
 
-            <div className="flex items-center gap-4 text-xl">
-              <Printer className="h-6 w-6 shrink-0" />
-              <span className="font-medium">Fax: (480) 923-6586</span>
-            </div>
+              <div className="flex items-center gap-4 text-xl">
+                <Printer className="h-6 w-6 shrink-0" />
+                <span className="font-medium">Fax: (480) 923-6586</span>
+              </div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-[60px]">
-
             {/* Maricopa */}
             <div className="flex items-start">
               <MapPin className="h-6 w-6 shrink-0 mt-1" />
