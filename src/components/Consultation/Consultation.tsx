@@ -405,6 +405,7 @@ export default function Consultation() {
             <Link
               href="https://www.google.com/maps/place/Desert+Oasis+Dermatology/@33.0739956,-112.0454332,17z/data=!3m1!4b1!4m6!3m5!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!16s%2Fg%2F11m6sg0qh8?hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
               className="text-white hover:opacity-80 transition-opacity"
+              target="_blank"
             >
               <Image
                 src={socailicon1 || "/placeholder.svg"}
@@ -417,6 +418,7 @@ export default function Consultation() {
             <Link
               href="https://www.facebook.com/profile.php?id=61574712775280"
               className="text-white hover:opacity-80 transition-opacity"
+              target="_blank"
             >
               <Image
                 src={socailicon2 || "/placeholder.svg"}
@@ -427,8 +429,9 @@ export default function Consultation() {
               />
             </Link>
             <Link
-              href="https://www.instagram.com/desert_oasis_dermatology/"
+              href="https://www.instagram.com/desert_oasis_dermatology_?igsh=eDE3Y2N6NWc3bGtj&utm_source=qr"
               className="text-white hover:opacity-80 transition-opacity"
+              target="_blank"
             >
               <Image
                 src={socailicon3 || "/placeholder.svg"}
@@ -438,7 +441,7 @@ export default function Consultation() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" className="text-white hover:opacity-80 transition-opacity">
+            <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" className="text-white hover:opacity-80 transition-opacity" target="_blank">
               <Image
                 src={socailicon4 || "/placeholder.svg"}
                 alt="Yelp Business Profile"
@@ -450,6 +453,7 @@ export default function Consultation() {
             <Link
               href="https://www.tiktok.com/@desert.oasis.dermatology"
               className="text-white hover:opacity-80 transition-opacity"
+              target="_blank"
             >
               <Image
                 src={socailicon5 || "/placeholder.svg"}
@@ -462,6 +466,7 @@ export default function Consultation() {
             <Link
               href="https://www.youtube.com/channel/UCSIbaqDBbdiEulTQlpOjd3A"
               className="text-white hover:opacity-80 transition-opacity"
+              target="_blank"
             >
               <Image
                 src={socailicon6 || "/placeholder.svg"}

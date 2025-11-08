@@ -341,6 +341,7 @@ export default function Navbar() {
               <Link
                 href="https://www.google.com/maps/place/Desert+Oasis+Dermatology/@33.0739956,-112.0454332,17z/data=!3m1!4b1!4m6!3m5!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!16s%2Fg%2F11m6sg0qh8?hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
                 aria-label="Google Business Profile"
+                target="_blank"
               >
                 <div className="flex h-5 w-5 items-center justify-center rounded-full">
                   <Image
@@ -352,7 +353,7 @@ export default function Navbar() {
                   />
                 </div>
               </Link>
-              <Link href="https://www.facebook.com/profile.php?id=61574712775280" aria-label="Facebook">
+              <Link href="https://www.facebook.com/profile.php?id=61574712775280" target="_blank" aria-label="Facebook">
                 <Image
                   src={social2 || "/placeholder.svg"}
                   alt="Facebook Business Profile"
@@ -361,7 +362,7 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </Link>
-              <Link href="https://www.instagram.com/desert_oasis_dermatology_?igsh=eDE3Y2N6NWc3bGtj&utm_source=qr" aria-label="Instagram">
+              <Link href="https://www.instagram.com/desert_oasis_dermatology_?igsh=eDE3Y2N6NWc3bGtj&utm_source=qr" aria-label="Instagram" target="_blank">
                 <Image
                   src={social3 || "/placeholder.svg"}
                   alt="Instagram Business Profile"
@@ -370,7 +371,7 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </Link>
-              <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" aria-label="Yelp">
+              <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" aria-label="Yelp" target="_blank">
                 <Image
                   src={social4 || "/placeholder.svg"}
                   alt="Yelp Business Profile"
@@ -379,7 +380,7 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </Link>
-              <Link href="https://www.tiktok.com/@desert.oasis.dermatology" aria-label="TikTok">
+              <Link href="https://www.tiktok.com/@desert.oasis.dermatology" aria-label="TikTok" target="_blank">
                 <Image
                   src={social5 || "/placeholder.svg"}
                   alt="TikTok Business Profile"
@@ -388,7 +389,7 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </Link>
-              <Link href="https://www.youtube.com/channel/UCSIbaqDBbdiEulTQlpOjd3A" aria-label="Youtube">
+              <Link href="https://www.youtube.com/channel/UCSIbaqDBbdiEulTQlpOjd3A" aria-label="Youtube" target="_blank">
                 <Image
                   src={social6 || "/placeholder.svg"}
                   alt="TikTok Business Profile"
