@@ -9,7 +9,7 @@ export default function DownloadForms() {
                 <span>
                     <HiOutlineDownload className="text-[#A66A47] w-5 h-5 md:w-7 md:h-7" />
                 </span>
-                <a className="text-[18px] md:test-[24px] text-[#A66A47] font-semibold underline" download href="/documents/DesertOasis-After-Surgery-Care.pdf">Post-Procedure Instructions</a>
+                <a className="text-[18px] md:text-[24px] text-[#A66A47] font-semibold underline" download href="/documents/DesertOasis-After-Surgery-Care.pdf">Post-Procedure Instructions</a>
             </div>
         </div>
     )
