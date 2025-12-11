@@ -213,17 +213,17 @@ export default function Consultation() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             <div className="rounded-lg overflow-hidden border-2 border-white/20">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.0959852664564!2d-111.86323182384797!3d33.263979358940205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b007930373701%3A0x7a2b046099685ec1!2s2860%20S%20Alma%20School%20Rd%2C%20Chandler%2C%20AZ%2085286!5e0!3m2!1sen!2sus!4v1762636791619!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.8634452736515!2d-112.04917711882933!3d33.075172293480286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872afb13db300289%3A0xa1cbdb5513efe36f!2sDesert%20Oasis%20Dermatology!5e0!3m2!1sen!2sbd!4v1743574353740!5m2!1sen!2sbd"
                 className="w-full h-[350px] border-0"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-
+            
             <div className="rounded-lg overflow-hidden border-2 border-white/20">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.8634452736515!2d-112.04917711882933!3d33.075172293480286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872afb13db300289%3A0xa1cbdb5513efe36f!2sDesert%20Oasis%20Dermatology!5e0!3m2!1sen!2sbd!4v1743574353740!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.0959852664564!2d-111.86323182384797!3d33.263979358940205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b007930373701%3A0x7a2b046099685ec1!2s2860%20S%20Alma%20School%20Rd%2C%20Chandler%2C%20AZ%2085286!5e0!3m2!1sen!2sus!4v1762636791619!5m2!1sen!2sus"
                 className="w-full h-[350px] border-0"
                 allowFullScreen
                 loading="lazy"

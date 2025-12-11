@@ -214,7 +214,7 @@ export default function Navbar() {
               >
                 <div className="flex flex-col gap-2">
                   <a
-                    href="https://l.klara.com/praBhJcLPeQC8Gbn"
+                    href="https://l.klara.com/nRAFhjrtXdbTLzKY"
                     target="_blank"
                     className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
                     rel="noreferrer"
