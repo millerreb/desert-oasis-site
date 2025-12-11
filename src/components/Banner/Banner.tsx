@@ -38,7 +38,7 @@ export default function Banner() {
         "Get personalized, cutting-edge dermatology care from our board-certified specialists. Healthy, radiant skin starts here",
       image: banner,
       buttonText: "Schedule an Appointment",
-      buttonLink: "https://l.klara.com/praBhJcLPeQC8Gbn",
+      buttonLink: "https://l.klara.com/nRAFhjrtXdbTLzKY",
       target: "_blank",
     },
     {
@@ -48,7 +48,7 @@ export default function Banner() {
         "We provide expert care in a calming environment, helping you achieve glowing, healthy skin with tailored treatments.",
       image: banner2,
       buttonText: "Book Your Visit Today",
-      buttonLink: "https://l.klara.com/9dpX5HB6CLyjfDF2",
+      buttonLink: "https://l.klara.com/nRAFhjrtXdbTLzKY",
       target: "_blank",
 
     },
