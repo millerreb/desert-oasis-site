@@ -6,7 +6,7 @@ import React from "react";
 import cardicon1 from "@/../../Public/icon/cardicon/card-icon-1.png";
 import cardicon2 from "@/../../Public/icon/cardicon/card-icon-2.png";
 import cardicon3 from "@/../../Public/icon/cardicon/card-icon-3.png";
-import icon3 from "@/../../public/icon/icon3.png";
+import icon3 from "@/../../Public/icon/icon3.png";
 import Consultation from "@/components/Consultation/Consultation";
 import AASMember from "@/components/AAS/AASMember";
 
