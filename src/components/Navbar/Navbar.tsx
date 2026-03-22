@@ -30,8 +30,6 @@ export default function Navbar() {
   const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const patientInfoTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Cleanup timeouts on unmount
-
   const handleMouseEnter = (
     setter: React.Dispatch<React.SetStateAction<boolean>>,
     timeoutRef: React.MutableRefObject<NodeJS.Timeout | null>,
@@ -49,7 +47,7 @@ export default function Navbar() {
   ) => {
     timeoutRef.current = setTimeout(() => {
       setter(false)
-    }, 300) // Increased delay for smoother interaction
+    }, 300)
   }
 
   const isActive = (href: string) => pathname === href
@@ -230,17 +228,7 @@ export default function Navbar() {
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
                     }}
                   >
-                    Pay Your Bill
-                  </Link>
-                  <Link
-                    href="/billing-questions"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
-                    onClick={(e) => {
-                      e.stopPropagation()
-                      setTimeout(() => setPatientInfoPopoverOpen(false), 100)
-                    }}
-                  >
-                    Billing Questions
+                    Payment and Billing
                   </Link>
                   <Link
                     href="/chat-with-us"
@@ -323,7 +311,7 @@ export default function Navbar() {
                   Schedule Appointment
                 </Button>
               </a>
-              <Link href="https://dodermatology.ema.md/ema/pay/onlinepayments" rel="noreferrer" target="_blank">
+              <Link href="/pay-bill" rel="noreferrer" target="_self">
                 <Button
                   variant="outline"
                   size="sm"
@@ -338,21 +326,32 @@ export default function Navbar() {
           {/* Social Media Icons - Desktop */}
           <div className="hidden justify-end md:flex ml-2 md:ml-3 lg:ml-4">
             <div className="flex items-center gap-1 lg:gap-2">
-              <Link
-                href="https://www.google.com/maps/place/Desert+Oasis+Dermatology/@33.0739956,-112.0454332,17z/data=!3m1!4b1!4m6!3m5!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!16s%2Fg%2F11m6sg0qh8?hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
-                aria-label="Google Business Profile"
-                target="_blank"
-              >
-                <div className="flex h-5 w-5 items-center justify-center rounded-full">
-                  <Image
-                    src={social1 || "/placeholder.svg"}
-                    alt="Google Business Profile"
-                    width={20}
-                    height={20}
-                    className="object-contain"
-                  />
-                </div>
-              </Link>
+              
+              {/* Google Popover */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full cursor-pointer hover:opacity-80 transition-opacity">
+                    <Image
+                      src={social1 || "/placeholder.svg"}
+                      alt="Google Business Profile"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  </div>
+                </PopoverTrigger>
+                <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
+                  <div className="flex flex-col gap-1">
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Maricopa/@33.0739956,-112.0454332,17z/data=!4m8!3m7!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!9m1!1b1!16s%2Fg%2F11m6sg0qh8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                      Maricopa location
+                    </Link>
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Chandler/@33.2642304,-111.8608164,17z/data=!3m1!4b1!4m6!3m5!1s0x872b01d61f9ee563:0xbefb48eebcc53c32!8m2!3d33.2642304!4d-111.8608164!16s%2Fg%2F11ymhcdzl8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                      Chandler location
+                    </Link>
+                  </div>
+                </PopoverContent>
+              </Popover>
+
               <Link href="https://www.facebook.com/profile.php?id=61574712775280" target="_blank" aria-label="Facebook">
                 <Image
                   src={social2 || "/placeholder.svg"}
@@ -371,15 +370,32 @@ export default function Navbar() {
                   className="object-contain"
                 />
               </Link>
-              <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" aria-label="Yelp" target="_blank">
-                <Image
-                  src={social4 || "/placeholder.svg"}
-                  alt="Yelp Business Profile"
-                  width={20}
-                  height={20}
-                  className="object-contain"
-                />
-              </Link>
+
+              {/* Yelp Popover */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <div className="flex h-5 w-5 items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                    <Image
+                      src={social4 || "/placeholder.svg"}
+                      alt="Yelp Business Profile"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  </div>
+                </PopoverTrigger>
+                <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
+                  <div className="flex flex-col gap-1">
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                     Maricopa location
+                    </Link>
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-chandler" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                      Chandler location
+                    </Link>
+                  </div>
+                </PopoverContent>
+              </Popover>
+
               <Link href="https://www.tiktok.com/@desert.oasis.dermatology" aria-label="TikTok" target="_blank">
                 <Image
                   src={social5 || "/placeholder.svg"}
@@ -392,7 +408,7 @@ export default function Navbar() {
               <Link href="https://www.youtube.com/channel/UCSIbaqDBbdiEulTQlpOjd3A" aria-label="Youtube" target="_blank">
                 <Image
                   src={social6 || "/placeholder.svg"}
-                  alt="TikTok Business Profile"
+                  alt="YouTube Business Profile"
                   width={25}
                   height={25}
                   className="object-contain"
@@ -402,7 +418,6 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden ml-auto">
               <Button
@@ -431,224 +446,73 @@ export default function Navbar() {
                       <Link
                         href="/services"
                         className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/services") ? "text-amber-700 font-bold" : ""}`}
-                        onClick={() => {
-                          // Allow the link to work normally
-                        }}
+                        onClick={() => {}}
                       >
                         Services
                       </Link>
                     </div>
                     <div className="flex flex-col pl-4 gap-2">
-                      <Link
-                        href="/services?category=Medical"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Medical
-                      </Link>
-                      <Link
-                        href="/services?category=Surgical"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Surgical
-                      </Link>
-                      <Link
-                        href="/services?category=Cosmetic"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Cosmetic
-                      </Link>
+                      <Link href="/services?category=Medical" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Medical</Link>
+                      <Link href="/services?category=Surgical" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Surgical</Link>
+                      <Link href="/services?category=Cosmetic" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Cosmetic</Link>
                     </div>
                   </div>
 
                   {/* About dropdown for mobile */}
                   <div className="flex flex-col gap-1">
-                    <Link
-                      href=""
-                      className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/about") ? "text-amber-700 font-bold" : ""}`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      About
-                    </Link>
+                    <Link href="" className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/about") ? "text-amber-700 font-bold" : ""}`} onClick={() => setIsOpen(false)}>About</Link>
                     <div className="flex flex-col pl-4 gap-2">
-                      <Link
-                        href="/about"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Meet Dr. Lavian
-                      </Link>
-                      <Link
-                        href="/blog"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Blog
-                      </Link>
+                      <Link href="/about" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Meet Dr. Lavian</Link>
+                      <Link href="/blog" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Blog</Link>
                     </div>
                   </div>
 
                   {/* Patient Info dropdown for mobile */}
                   <div className="flex flex-col gap-1">
-                    <Link
-                      href="/patient-info"
-                      className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/patient-info") ? "text-amber-700 font-bold" : ""}`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Patient Info
-                    </Link>
+                    <Link href="/patient-info" className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/patient-info") ? "text-amber-700 font-bold" : ""}`} onClick={() => setIsOpen(false)}>Patient Info</Link>
                     <div className="flex flex-col pl-4 gap-2">
-                      <a
-                        href="https://l.klara.com/JKkUeq7HEnFzXBDj"
-                        target="_blank"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                        rel="noreferrer"
-                      >
-                        Online Scheduling
-                      </a>
-
-                      <Link
-                        href="/pay-bill"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Pay Your Bill
-                      </Link>
-                      <Link
-                        href="/billing-questions"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Billing Questions
-                      </Link>
-                      <Link
-                        href="/chat-with-us"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Chat With Us
-                      </Link>
-                      <Link
-                        href="https://dodermatology.ema.md"
-                        rel="noreferrer"
-                        target="_blank"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Patient Portal
-                      </Link>
-                      <Link
-                        href="/dermatology-patient-forms"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Dermatology Patient Forms
-                      </Link>
-                      <Link
-                        href="/insurance-accepted"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Insurance Accepted
-                      </Link>
-                      <Link
-                        href="/recommended-products"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Recommended Products
-                      </Link>
-                      <Link
-                        href="/hours-and-location"
-                        className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        Hours & Location
-                      </Link>
+                      <a href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)} rel="noreferrer">Online Scheduling</a>
+                      <Link href="/pay-bill" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Pay Your Bill</Link>
+                      <Link href="/billing-questions" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Billing Questions</Link>
+                      <Link href="/chat-with-us" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Chat With Us</Link>
+                      <Link href="https://dodermatology.ema.md" rel="noreferrer" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Patient Portal</Link>
+                      <Link href="/dermatology-patient-forms" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Dermatology Patient Forms</Link>
+                      <Link href="/insurance-accepted" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Insurance Accepted</Link>
+                      <Link href="/recommended-products" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Recommended Products</Link>
+                      <Link href="/hours-and-location" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Hours & Location</Link>
                     </div>
                   </div>
                 </nav>
 
                 <div className="flex flex-col gap-3">
                   <a href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" rel="noreferrer">
-                    <Button className="w-full bg-[#C7925B] text-white hover:bg-[#C7925B]/80">
-                      Schedule Appointment
-                    </Button>
+                    <Button className="w-full bg-[#C7925B] text-white hover:bg-[#C7925B]/80">Schedule Appointment</Button>
                   </a>
-
                   <Link href="/chat-with-us">
-                    <Button
-                      variant="outline"
-                      className="w-full border-amber-500 text-amber-800 hover:bg-amber-50 hover:text-amber-900"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      Chat With Us
-                    </Button>
+                    <Button variant="outline" className="w-full border-amber-500 text-amber-800 hover:bg-amber-50 hover:text-amber-900" onClick={() => setIsOpen(false)}>Chat With Us</Button>
                   </Link>
                 </div>
 
                 <div className="flex items-center gap-4 pt-4">
-                  <Link
-                    href="https://www.google.com/maps/place/Desert+Oasis+Dermatology/@33.0739956,-112.0454332,17z/data=!3m1!4b1!4m6!3m5!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!16s%2Fg%2F11m6sg0qh8?hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
-                    aria-label="Google Business Profile"
-                  >
+                  <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology/@33.0739956,-112.0454332,17z/data=!3m1!4b1!4m6!3m5!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!16s%2Fg%2F11m6sg0qh8?hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" aria-label="Google Business Profile">
                     <div className="flex h-6 w-6 items-center justify-center rounded-full ">
-                      <Image
-                        src={social1 || "/placeholder.svg"}
-                        alt="Google Business Profile"
-                        width={20}
-                        height={20}
-                        className="object-contain"
-                      />
+                      <Image src={social1 || "/placeholder.svg"} alt="Google Business Profile" width={20} height={20} className="object-contain" />
                     </div>
                   </Link>
                   <Link href="https://www.facebook.com/profile.php?id=61574712775280" aria-label="Facebook">
-                    <Image
-                      src={social2 || "/placeholder.svg"}
-                      alt="Facebook Business Profile"
-                      width={20}
-                      height={20}
-                      className="object-contain"
-                    />
+                    <Image src={social2 || "/placeholder.svg"} alt="Facebook Business Profile" width={20} height={20} className="object-contain" />
                   </Link>
                   <Link href="https://www.instagram.com/desert_oasis_dermatology/" aria-label="Instagram">
-                    <Image
-                      src={social3 || "/placeholder.svg"}
-                      alt="Instagram Business Profile"
-                      width={20}
-                      height={20}
-                      className="object-contain"
-                    />
+                    <Image src={social3 || "/placeholder.svg"} alt="Instagram Business Profile" width={20} height={20} className="object-contain" />
                   </Link>
                   <Link onClick={() => setIsOpen(false)} href="future-comming-soon" aria-label="Yelp">
-                    <Image
-                      src={social4 || "/placeholder.svg"}
-                      alt="Yelp Business Profile"
-                      width={20}
-                      height={20}
-                      className="object-contain"
-                    />
+                    <Image src={social4 || "/placeholder.svg"} alt="Yelp Business Profile" width={20} height={20} className="object-contain" />
                   </Link>
                   <Link href="https://www.tiktok.com/@desert.oasis.dermatology" aria-label="TikTok">
-                    <Image
-                      src={social5 || "/placeholder.svg"}
-                      alt="TikTok Business Profile"
-                      width={20}
-                      height={20}
-                      className="object-contain"
-                    />
+                    <Image src={social5 || "/placeholder.svg"} alt="TikTok Business Profile" width={20} height={20} className="object-contain" />
                   </Link>
                   <Link href="https://www.youtube.com/channel/UCSIbaqDBbdiEulTQlpOjd3A" aria-label="Youtube">
-                    <Image
-                      src={social6 || "/placeholder.svg"}
-                      alt="TikTok Business Profile"
-                      width={25}
-                      height={25}
-                      className="object-contain"
-                    />
+                    <Image src={social6 || "/placeholder.svg"} alt="TikTok Business Profile" width={25} height={25} className="object-contain" />
                   </Link>
                 </div>
               </div>
@@ -659,4 +523,3 @@ export default function Navbar() {
     </header>
   )
 }
-

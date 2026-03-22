@@ -2,6 +2,7 @@ import React from 'react';
 import Consultation from '@/components/Consultation/Consultation'
 import Header from '@/components/Headers/Header'
 
+//THIS IS NO LONGER IN USE. CAN DELETE IF NOT NEEDED IN FUTURE.
 const page = () => {
   return (
     <section>

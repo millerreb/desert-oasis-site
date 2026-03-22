@@ -1,6 +1,7 @@
 import Consultation from "@/components/Consultation/Consultation";
 import Header from "@/components/Headers/Header";
 import React from "react";
+import AASMember from "@/components/AAS/AASMember";
 
 const page = () => {
   return (
@@ -11,6 +12,7 @@ const page = () => {
           subtitle="We are committed to making healthcare accessible."
         />
         <div className="container mt-[60px]">
+          <AASMember />
           <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-[#A66A47] mb-8">Insurance Plans Accepted</h2>
           <h5 className="text-base text-[#A66A47] font-midium ">
             We accept a variety of insurance plans. Please be advised that most HMO plans 
@@ -29,7 +31,10 @@ const page = () => {
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">AHCCCS- American Indian Health Program</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">AmeriPlan Discount Card</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Antidote PPO</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Arizona Complete Health</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">ARIZONA PRIORITY CARE NETWORK</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Banner Health Network</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Banner University Health Plan</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Blue Cross Blue Shield Advantage Medicare HMO & PPO</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Blue Cross Blue Shield of Arizona</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Cigna Commercial (but not Cigna Medicare Advantage)</p></li>
@@ -49,6 +54,7 @@ const page = () => {
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Medicare</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Molina/Magellan AHCCCS</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Multiplan Auto/Medicare Advantage/PPO/ValuePoint</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Optum</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Oscar + CIGNA</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Oscar Health</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Partners Direct Health</p></li>
@@ -77,14 +83,10 @@ const page = () => {
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Ambetter</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Arizona Care Network</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Arizona Complete Care</p></li>
-            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Arizona Complete Health</p></li>
-            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Banner Health Network</p></li>
-            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Banner University Health Plan</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Blue Cross Blue Shield Health Choice AHCCCS/Medicare</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Cigna Medicare Advantage</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">CMDP</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Mercycare/Mercy Maricopa</p></li>
-            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Optum</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Sanford Health Plan</p></li>
           </ul>
         </div>

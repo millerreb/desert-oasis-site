@@ -4,6 +4,7 @@ import type React from "react"
 import { MapPin, Phone, Printer } from "lucide-react"
 import Link from "next/link"
 import { useState, type FormEvent } from "react"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import socailicon1 from "@/../../Public/image/white-goole.png"
 import socailicon2 from "@/../../Public/image/whit-facebook.png"
 import socailicon3 from "@/../../Public/image/white-instragram.png"
@@ -402,19 +403,29 @@ export default function Consultation() {
         <div className="pt-4">
           <h3 className="text-base text-[#FFFFFF] font-medium mb-4">Follow Us</h3>
           <div className="flex gap-4 items-center">
-            <Link
-              href="https://www.google.com/maps/place/Desert+Oasis+Dermatology/@33.0739956,-112.0454332,17z/data=!3m1!4b1!4m6!3m5!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!16s%2Fg%2F11m6sg0qh8?hl=en&entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
-              className="text-white hover:opacity-80 transition-opacity"
-              target="_blank"
-            >
-              <Image
-                src={socailicon1 || "/placeholder.svg"}
-                alt="Gooole Business Profile"
-                width={20}
-                height={20}
-                className="object-contain"
-              />
-            </Link>
+             <Popover>
+                <PopoverTrigger asChild>
+                  <div className="flex h-5 w-5 items-center justify-center rounded-full cursor-pointer hover:opacity-80 transition-opacity">
+                    <Image
+                      src={socailicon1 || "/placeholder.svg"}
+                      alt="Google Business Profile"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  </div>
+                </PopoverTrigger>
+                <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
+                  <div className="flex flex-col gap-1">
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Maricopa/@33.0739956,-112.0454332,17z/data=!4m8!3m7!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!9m1!1b1!16s%2Fg%2F11m6sg0qh8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                      Maricopa location
+                    </Link>
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Chandler/@33.2642304,-111.8608164,17z/data=!3m1!4b1!4m6!3m5!1s0x872b01d61f9ee563:0xbefb48eebcc53c32!8m2!3d33.2642304!4d-111.8608164!16s%2Fg%2F11ymhcdzl8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                      Chandler location
+                    </Link>
+                  </div>
+                </PopoverContent>
+              </Popover>
             <Link
               href="https://www.facebook.com/profile.php?id=61574712775280"
               className="text-white hover:opacity-80 transition-opacity"
@@ -441,15 +452,29 @@ export default function Consultation() {
                 className="object-contain"
               />
             </Link>
-            <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" className="text-white hover:opacity-80 transition-opacity" target="_blank">
-              <Image
-                src={socailicon4 || "/placeholder.svg"}
-                alt="Yelp Business Profile"
-                width={20}
-                height={20}
-                className="object-contain"
-              />
-            </Link>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <div className="flex h-5 w-5 items-center justify-center cursor-pointer hover:opacity-80 transition-opacity">
+                    <Image
+                      src={socailicon4 || "/placeholder.svg"}
+                      alt="Yelp Business Profile"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  </div>
+                </PopoverTrigger>
+                <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
+                  <div className="flex flex-col gap-1">
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                     Maricopa location
+                    </Link>
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-chandler" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                      Chandler location
+                    </Link>
+                  </div>
+                </PopoverContent>
+              </Popover>
             <Link
               href="https://www.tiktok.com/@desert.oasis.dermatology"
               className="text-white hover:opacity-80 transition-opacity"
