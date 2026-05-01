@@ -472,8 +472,7 @@ export default function Navbar() {
                     <Link href="/patient-info" className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/patient-info") ? "text-amber-700 font-bold" : ""}`} onClick={() => setIsOpen(false)}>Patient Info</Link>
                     <div className="flex flex-col pl-4 gap-2">
                       <a href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)} rel="noreferrer">Online Scheduling</a>
-                      <Link href="/pay-bill" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Pay Your Bill</Link>
-                      <Link href="/billing-questions" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Billing Questions</Link>
+                      <Link href="/pay-bill" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Payment and Billing</Link>
                       <Link href="/chat-with-us" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Chat With Us</Link>
                       <Link href="https://dodermatology.ema.md" rel="noreferrer" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Patient Portal</Link>
                       <Link href="/dermatology-patient-forms" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Dermatology Patient Forms</Link>
