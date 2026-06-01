@@ -1,25 +1,27 @@
 
 'use client';
 import React from 'react'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 const PageContent = () => {
-    const [shouldPromptReview, setShouldPromptReview] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
-    const params = useSearchParams();
-    useEffect(() => {
-        const clinical = String(params.get("clinical"));
-        const checkin = String(params.get("checkin"));
+    const TextAndLink = () => {
+        const [shouldPromptReview, setShouldPromptReview] = useState(false);
+        const [isLoading, setIsLoading] = useState(true);
+        const params = useSearchParams();
 
-        if (clinical === "5" && checkin === "5") {
-            setShouldPromptReview(true)
-        };
-        setIsLoading(false)
-    }, [params]);
+        useEffect(() => {
+            const clinical = String(params.get("clinical"));
+            const checkin = String(params.get("checkin"));
 
-    return (
-        <div className='container py-[60px] md:py-[270px]'>
+            if (clinical === "5" && checkin === "5") {
+                setShouldPromptReview(true)
+            };
+            setIsLoading(false)
+        }, [params]);
+        
+        return (
+         <div className='container py-[60px] md:py-[270px]'>
             {isLoading && ( 
                 <p className="w-full md:w-[1100px] mx-auto text-[18px] md:text-[22px] text-[#333333] font-normal text-center">
                     Loading...
@@ -38,6 +40,12 @@ const PageContent = () => {
                     </p>
             )}
         </div>
+        )
+    }
+    return (
+       <Suspense fallback={null}>
+            <TextAndLink />
+       </Suspense>
     )
 }
 
