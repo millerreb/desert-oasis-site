@@ -74,7 +74,7 @@ const page = () => {
           </ul>
         </div>
         <div className="container">
-          <h5 className="text-base text-[#A66A47] font-midium mb-[20px]">
+          <h5 className="text-base text-[#A66A47] font-semibold mb-[20px]">
           Non-Contracted Insurances:
           </h5>
           <ul>
