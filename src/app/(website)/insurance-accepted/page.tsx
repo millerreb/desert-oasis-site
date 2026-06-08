@@ -54,6 +54,7 @@ const page = () => {
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">ICP (Honor Health Innovation Care Partners)</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Intel</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Medicare</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Mercy Care</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">OptumCare</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Oscar</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Oscar only ICP</p></li>
@@ -80,7 +81,6 @@ const page = () => {
           <ul>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">BCBS PimaConnect, PimaFocus or Neighborhood Ntwk</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Cigna Health Spring Medicare Advantage (Contract pending, will accept soon)</p></li>
-            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] text-justify md:text-start">Mercy Care (Contract pending, will accept soon)</p></li>
           </ul>
         </div>
         <div className="container mt-[60px] pb-[60px]">
