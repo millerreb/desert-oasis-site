@@ -192,7 +192,7 @@ export default function Consultation() {
               <div className="ml-3">
                 <span className="font-semibold block">Maricopa Office</span>
                 <span className="text-sm leading-relaxed block mt-1">
-                  21300 N John Wayne Pkwy STE 108<br />
+                  21300 N John Wayne Pkwy STE 116<br />
                   Maricopa, AZ 85139
                 </span>
               </div>
