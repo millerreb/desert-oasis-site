@@ -13,7 +13,7 @@ const AREA = "Maricopa, AZ & Chandler, AZ";
 export const defaultSeo: PageSeo = {
   title: `Dermatologist in ${AREA} | ${BRAND}`,
   description:
-    "Board-certified dermatologist and Mohs surgeon Dr. Jonathan Lavian treats acne, eczema, skin cancer and more in Maricopa and Chandler, AZ. Most insurances accepted.",
+    "Board-certified dermatology and Mohs surgery in Maricopa and Chandler, AZ, treating acne, eczema, skin cancer and more. Most insurances accepted.",
 };
 
 const pages: Record<string, PageSeo> = {
@@ -81,12 +81,12 @@ const pages: Record<string, PageSeo> = {
   "/recommended-products": {
     title: `Dermatologist-Recommended Skin Care Products | ${BRAND}`,
     description:
-      "Skin care products recommended by board-certified dermatologist Dr. Jonathan Lavian.",
+      "Skin care products recommended by the board-certified dermatology team at Desert Oasis Dermatology.",
   },
   "/reviews": {
     title: `Patient Reviews | ${BRAND}`,
     description:
-      "See what patients say about Dr. Jonathan Lavian and Desert Oasis Dermatology in Maricopa and Chandler, AZ.",
+      "See what patients say about Desert Oasis Dermatology in Maricopa and Chandler, AZ.",
   },
   "/blog": {
     title: `Skin Health Blog | ${BRAND}`,

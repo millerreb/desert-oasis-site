@@ -126,7 +126,7 @@ const OurServices = () => {
         <section>
             <div className="container mt-[60px]">
                 <h2 className="text-[32px] text-[#A66A47] font-semibold text-center">Our Services</h2>
-                <p className="text-xl text-[#698B8F] font-normal text-center mt-5">
+                <p className="text-xl text-[#4D6A6E] font-normal text-center mt-5">
                     At Desert Oasis Dermatology, we offer a comprehensive range of treatments tailored to your skin care needs.
                     Explore our key services below.
                 </p>

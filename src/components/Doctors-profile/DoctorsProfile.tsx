@@ -24,7 +24,7 @@ export default function DoctorProfile() {
 
           {/* Doctor Information */}
           <div className="w-full md:w-full lg:w-3/4 space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold">Meet Dr. Lavian </h1>
+            <h2 className="text-4xl md:text-5xl font-bold">Meet Dr. Lavian </h2>
 
             <p className="text-base md:text-lg text-justify">
               Dr. Jonathan Lavian is a double board-certified specialist in Dermatology

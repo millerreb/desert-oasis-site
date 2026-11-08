@@ -19,7 +19,7 @@ import {
 const serviceGroups = [
     {
         title: "Medical Dermatology",
-        intro: "Dr. Lavian treats every medical skin, hair and nail condition, including:",
+        intro: "We treat every medical skin, hair and nail condition, including:",
         links: [
             { href: "/services/acne", label: "Acne" },
             { href: "/services/eczema", label: "Eczema" },
@@ -53,12 +53,12 @@ const serviceGroups = [
     },
 ]
 
-const credentials = [
-    "Double board-certified in Dermatology and Mohs Micrographic Surgery",
-    "Fellow of the American Academy of Dermatology",
-    "Medical degree from Hofstra-Northwell School of Medicine, top 15% of his class",
-    "Chief Resident during his Hofstra-Northwell dermatology residency",
-    "Inducted into the Gold Humanism Honor Society for compassionate patient care",
+const reasons = [
+    "Board-certified dermatology for medical, surgical and cosmetic skin care",
+    "Skin cancer care from screening through Mohs surgery in one practice",
+    "Two offices, in Maricopa and Chandler",
+    "Medicare, several AHCCCS plans and most major insurance accepted",
+    "Online booking and secure text messaging",
 ]
 
 export default function LocationPage({ office }: { office: Office }) {
@@ -71,7 +71,7 @@ export default function LocationPage({ office }: { office: Office }) {
     const faqs = [
         {
             q: `What are the hours at the ${office.city} office?`,
-            a: `Our ${office.city} office is open ${hoursSentence}. Dr. Lavian also sees patients at our ${other.city} office on ${openDaysText(other)}.`,
+            a: `Our ${office.city} office is open ${hoursSentence}. We also see patients at our ${other.city} office on ${openDaysText(other)}.`,
         },
         {
             q: "Do I need a referral to see a dermatologist?",
@@ -80,10 +80,6 @@ export default function LocationPage({ office }: { office: Office }) {
         {
             q: "Do you accept Medicare and AHCCCS?",
             a: "Yes. We accept Medicare and several AHCCCS plans, along with most major insurance, including Aetna, Blue Cross Blue Shield, Cigna, Humana and UnitedHealthcare. Self-pay pricing is also available.",
-        },
-        {
-            q: "Who will I see at my appointment?",
-            a: "Every patient is seen by Dr. Jonathan Lavian, a double board-certified dermatologist and Mohs surgeon.",
         },
         {
             q: `How do I find the ${office.city} office?`,
@@ -110,8 +106,6 @@ export default function LocationPage({ office }: { office: Office }) {
                 <div className="max-w-[900px] mx-auto text-center space-y-5">
                     <p className="text-[18px] md:text-[20px] text-[#333333] leading-[160%]">
                         Desert Oasis Dermatology brings board-certified medical, surgical and cosmetic dermatology to {office.city}.
-                        Every visit is with Dr. Jonathan Lavian, a double board-certified dermatologist and Mohs surgeon who cares for
-                        patients of all ages, from a first acne visit to skin cancer removal.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                         <a
@@ -199,7 +193,7 @@ export default function LocationPage({ office }: { office: Office }) {
                     </div>
                 </div>
                 <p className="text-center text-base md:text-lg text-[#333333] mt-6">
-                    Need a different day? Dr. Lavian also sees patients at our{" "}
+                    Need a different day? We also see patients at our{" "}
                     <Link href={other.slug} className="text-[#8A5536] underline font-semibold">
                         {other.city} dermatology office
                     </Link>{" "}
@@ -236,19 +230,19 @@ export default function LocationPage({ office }: { office: Office }) {
                 </p>
             </section>
 
-            {/* Why Dr. Lavian */}
+            {/* Why choose the practice */}
             <section className="container mt-[60px]">
                 <h2 className="text-[28px] md:text-[32px] text-[#A66A47] font-semibold text-center">
-                    Why {office.city} Patients Choose Dr. Lavian
+                    Why {office.city} Patients Choose Desert Oasis Dermatology
                 </h2>
                 <ul className="max-w-[800px] mx-auto mt-6 space-y-3 list-disc pl-6 text-base md:text-lg text-[#333333]">
-                    {credentials.map((c) => (
-                        <li key={c}>{c}</li>
+                    {reasons.map((r) => (
+                        <li key={r}>{r}</li>
                     ))}
                 </ul>
                 <p className="text-center mt-6">
                     <Link href="/about" className="text-[#8A5536] underline font-semibold text-lg">
-                        Learn more about Dr. Lavian
+                        Meet our physician
                     </Link>
                 </p>
             </section>

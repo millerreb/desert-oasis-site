@@ -168,9 +168,9 @@ export default function Consultation() {
           <div className="text-center space-y-6">
 
             <div className="space-y-2">
-              <h1 className="text-[24px] md:text-[40px] font-bold leading-tight">
+              <h2 className="text-[24px] md:text-[40px] font-bold leading-tight">
                 Schedule a Consultation
-              </h1>
+              </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex items-center gap-4 text-xl">

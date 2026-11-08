@@ -64,7 +64,7 @@ export default function BusinessHours() {
             </div>
 
             <div className="mt-10 space-y-2 text-[#8A5536] font-medium px-2 text-center">
-                <p className="text-sm sm:text-base">Dr. Lavian sees patients at both offices on the days shown above.</p>
+                <p className="text-sm sm:text-base">We see patients at both offices on the days shown above.</p>
                 <p className="text-sm sm:text-base flex items-center justify-center gap-2">
                     <Phone className="h-4 w-4" />
                     <span>

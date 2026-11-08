@@ -1,5 +1,6 @@
 import Banner from '@/components/Banner/Banner'
 import Consultation from '@/components/Consultation/Consultation'
+import HomeIntro from '@/components/Home-Intro/HomeIntro'
 import DoctorProfile from '@/components/Doctors-profile/DoctorsProfile'
 import OurServices from '@/components/Our-Services/OurServices'
 
@@ -13,6 +14,7 @@ const Homepage = () => {
   return (
     <div>
       <Banner />
+      <HomeIntro />
       <OurServices />
       <DoctorProfile />
       <Testimonials/>
