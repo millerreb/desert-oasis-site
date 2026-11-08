@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { MapPin, Phone } from "lucide-react"
 import { offices, WEEK, formatTime, PHONE, PHONE_LINK } from "@/lib/site"
@@ -41,7 +42,13 @@ export default function BusinessHours() {
                                 })}
                             </div>
 
-                            <div className="flex justify-center mt-6">
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+                                <Link
+                                    href={office.slug}
+                                    className="bg-[#8A5536] hover:bg-[#6F4329] text-white transition-colors px-6 py-2 rounded-sm text-sm font-semibold"
+                                >
+                                    About the {office.city} Office
+                                </Link>
                                 <a
                                     href={office.directionsUrl}
                                     target="_blank"

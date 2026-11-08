@@ -34,6 +34,16 @@ const pages: Record<string, PageSeo> = {
     description:
       "Hours, addresses and directions for Desert Oasis Dermatology's offices in Maricopa (John Wayne Pkwy) and Chandler (S Alma School Rd). Call (480) 418-3314.",
   },
+  "/maricopa-dermatologist": {
+    title: `Dermatologist in Maricopa, AZ | ${BRAND}`,
+    description:
+      "Board-certified dermatologist on John Wayne Pkwy in Maricopa, AZ, open Wednesdays and Fridays. Skin cancer screening, Mohs surgery, acne, eczema and cosmetics.",
+  },
+  "/chandler-dermatologist": {
+    title: `Dermatologist in Chandler, AZ | ${BRAND}`,
+    description:
+      "Board-certified dermatologist on S Alma School Rd in Chandler, AZ, open Mon, Tue and Thu. Skin cancer screening, Mohs surgery, acne, eczema and cosmetics.",
+  },
   "/insurance-accepted": {
     title: `Insurance Accepted & Self-Pay Prices | ${BRAND}`,
     description:

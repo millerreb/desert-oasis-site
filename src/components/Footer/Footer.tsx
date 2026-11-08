@@ -61,6 +61,18 @@ export default function Footer() {
               >
                 Patient Information
               </Link>
+              <Link
+                href="/maricopa-dermatologist"
+                className={`${pathname === "/maricopa-dermatologist" ? "text-[#A66A47]" : "text-gray-700"} hover:text-[#A66A47] text-sm sm:text-base transition-colors`}
+              >
+                Maricopa Office
+              </Link>
+              <Link
+                href="/chandler-dermatologist"
+                className={`${pathname === "/chandler-dermatologist" ? "text-[#A66A47]" : "text-gray-700"} hover:text-[#A66A47] text-sm sm:text-base transition-colors`}
+              >
+                Chandler Office
+              </Link>
             </nav>
           </div>
 
