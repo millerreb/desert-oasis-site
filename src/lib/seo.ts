@@ -8,12 +8,12 @@ import { getServiceById } from "@/lib/mokdata";
 type PageSeo = { title: string; description: string };
 
 const BRAND = "Desert Oasis Dermatology";
-const AREA = "Maricopa & Chandler, AZ";
+const AREA = "Maricopa, AZ & Chandler, AZ";
 
 export const defaultSeo: PageSeo = {
   title: `Dermatologist in ${AREA} | ${BRAND}`,
   description:
-    "Board-certified dermatologist and Mohs surgeon Dr. Jonathan Lavian treats acne, eczema, skin cancer and more in Maricopa and Chandler, AZ. Most insurance accepted.",
+    "Board-certified dermatologist and Mohs surgeon Dr. Jonathan Lavian treats acne, eczema, skin cancer and more in Maricopa and Chandler, AZ. Most insurances accepted.",
 };
 
 const pages: Record<string, PageSeo> = {
