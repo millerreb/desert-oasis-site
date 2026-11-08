@@ -64,7 +64,7 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
                             <Phone className="h-5 w-5 text-[#A67C52]" />
                             <span className="font-medium">Phone: {serviceData.callToAction.phone}</span>
                         </div>
-                            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSfenP9CvOOVj-0yIv5VJspemSxtuKM2IzFG1xWvwbiROKYXtg/viewform" >
+                            <Link href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" rel="noreferrer">
                                 <Button className="bg-[#C7925B] hover:bg-[#C7925B]/80 text-white px-6 py-3 rounded">
                                     {serviceData.callToAction.buttonText}
                                 </Button>
