@@ -373,19 +373,29 @@ export const servicesData: ServiceData[] = [
     mainImage: "/placeholder.svg?height=500&width=500",
     paragraphs: [
       {
-        title: "Safe and Effective Skin Growth Removal",
+        title: "What Is Mohs Surgery?",
         content:
-          "Excision is a minor surgical procedure used to remove suspicious moles, skin cancers, and other abnormal growths. Our dermatologists ensure precision and minimal scarring.",
+          "Mohs micrographic surgery is a precise treatment for many skin cancers, including basal cell and squamous cell carcinoma. The cancer is removed in thin layers, and each layer is examined under a microscope during your visit, so healthy skin is preserved wherever possible.",
       },
       {
-        title: "Procedure Overview",
+        title: "When Is Mohs Recommended?",
         content:
-          "A local anesthetic is applied, and the affected area is surgically removed with precision. Stitches may be required, and recovery is typically quick.",
+          "Mohs is often recommended for skin cancers on the face, ears, scalp, hands and other areas where preserving tissue matters, and for cancers that are large, have unclear borders, or have returned after treatment.",
       },
       {
-        title: "Post-Surgical Care",
+        title: "The Day of Surgery",
         content:
-          "Proper wound care is essential for healing. We provide detailed aftercare instructions to promote recovery and reduce scarring.",
+          "Surgery is done in the office under local anesthesia. Between layers, you wait while your surgeon examines the tissue, and the process continues until no cancer is seen.",
+      },
+      {
+        title: "Repair and Aftercare",
+        content:
+          "Most wounds are repaired the same day. For more complex cases, we coordinate reconstruction with plastic surgeons. You'll receive aftercare instructions before you leave.",
+      },
+      {
+        title: "Your Surgeon",
+        content:
+          "Mohs surgery at Desert Oasis Dermatology is performed by a board-certified Mohs surgeon, who performs both the surgery and the microscopic examination.",
       },
     ],
     callToAction: commonCallToAction,
