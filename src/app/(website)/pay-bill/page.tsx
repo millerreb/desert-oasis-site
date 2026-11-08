@@ -9,6 +9,9 @@ import cardicon3 from "@/../../Public/icon/cardicon/card-icon-3.png";
 import icon3 from "@/../../Public/icon/icon3.png";
 import Consultation from "@/components/Consultation/Consultation";
 import AASMember from "@/components/AAS/AASMember";
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/pay-bill");
 
 interface IProps {
   isAAs: boolean

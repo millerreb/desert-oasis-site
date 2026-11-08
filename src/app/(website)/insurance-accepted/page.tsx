@@ -2,6 +2,9 @@ import Consultation from "@/components/Consultation/Consultation";
 import Header from "@/components/Headers/Header";
 import React from "react";
 import AASMember from "@/components/AAS/AASMember";
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/insurance-accepted");
 
 const page = () => {
   return (

@@ -2,6 +2,9 @@
 // import { Button } from '@/components/ui/button'
 import React from 'react';
 import Header from '@/components/Headers/Header'
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/recommended-products");
 
 const page = () => {
   return (

@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from '@/components/Headers/Header'
 import PageContent from './_components/PageContent';
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/maricopa-survey-redirect");
 
 const page = () => {
     return (

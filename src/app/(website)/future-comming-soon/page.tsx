@@ -1,6 +1,9 @@
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/future-comming-soon");
 
 const page = () => {
   return (

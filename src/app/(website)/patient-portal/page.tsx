@@ -1,6 +1,9 @@
 
 import Header from '@/components/Headers/Header'
 import React from 'react'
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/patient-portal");
 
 const page = () => {
     return (

@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { defaultSeo } from "@/lib/seo";
 
 
 
@@ -13,8 +14,8 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 export const metadata: Metadata = {
-  title: "Desert Oasis",
-  description: "Expert dermatology care specializing in skin health, treatments, and cosmetic procedures.",
+  title: defaultSeo.title,
+  description: defaultSeo.description,
   icons: {
     icon: "/image/Fav-icon.png", 
   },

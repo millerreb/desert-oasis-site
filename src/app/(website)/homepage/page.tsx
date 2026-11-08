@@ -5,6 +5,9 @@ import OurServices from '@/components/Our-Services/OurServices'
 
 import Testimonials from '@/components/Testimonials/Testimonials'
 import React from 'react'
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/homepage");
 
 const Homepage = () => {
   return (
