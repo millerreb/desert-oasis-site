@@ -62,7 +62,7 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
                         <p className="text-xl text-[#A66A47] text-semibold mb-4">{serviceData.callToAction.subheading}</p>
                         <div className="flex items-center justify-center lg:justify-center gap-2 mb-6">
                             <Phone className="h-5 w-5 text-[#A67C52]" />
-                            <span className="font-medium">Phone: {serviceData.callToAction.phone}</span>
+                            <span className="font-medium">Phone: <a href="tel:+14804183314" className="hover:underline">{serviceData.callToAction.phone}</a></span>
                         </div>
                             <Link href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" rel="noreferrer">
                                 <Button className="bg-[#C7925B] hover:bg-[#C7925B]/80 text-white px-6 py-3 rounded">

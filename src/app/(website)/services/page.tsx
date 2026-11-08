@@ -1,5 +1,6 @@
 import Consultation from '@/components/Consultation/Consultation'
 import Services, { type TreatmentCategory } from '@/components/Services/Services'
+import Header from '@/components/Headers/Header'
 import React from 'react'
 import { pageMeta } from "@/lib/seo";
 
@@ -14,6 +15,10 @@ const page = ({ searchParams }: { searchParams: { category?: string } }) => {
 
   return (
     <div>
+      <Header
+        title="Dermatology Services"
+        subtitle="Skincare to fit your every need"
+      />
       <Services initialCategory={initialCategory} />
       <Consultation/>
     </div>

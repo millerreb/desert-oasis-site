@@ -175,7 +175,7 @@ export default function Consultation() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex items-center gap-4 text-xl">
                 <Phone className="h-6 w-6 shrink-0" />
-                <span className="font-medium">Phone: (480) 418-3314</span>
+                <span className="font-medium">Phone: <a href="tel:+14804183314" className="hover:underline">(480) 418-3314</a></span>
               </div>
 
               <div className="flex items-center gap-4 text-xl">

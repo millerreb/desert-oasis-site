@@ -130,7 +130,7 @@ const Page = () => {
               <div>
                 <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">Pay by phone</h5>
                 <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                  To pay your bill over the phone with a credit or debit card, please call us at (480) 418-3314 and select extension 2, and then extension 4.
+                  To pay your bill over the phone with a credit or debit card, please call us at <a href="tel:+14804183314" className="text-[#8A5536] underline">(480) 418-3314</a> and select extension 2, and then extension 4.
                 </p>
               </div>
             </div>
@@ -143,7 +143,7 @@ const Page = () => {
               <div>
                 <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">Questions?</h5>
                 <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                  Please call us at (480) 418-3314 and select extension 2, and then extension 4, for billing questions.
+                  Please call us at <a href="tel:+14804183314" className="text-[#8A5536] underline">(480) 418-3314</a> and select extension 2, and then extension 4, for billing questions.
                 </p>
               </div>
             </div>
