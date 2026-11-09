@@ -44,10 +44,10 @@ function searchTags(path: string): Metadata {
 }
 
 const BRAND = "Desert Oasis Dermatology";
-const AREA = "Maricopa, AZ & Chandler, AZ";
+const AREA = "Maricopa & Chandler, AZ";
 
 export const defaultSeo: PageSeo = {
-  title: `Dermatologist in ${AREA} | ${BRAND}`,
+  title: `${BRAND} | ${AREA}`,
   description:
     "Board-certified dermatology and Mohs surgery in Maricopa and Chandler, AZ, treating acne, eczema, skin cancer and more. Most insurances accepted.",
 };
@@ -56,17 +56,17 @@ const pages: Record<string, PageSeo> = {
   "/": defaultSeo,
   "/homepage": defaultSeo,
   "/about": {
-    title: `Dr. Jonathan Lavian, MD, FAAD | Dermatologist & Mohs Surgeon | ${BRAND}`,
+    title: "Dr. Jonathan Lavian, MD | Dermatologist & Mohs Surgeon",
     description:
       "Meet Dr. Jonathan Lavian, double board-certified in Dermatology and Mohs Micrographic Surgery, caring for patients in Maricopa and Chandler, AZ.",
   },
   "/services": {
-    title: `Dermatology Services in ${AREA} | ${BRAND}`,
+    title: `Dermatology Services in ${AREA}`,
     description:
       "Medical, surgical and cosmetic dermatology in Maricopa and Chandler, AZ: skin cancer screening, Mohs surgery, acne, eczema, psoriasis, Botox, peels and more.",
   },
   "/hours-and-location": {
-    title: `Office Hours & Locations | ${BRAND} Maricopa & Chandler`,
+    title: `Office Hours & Locations | ${AREA}`,
     description:
       "Hours, addresses and directions for Desert Oasis Dermatology's offices in Maricopa (John Wayne Pkwy) and Chandler (S Alma School Rd). Call (480) 418-3314.",
   },
@@ -81,7 +81,7 @@ const pages: Record<string, PageSeo> = {
       "Board-certified dermatologist on S Alma School Rd in Chandler, AZ, open Mon, Tue and Thu. Skin cancer screening, Mohs surgery, acne, eczema and cosmetics.",
   },
   "/insurance-accepted": {
-    title: `Insurance Accepted & Self-Pay Prices | ${BRAND}`,
+    title: `Insurance & Self-Pay Prices | ${BRAND}`,
     description:
       "Insurance plans accepted at Desert Oasis Dermatology, including Medicare, AHCCCS plans, Aetna, BCBS, Cigna, Humana and UnitedHealthcare, plus self-pay pricing.",
   },
@@ -165,7 +165,7 @@ export function pageMeta(path: string): Metadata {
 // Service pages (/services/[id]): one description per service.
 const serviceDescriptions: Record<string, string> = {
   "skin-cancer-screening":
-    "Full-body skin cancer screenings and mole checks with a board-certified dermatologist and Mohs surgeon in Maricopa and Chandler, AZ. Early detection saves lives.",
+    "Full-body skin cancer screenings and mole checks with a board-certified dermatologist and Mohs surgeon in Maricopa and Chandler, AZ.",
   acne:
     "Personalized acne treatment for teens and adults in Maricopa and Chandler, AZ, from prescription creams and oral medications to chemical peels.",
   eczema:
@@ -206,11 +206,22 @@ const serviceDescriptions: Record<string, string> = {
     "Microneedling to improve acne scars, fine lines and skin texture, performed by a board-certified dermatologist in Maricopa and Chandler, AZ.",
 };
 
+// Shorter names for search-result titles, where the page's full service name is too long.
+// The heading on the page itself is unchanged.
+const serviceTitleNames: Record<string, string> = {
+  excision: "Skin Cancer & Growth Removal",
+  "excessive-sweating": "Hyperhidrosis Treatment",
+  molluscum: "Molluscum Treatment",
+  microneedling: "Microneedling",
+  "hand-dermatitis": "Hand Dermatitis Treatment",
+};
+
 export function serviceMeta(id: string): Metadata {
   const service = getServiceById(id);
   if (!service) return pageMeta("/services");
   return {
-    title: `${service.serviceName} in ${AREA} | ${BRAND}`,
+    // No practice name here: Google shows the site name above each result (from the website schema)
+    title: `${serviceTitleNames[id] ?? service.serviceName} in ${AREA}`,
     description:
       serviceDescriptions[id] ??
       `${service.serviceName} from a board-certified dermatologist in Maricopa and Chandler, AZ.`,
