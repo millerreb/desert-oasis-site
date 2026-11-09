@@ -61,6 +61,18 @@ export default function Footer() {
               >
                 Patient Information
               </Link>
+              <Link
+                href="/maricopa-dermatologist"
+                className={`${pathname === "/maricopa-dermatologist" ? "text-[#A66A47]" : "text-gray-700"} hover:text-[#A66A47] text-sm sm:text-base transition-colors`}
+              >
+                Maricopa Office
+              </Link>
+              <Link
+                href="/chandler-dermatologist"
+                className={`${pathname === "/chandler-dermatologist" ? "text-[#A66A47]" : "text-gray-700"} hover:text-[#A66A47] text-sm sm:text-base transition-colors`}
+              >
+                Chandler Office
+              </Link>
             </nav>
           </div>
 
@@ -68,8 +80,8 @@ export default function Footer() {
           <div className="flex flex-col items-center sm:items-start mt-4 sm:mt-0">
             <h3 className="text-lg font-semibold mb-3 sm:mb-4">Contact Us</h3>
             <div className="flex flex-col space-y-2 items-center sm:items-start">
-              <p className="text-gray-700 text-sm sm:text-base">Call us: (480) 418-3314</p>
-              <p className="text-gray-700 text-sm sm:text-base">Text for appointments: (480) 418-3314</p>
+              <p className="text-gray-700 text-sm sm:text-base">Call us: <a href="tel:+14804183314" className="hover:underline">(480) 418-3314</a></p>
+              <p className="text-gray-700 text-sm sm:text-base">Text for appointments: <a href="sms:+14804183314" className="hover:underline">(480) 418-3314</a></p>
               <div className="mt-2 sm:mt-4 text-xs sm:text-sm text-gray-600 flex flex-col items-center sm:items-start">
                 <p>Message/Data Rates May Apply</p>
                 <p>Message Frequency May Vary</p>

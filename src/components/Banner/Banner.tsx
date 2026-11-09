@@ -103,9 +103,9 @@ export default function Banner() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center md:px-8 lg:px-16 ">
                   <div className="absolute inset-0 w-full h-full bg-white/60 backdrop:blur-md"></div>
                   <div className=" z-40  ">
-                    <h1 className="text-[25px] md:text-[40px] lg:text-[60px] text-[#A66A47] font-bold mt-10 md:mt-0">
+                    <h2 className="text-[25px] md:text-[40px] lg:text-[60px] text-[#A66A47] font-bold mt-10 md:mt-0">
                       {slide.title}
-                    </h1>
+                    </h2>
                     <p className="text-sm px-4 md:text-[18px] lg:text-xl text-[#A66A47] font-medium mt-[50px] md:mt-10">
                       {slide.description}
                     </p>

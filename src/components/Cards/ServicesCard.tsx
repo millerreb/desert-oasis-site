@@ -16,7 +16,7 @@ const ServicesCard = ({ imgSrc, title, description, rout = "/" }: ServicesCardPr
                 <Image src={imgSrc || "/placeholder.svg"} alt={title} width={60} height={60} />
             </div>
             <h3 className="text-[24px] text-[#A66A47] font-semibold text-center mt-[30px] group-hover:text-white">{title}</h3>
-            <p className="text-xl h-[72px] text-[#698B8F] font-normal text-center mt-5 group-hover:text-white">
+            <p className="text-xl h-[72px] text-[#4D6A6E] font-normal text-center mt-5 group-hover:text-white">
                 {description}
             </p>
             <div className="flex justify-center mt-[54px]">

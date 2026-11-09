@@ -2,13 +2,16 @@
 // import { Button } from '@/components/ui/button'
 import React from 'react';
 import Header from '@/components/Headers/Header'
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/recommended-products");
 
 const page = () => {
   return (
     <section>
       <Header
-          title="Chat With Us"
-          subtitle="We're here to help—ask your questions and get personalized support in real-time."
+          title="Recommended Products"
+          subtitle="Skin care products recommended by our dermatology team."
       />
       <div className='container py-[60px] md:py-[270px]'>
       <h3 className='text-[28px] md:text-[40px] text-[#A66A47] font-bold text-center'>Feature coming soon</h3>

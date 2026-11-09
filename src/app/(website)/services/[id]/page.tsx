@@ -1,48 +1,22 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { useParams } from "next/navigation"
-import { getServiceById, type ServiceData } from "@/lib/mokdata"
+import { notFound } from "next/navigation"
+import { getServiceById, servicesData } from "@/lib/mokdata"
 import ServicesDetailsCard from "@/app/(website)/services/Service-details"
 
-export default function ServiceDetailsPage() {
-    const params = useParams()
-    const [serviceData, setServiceData] = useState<ServiceData | null>(null)
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState<string | null>(null)
+// Build every service page ahead of time, so its full content is in the page
+// as soon as it loads (for patients and for Google).
+export function generateStaticParams() {
+    return servicesData.map((service) => ({ id: service.id }))
+}
 
-    useEffect(() => {
-        if (params.id) {
-            const id = Array.isArray(params.id) ? params.id[0] : params.id
-            const data = getServiceById(id)
+// Any address that isn't one of the services above returns a proper "404 not found".
+export const dynamicParams = false
 
-            if (data) {
-                setServiceData(data)
-            } else {
-                setError("Service not found")
-            }
+export default function ServiceDetailsPage({ params }: { params: { id: string } }) {
+    const serviceData = getServiceById(params.id)
 
-            setLoading(false)
-        }
-    }, [params.id])
-
-    if (loading) {
-        return (
-            <div className="flex items-center justify-center min-h-[400px]">
-                <p>Loading service details...</p>
-            </div>
-        )
-    }
-
-    if (error || !serviceData) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-[400px]">
-                <h2 className="text-2xl font-semibold text-[#A67C52] mb-4">Service Not Found</h2>
-                <p className="text-gray-600">The requested service could not be found.</p>
-            </div>
-        )
+    if (!serviceData) {
+        notFound()
     }
 
     return <ServicesDetailsCard serviceData={serviceData} />
 }
-

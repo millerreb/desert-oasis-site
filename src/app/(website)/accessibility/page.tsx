@@ -1,5 +1,8 @@
 import Header from "@/components/Headers/Header";
 import React from "react";
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/accessibility");
 
 const page = () => {
   return (
@@ -10,7 +13,7 @@ const page = () => {
         subtitle="Prioritizing Accessibility and Inclusion in Every Interaction"
           />
           <div className="container mt-[60px] py-[60px] md:py-[322px]">
-              <p className=" text-[18px] md:text-[22px] text-[#333333] font-normal leading-[150%] text-center">We are committed to ensuring that our dermatology website and mobile applications are accessible to everyone, including individuals with disabilities. If you require assistance using our site or app, please call our support team at <span className="text-[#A66A47]">(480) 418-3314.</span></p>
+              <p className=" text-[18px] md:text-[22px] text-[#333333] font-normal leading-[150%] text-center">We are committed to ensuring that our dermatology website and mobile applications are accessible to everyone, including individuals with disabilities. If you require assistance using our site or app, please call our support team at <a href="tel:+14804183314" className="text-[#8A5536] underline">(480) 418-3314</a>.</p>
           </div>
     </section>
   );

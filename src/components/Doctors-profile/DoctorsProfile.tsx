@@ -24,7 +24,7 @@ export default function DoctorProfile() {
 
           {/* Doctor Information */}
           <div className="w-full md:w-full lg:w-3/4 space-y-6">
-            <h1 className="text-4xl md:text-5xl font-bold">Meet Dr. Lavian </h1>
+            <h2 className="text-4xl md:text-5xl font-bold">Meet Dr. Lavian </h2>
 
             <p className="text-base md:text-lg text-justify">
               Dr. Jonathan Lavian is a double board-certified specialist in Dermatology
@@ -70,7 +70,7 @@ export default function DoctorProfile() {
               <div className="flex items-center gap-x-3">
                 <Phone className="h-4 w-4" />
                 <span className="text-sm md:text-base text-[#FFFFFF] font-semibold">
-                  Questions? Give us a call: (480) 418-3314
+                  Questions? Give us a call: <a href="tel:+14804183314" className="hover:underline">(480) 418-3314</a>
                 </span>
               </div>
             </div>

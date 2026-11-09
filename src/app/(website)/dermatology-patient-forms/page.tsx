@@ -2,6 +2,9 @@ import Header from "@/components/Headers/Header";
 import React from "react";
 import DownloadForms from "./_components/DwonlodeFroms";
 import Consultation from "@/components/Consultation/Consultation";
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/dermatology-patient-forms");
 
 const page = () => {
   return (

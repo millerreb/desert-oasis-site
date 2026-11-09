@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect, Suspense } from "react"
+import { useState, useEffect } from "react"
+import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 
-type TreatmentCategory = "Medical" | "Surgical" | "Cosmetic"
+export type TreatmentCategory = "Medical" | "Surgical" | "Cosmetic"
 
 interface Treatment {
   id: string
@@ -12,19 +13,16 @@ interface Treatment {
   description?: string
 }
 
-// Create a separate component that uses useSearchParams
-function ServicesContent() {
-  const [activeCategory, setActiveCategory] = useState<TreatmentCategory>("Medical")
+// The starting tab comes from the page address (?category=...), read on the server,
+// so the list of services is in the page as soon as it loads.
+export default function Services({ initialCategory = "Medical" }: { initialCategory?: TreatmentCategory }) {
+  const [activeCategory, setActiveCategory] = useState<TreatmentCategory>(initialCategory)
   const router = useRouter()
-  const searchParams = useSearchParams()
 
-  // Update active category when URL query parameter changes
+  // Update the active tab when the address changes (e.g. the browser Back button)
   useEffect(() => {
-    const categoryParam = searchParams.get("category") as TreatmentCategory
-    if (categoryParam && ["Medical", "Surgical", "Cosmetic"].includes(categoryParam)) {
-      setActiveCategory(categoryParam)
-    }
-  }, [searchParams])
+    setActiveCategory(initialCategory)
+  }, [initialCategory])
 
   const categories: Record<TreatmentCategory, Treatment[]> = {
     Medical: [
@@ -53,10 +51,6 @@ function ServicesContent() {
       { id: "chemical-peels", name: "Chemical Peels " },
       { id: "microneedling", name: "Microneedling (acne scars)" },
     ],
-  }
-
-  const handleTreatmentClick = (treatmentId: string) => {
-    router.push(`/services/${treatmentId}`)
   }
 
   const handleCategoryChange = (category: TreatmentCategory) => {
@@ -92,26 +86,17 @@ function ServicesContent() {
             } gap-[30px] mt-[100px]`}
         >
           {categories[activeCategory].map((treatment) => (
-            <button
+            <Link
               key={treatment.id}
-              onClick={() => handleTreatmentClick(treatment.id)}
-              className="border border-[#A66A47] rounded py-[15.5px] w-full sm:w-[300px]  xl:w-[350px] text-center hover:border-[#A66A47] transition-colors text-base font-semibold text-[#333333] mx-auto"
+              href={`/services/${treatment.id}`}
+              className="block border border-[#A66A47] rounded py-[15.5px] w-full sm:w-[300px]  xl:w-[350px] text-center hover:border-[#A66A47] transition-colors text-base font-semibold text-[#333333] mx-auto"
             >
               <span className="text-sm sm:text-base">{treatment.name}</span>
-            </button>
+            </Link>
           ))}
         </div>
       </div>
     </div>
-  )
-}
-
-// Main component with Suspense boundary
-export default function Services() {
-  return (
-    <Suspense fallback={<div className="container w-full px-4 py-8 text-center">Loading services...</div>}>
-      <ServicesContent />
-    </Suspense>
   )
 }
 

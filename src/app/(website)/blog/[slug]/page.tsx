@@ -2,6 +2,12 @@
 import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
+import { pageMeta } from "@/lib/seo";
+
+// Gives each blog article a canonical tag and keeps it out of search while the blog is hidden
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  return pageMeta(`/blog/${params.slug}`);
+}
 
 const page = () => {
   return (

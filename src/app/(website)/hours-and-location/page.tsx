@@ -3,6 +3,9 @@ import React from 'react'
 
 import Consultation from '@/components/Consultation/Consultation'
 import BusinessHours from './OfficeHours'
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta("/hours-and-location");
 
 const page = () => {
   return (
