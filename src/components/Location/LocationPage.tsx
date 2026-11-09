@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { MapPin, Phone, Printer } from "lucide-react"
 import Consultation from "@/components/Consultation/Consultation"
+import JsonLd from "@/components/JsonLd/JsonLd"
+import { clinicSchema } from "@/lib/schema"
 import {
     offices,
     WEEK,
@@ -89,6 +91,8 @@ export default function LocationPage({ office }: { office: Office }) {
 
     return (
         <main>
+            <JsonLd data={clinicSchema(office)} />
+
             {/* Hero */}
             <section className="bg-[#A66A47]">
                 <div className="container py-5 md:py-10">

@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
-import { defaultSeo } from "@/lib/seo";
+import { defaultSeo, SITE_URL } from "@/lib/seo";
 
 
 
@@ -14,6 +14,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: defaultSeo.title,
   description: defaultSeo.description,
   icons: {

@@ -7,6 +7,42 @@ import { getServiceById } from "@/lib/mokdata";
 
 type PageSeo = { title: string; description: string };
 
+// The site's official address. Google already lists the www version, so every page's
+// canonical tag points here (e.g. https://www.dodermatology.com/services/acne).
+export const SITE_URL = "https://www.dodermatology.com";
+
+// Pages kept out of Google search results. They still work for anyone who visits.
+// To unhide a page, delete its line. A section like "/blog" also covers every page under it.
+export const hiddenFromSearch = [
+  "/homepage", // duplicate of the homepage at "/"
+  "/future-comming-soon",
+  "/maricopa-survey-redirect",
+  "/chandler-survey-redirect",
+  "/reviews",
+  "/patient-portal",
+  "/recommended-products",
+  "/blog",
+];
+
+export function isHiddenFromSearch(path: string): boolean {
+  return hiddenFromSearch.some((p) => path === p || path.startsWith(`${p}/`));
+}
+
+// Pages whose canonical tag points somewhere other than their own address.
+const canonicalOverrides: Record<string, string> = {
+  "/homepage": "/",
+};
+
+// Canonical tag + "don't show in search" tag for a page.
+function searchTags(path: string): Metadata {
+  const canonicalPath = canonicalOverrides[path] ?? path;
+  return {
+    // new URL() joins the address and path with exactly one slash, with or without a leading "/"
+    alternates: { canonical: new URL(canonicalPath, SITE_URL).toString() },
+    ...(isHiddenFromSearch(path) ? { robots: { index: false, follow: true } } : {}),
+  };
+}
+
 const BRAND = "Desert Oasis Dermatology";
 const AREA = "Maricopa, AZ & Chandler, AZ";
 
@@ -117,9 +153,13 @@ const pages: Record<string, PageSeo> = {
   },
 };
 
+// Every page with an entry above; the sitemap is built from this list.
+export const pagePaths = Object.keys(pages);
+
 export function pageMeta(path: string): Metadata {
-  const seo = pages[path] ?? defaultSeo;
-  return { title: seo.title, description: seo.description };
+  // Blog articles share the blog's title until they have their own.
+  const seo = pages[path] ?? (path.startsWith("/blog/") ? pages["/blog"] : defaultSeo);
+  return { title: seo.title, description: seo.description, ...searchTags(path) };
 }
 
 // Service pages (/services/[id]): one description per service.
@@ -174,5 +214,6 @@ export function serviceMeta(id: string): Metadata {
     description:
       serviceDescriptions[id] ??
       `${service.serviceName} from a board-certified dermatologist in Maricopa and Chandler, AZ.`,
+    ...searchTags(`/services/${id}`),
   };
 }
