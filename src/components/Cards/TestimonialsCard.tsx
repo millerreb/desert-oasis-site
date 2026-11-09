@@ -35,14 +35,6 @@ const testimonials: TestimonialProps[] = [
     {
         rating: 5,
         quote:
-            "Dr. Lavian's expertise and compassionate approach immediately put me at ease during my skin cancer screening. I felt well-informed and truly cared for every step of the way.",
-        name: "Sarah",
-        location: "AZ",
-        avatarSrc: "/placeholder.svg?height=40&width=40",
-    },
-    {
-        rating: 5,
-        quote:
             "The care I received was exceptional. Dr. Lavian took the time to explain everything thoroughly and answer all my questions.",
         name: "Michael",
         location: "AZ",
