@@ -49,7 +49,7 @@ const AREA = "Maricopa & Chandler, AZ";
 export const defaultSeo: PageSeo = {
   title: `${BRAND} | ${AREA}`,
   description:
-    "Board-certified dermatology and Mohs surgery in Maricopa and Chandler, AZ, treating acne, eczema, skin cancer and more. Most insurances accepted.",
+    "Board-certified dermatology and Mohs surgery in Arizona, treating acne, eczema, skin cancer and more. Most insurances accepted.",
 };
 
 const pages: Record<string, PageSeo> = {
@@ -63,7 +63,7 @@ const pages: Record<string, PageSeo> = {
   "/services": {
     title: `Dermatology Services in ${AREA}`,
     description:
-      "Medical, surgical and cosmetic dermatology in Maricopa and Chandler, AZ: skin cancer screening, Mohs surgery, acne, eczema, psoriasis, Botox, peels and more.",
+      "Medical, surgical and cosmetic dermatology in Maricopa and Chandler, AZ: skin cancer screening, Mohs surgery in Chandler location, acne, eczema, psoriasis, Botox, peels and more.",
   },
   "/hours-and-location": {
     title: `Office Hours & Locations | ${AREA}`,
@@ -73,7 +73,7 @@ const pages: Record<string, PageSeo> = {
   "/maricopa-dermatologist": {
     title: `Dermatologist in Maricopa, AZ | ${BRAND}`,
     description:
-      "Board-certified dermatologist on John Wayne Pkwy in Maricopa, AZ, open Wednesdays and Fridays. Skin cancer screening, Mohs surgery, acne, eczema and cosmetics.",
+      "Board-certified dermatologist on John Wayne Pkwy in Maricopa, AZ, open Wednesdays and Fridays. Skin cancer screening, surgery, acne, and eczema.",
   },
   "/chandler-dermatologist": {
     title: `Dermatologist in Chandler, AZ | ${BRAND}`,
@@ -193,7 +193,7 @@ const serviceDescriptions: Record<string, string> = {
   rosaceae:
     "Rosacea treatment to reduce facial redness, flushing and bumps, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
   "mohs-surgery":
-    "Mohs surgery for skin cancer by a double board-certified Mohs surgeon in Maricopa and Chandler, AZ. High cure rates with maximum healthy skin preserved.",
+    "Mohs surgery for skin cancer by a double board-certified Mohs surgeon in Chandler, AZ. High cure rates with maximum healthy skin preserved.",
   excision:
     "Surgical removal of skin cancers, cysts, moles and other growths by a board-certified dermatologic surgeon in Maricopa and Chandler, AZ.",
   "cyst-drainage":

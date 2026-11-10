@@ -18,8 +18,8 @@ import {
 // Shared template for the Maricopa and Chandler office pages.
 // Colors meet WCAG AA contrast: body #333333, links/buttons #8A5536, large headings #A66A47.
 
-const serviceGroups = [
-    {
+const chandlerServiceGroups = [
+    {   id: "MedDerm",
         title: "Medical Dermatology",
         intro: "We treat every medical skin, hair and nail condition, including:",
         links: [
@@ -34,6 +34,7 @@ const serviceGroups = [
         ],
     },
     {
+        id: "SurDerm",
         title: "Skin Cancer & Surgical Dermatology",
         intro:
             "Arizona has some of the highest UV exposure in the country, which makes regular skin checks especially important. Services include:",
@@ -45,6 +46,7 @@ const serviceGroups = [
         ],
     },
     {
+        id: "CosDerm",
         title: "Cosmetic Dermatology",
         intro: "Cosmetic treatments performed by a board-certified dermatologist, including dermal fillers and:",
         links: [
@@ -55,11 +57,44 @@ const serviceGroups = [
     },
 ]
 
+const maricopaServiceGroups = [
+    {   id: "MedDerm",
+        title: "Medical Dermatology",
+        intro: "We treat every medical skin, hair and nail condition, including:",
+        links: [
+            { href: "/services/acne", label: "Acne" },
+            { href: "/services/eczema", label: "Eczema" },
+            { href: "/services/psoriasis", label: "Psoriasis" },
+            { href: "/services/rosaceae", label: "Rosacea" },
+            { href: "/services/warts", label: "Warts" },
+            { href: "/services/hair-loss", label: "Hair loss" },
+            { href: "/services/molluscum", label: "Molluscum " },
+            { href: "/services/dandruff", label: "Dandruff" },
+            { href: "/services/excessive-sweating", label: "Excessive sweating" },
+            { href: "/services/allergic-reactions", label: "Skin allergies and rashes" },
+            { href: "/services/hand-dermatitis", label: "Hand Dermatitis" },
+        ],
+    },
+    {
+        id: "SurDerm",
+        title: "Skin Cancer & Surgical Dermatology",
+        intro:
+            "Arizona has some of the highest UV exposure in the country, which makes regular skin checks especially important. Services include:",
+        links: [
+            { href: "/services/skin-cancer-screening", label: "Full-body skin cancer screenings" },
+            { href: "/services/excision", label: "Removal of skin cancers and growths" },
+            { href: "/services/cyst-drainage", label: "Cyst drainage" },
+        ],
+    },
+
+];
+
+const serviceGroups = (office: Office) => (office.city === "Chandler" ? chandlerServiceGroups : maricopaServiceGroups)
+
 const reasons = [
     "Board-certified dermatology for medical, surgical and cosmetic skin care",
-    "Skin cancer care from screening through Mohs surgery in one practice",
-    "Two offices, in Maricopa and Chandler",
-    "Medicare, several AHCCCS plans and most major insurance accepted",
+    "Skin cancer care from screening through surgery in one practice",
+    "All AHCCCS plans, and most Medicare Advantage and private insurance plans accepted",
     "Online booking and secure text messaging",
 ]
 
@@ -81,7 +116,7 @@ export default function LocationPage({ office }: { office: Office }) {
         },
         {
             q: "Do you accept Medicare and AHCCCS?",
-            a: "Yes. We accept Medicare and several AHCCCS plans, along with most major insurance, including Aetna, Blue Cross Blue Shield, Cigna, Humana and UnitedHealthcare. Self-pay pricing is also available.",
+            a: "Yes. We accept all AHCCCS plans and most Medicare Advantage plans, along with most private insurance plans, including Aetna, Blue Cross Blue Shield, Cigna, Humana and UnitedHealthcare. Self-pay pricing is also available.",
         },
         {
             q: `How do I find the ${office.city} office?`,
@@ -109,7 +144,7 @@ export default function LocationPage({ office }: { office: Office }) {
             <section className="container mt-[60px]">
                 <div className="max-w-[900px] mx-auto text-center space-y-5">
                     <p className="text-[18px] md:text-[20px] text-[#333333] leading-[160%]">
-                        Desert Oasis Dermatology brings board-certified medical, surgical and cosmetic dermatology to {office.city}.
+                        {office.city === "Chandler" ? `Desert Oasis Dermatology brings board-certified medical, surgical and cosmetic dermatology to ${office.city}.` : `Desert Oasis Dermatology brings board-certified medical and surgical dermatology to ${office.city}.`}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
                         <a
@@ -210,8 +245,9 @@ export default function LocationPage({ office }: { office: Office }) {
                 <h2 className="text-[28px] md:text-[32px] text-[#A66A47] font-semibold text-center">
                     Dermatology Services in {office.city}
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                    {serviceGroups.map((group) => (
+                {/* Two groups (Maricopa): two centered columns, same card width as three */}
+                <div className={`grid grid-cols-1 gap-8 mt-8 ${serviceGroups(office).length === 2 ? "md:grid-cols-2 md:w-2/3 mx-auto" : "md:grid-cols-3"}`}>
+                    {serviceGroups(office).map((group) => (
                         <div key={group.title} className="border border-[#C7925B] rounded-lg p-6">
                             <h3 className="text-[20px] text-[#333333] font-semibold">{group.title}</h3>
                             <p className="text-base text-[#333333] mt-3 leading-[160%]">{group.intro}</p>
@@ -255,7 +291,7 @@ export default function LocationPage({ office }: { office: Office }) {
             <section className="container mt-[60px]">
                 <h2 className="text-[28px] md:text-[32px] text-[#A66A47] font-semibold text-center">Insurance Accepted</h2>
                 <p className="max-w-[900px] mx-auto text-center text-base md:text-lg text-[#333333] mt-5 leading-[160%]">
-                    We accept Medicare, several AHCCCS plans and most major insurance, including Aetna, Blue Cross Blue Shield,
+                    We accept all AHCCCS, most Medicare Advantage plans and most major private insurance plans, including Aetna, Blue Cross Blue Shield,
                     Cigna, Humana and UnitedHealthcare. Self-pay pricing is also available. Most HMO plans require a referral from
                     your primary care provider before your visit.
                 </p>
