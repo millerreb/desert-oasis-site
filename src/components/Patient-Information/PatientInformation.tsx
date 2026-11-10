@@ -174,14 +174,15 @@ const OurServices = () => {
               your care team in one secure place.
             </p>
             <div className="flex justify-center mt-[54px]">
-              <Link href="/patient-portal">
-                <Button
-                  className="bg-[#C7925B] text-base font-midium text-white px-[25px] py-[10px] mt-5 transition-all duration-300 
+              <Button
+                asChild
+                className="bg-[#C7925B] text-base font-midium text-white px-[25px] py-[10px] mt-5 transition-all duration-300 
             group-hover:bg-white group-hover:text-[#C7925B]/80"
-                >
+              >
+                <Link href="https://dodermatology.ema.md" rel="noreferrer" target="_blank">
                   Log In
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
           {/* =================================card8=============================== */}
