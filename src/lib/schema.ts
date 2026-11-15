@@ -2,11 +2,12 @@
 // name, offices, addresses, hours and phone number in a format it reads directly.
 // Everything comes from site.ts, so updating hours or addresses there updates this too.
 //
-// Intentionally left out: individual physician entries (no names or credentials on the
-// site) and review/rating markup (Google doesn't show stars from a site's own testimonials).
+// Intentionally left out: individual physician entries (beyond the author named on blog
+// articles) and review/rating markup (Google doesn't show stars from a site's own testimonials).
 
 import { SITE_URL } from "@/lib/seo"
 import { offices, PHONE, FAX, type Office } from "@/lib/site"
+import { BLOG_AUTHOR, type BlogPost } from "@/lib/blogPosts"
 
 const url = (path: string) => new URL(path, SITE_URL).toString()
 
@@ -99,5 +100,26 @@ export function clinicSchema(office: Office) {
       name: PRACTICE_NAME,
       url: url("/"),
     },
+  }
+}
+
+// A blog article: its headline, date and author (shown on the article itself)
+export function blogPostingSchema(post: BlogPost) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    url: url(`/blog/${post.slug}`),
+    mainEntityOfPage: url(`/blog/${post.slug}`),
+    ...(post.image ? { image: url(post.image) } : {}),
+    author: {
+      "@type": "Person",
+      name: BLOG_AUTHOR.name,
+      url: url(BLOG_AUTHOR.url),
+      jobTitle: "Board-Certified Dermatologist",
+    },
+    publisher: { "@id": ORGANIZATION_ID },
   }
 }

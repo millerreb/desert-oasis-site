@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getServiceById } from "@/lib/mokdata";
+import { BLOG_AUTHOR, getPostBySlug } from "@/lib/blogPosts";
 
 // Page titles and descriptions for every page on the site.
 // Each page imports what it needs, e.g.  export const metadata = pageMeta("/about")
@@ -21,7 +22,6 @@ export const hiddenFromSearch = [
   "/reviews",
   "/patient-portal",
   "/recommended-products",
-  "/blog",
 ];
 
 export function isHiddenFromSearch(path: string): boolean {
@@ -157,8 +157,7 @@ const pages: Record<string, PageSeo> = {
 export const pagePaths = Object.keys(pages);
 
 export function pageMeta(path: string): Metadata {
-  // Blog articles share the blog's title until they have their own.
-  const seo = pages[path] ?? (path.startsWith("/blog/") ? pages["/blog"] : defaultSeo);
+  const seo = pages[path] ?? defaultSeo;
   return { title: seo.title, description: seo.description, ...searchTags(path) };
 }
 
@@ -226,5 +225,26 @@ export function serviceMeta(id: string): Metadata {
       serviceDescriptions[id] ??
       `${service.serviceName} from a board-certified dermatologist in Maricopa and Chandler, AZ.`,
     ...searchTags(`/services/${id}`),
+  };
+}
+
+// Blog articles (/blog/[slug]): title, description and date come from blogPosts.ts.
+export function blogPostMeta(slug: string): Metadata {
+  const post = getPostBySlug(slug);
+  if (!post) return pageMeta("/blog");
+  return {
+    // No practice name here: Google shows the site name above each result
+    title: post.title,
+    description: post.description,
+    authors: [{ name: BLOG_AUTHOR.name, url: new URL(BLOG_AUTHOR.url, SITE_URL).toString() }],
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.description,
+      url: new URL(`/blog/${slug}`, SITE_URL).toString(),
+      publishedTime: post.date,
+      ...(post.image ? { images: [post.image] } : {}),
+    },
+    ...searchTags(`/blog/${slug}`),
   };
 }
