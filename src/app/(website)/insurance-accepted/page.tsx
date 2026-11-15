@@ -89,7 +89,7 @@ const page = () => {
         <div className="container mt-[60px] pb-[60px]">
           <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-[#A66A47] mb-8">Self-Pay Pricing for Uninsured Patients</h2>
           <ul style={{listStyleType: "disc", color: "#A66A47"}}>
-            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] mt-[20px] text-justify md:text-start">Office Visit (New Patient): $185.00</p></li>
+            <li><p className="text-base text-[#A66A47] font-normal leading-[150%] mt-[20px] text-justify md:text-start">Office Visit (New Patient): $190.00</p></li>
             <li><p className="text-base text-[#A66A47] font-normal leading-[150%] mt-[20px] text-justify md:text-start">Office Visit (Existing Patient Follow-up): $150.00</p></li>
           </ul>
           <p className="text-base text-[#A66A47] font-midium mb-[20px] mt-[20px]"><i>(Note: Office visit fees do not include any procedures such as biopsies or cryotherapy.)</i></p>
