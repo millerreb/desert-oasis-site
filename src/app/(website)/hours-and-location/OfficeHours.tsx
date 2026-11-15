@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { MapPin, Phone } from "lucide-react"
-import { offices, WEEK, formatTime, PHONE, PHONE_LINK } from "@/lib/site"
+import { MapPin } from "lucide-react"
+import { offices, WEEK, formatTime } from "@/lib/site"
+import FrontOfficeHours from "@/components/Location/FrontOfficeHours"
 
 export default function BusinessHours() {
     return (
@@ -23,7 +24,8 @@ export default function BusinessHours() {
                                 </address>
                             </div>
 
-                            <div className="w-full mt-6">
+                            <h5 className="text-[18px] md:text-[20px] text-[#333333] font-semibold text-center mt-6">Appointment hours</h5>
+                            <div className="w-full mt-2">
                                 {WEEK.map((day) => {
                                     const open = office.hours.find((h) => h.day === day)
                                     return (
@@ -35,7 +37,7 @@ export default function BusinessHours() {
                                                 {day}
                                             </span>
                                             <span className={`text-base md:text-xl ${open ? "text-[#333333] font-bold" : "text-[#595959] font-semibold"}`}>
-                                                {open ? `${formatTime(open.opens)} – ${formatTime(open.closes)}` : "Closed"}
+                                                {open ? `${formatTime(open.opens)} – ${formatTime(open.closes)}` : "No appointments"}
                                             </span>
                                         </div>
                                     )
@@ -63,15 +65,7 @@ export default function BusinessHours() {
                 ))}
             </div>
 
-            <div className="mt-10 space-y-2 text-[#8A5536] font-medium px-2 text-center">
-                <p className="text-sm sm:text-base">We see patients at both offices on the days shown above.</p>
-                <p className="text-sm sm:text-base flex items-center justify-center gap-2">
-                    <Phone className="h-4 w-4" />
-                    <span>
-                        Call or text to schedule: <a href={PHONE_LINK} className="underline">{PHONE}</a>
-                    </span>
-                </p>
-            </div>
+            <FrontOfficeHours className="mt-10 max-w-[760px] mx-auto" />
         </div>
     )
 }

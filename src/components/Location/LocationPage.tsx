@@ -3,11 +3,13 @@ import { MapPin, Phone, Printer } from "lucide-react"
 import Consultation from "@/components/Consultation/Consultation"
 import JsonLd from "@/components/JsonLd/JsonLd"
 import { clinicSchema } from "@/lib/schema"
+import FrontOfficeHours from "@/components/Location/FrontOfficeHours"
 import {
     offices,
     WEEK,
     formatTime,
     openDaysText,
+    frontOfficeHoursText,
     PHONE,
     PHONE_LINK,
     FAX,
@@ -101,14 +103,15 @@ const reasons = [
 export default function LocationPage({ office }: { office: Office }) {
     const other = offices.find((o) => o.key !== office.key)!
     const days = openDaysText(office)
-    const hoursSentence = office.hours
-        .map((h) => `${h.day} ${formatTime(h.opens)}–${formatTime(h.closes)}`)
-        .join(", ")
+    // "Monday 8:30 AM–4:30 PM, Tuesday 8:30 AM–12:00 PM and Thursday 8:30 AM–4:30 PM"
+    const hoursList = office.hours.map((h) => `${h.day} ${formatTime(h.opens)}–${formatTime(h.closes)}`)
+    const hoursSentence =
+        hoursList.length > 1 ? `${hoursList.slice(0, -1).join(", ")} and ${hoursList[hoursList.length - 1]}` : hoursList[0]
 
     const faqs = [
         {
             q: `What are the hours at the ${office.city} office?`,
-            a: `Our ${office.city} office is open ${hoursSentence}. We also see patients at our ${other.city} office on ${openDaysText(other)}.`,
+            a: `Appointments at our ${office.city} office are ${hoursSentence}. We also see patients at our ${other.city} office on ${openDaysText(other)}. Our front office answers calls and texts for both offices ${frontOfficeHoursText()}, at ${PHONE}.`,
         },
         {
             q: "Do I need a referral to see a dermatologist?",
@@ -135,7 +138,7 @@ export default function LocationPage({ office }: { office: Office }) {
                         Dermatologist in {office.city}, AZ
                     </h1>
                     <p className="w-full md:w-[650px] mx-auto text-sm md:text-base text-[#FFFFFF] font-semibold text-center mt-5 md:mt-[30px]">
-                        Board-certified dermatology on {office.road}, open {days}.
+                        Board-certified dermatology on {office.road}, seeing patients {days}.
                     </p>
                 </div>
             </section>
@@ -192,7 +195,8 @@ export default function LocationPage({ office }: { office: Office }) {
                             <span>Fax: {FAX}</span>
                         </div>
 
-                        <h3 className="text-[20px] text-[#333333] font-semibold mt-8 mb-2">Office hours</h3>
+                        <h3 className="text-[20px] text-[#333333] font-semibold mt-8">Appointment hours</h3>
+                        <p className="text-base text-[#555555] mb-2">Days we see patients at this office</p>
                         <div>
                             {WEEK.map((day) => {
                                 const open = office.hours.find((h) => h.day === day)
@@ -203,12 +207,14 @@ export default function LocationPage({ office }: { office: Office }) {
                                     >
                                         <span className={open ? "text-[#333333] font-bold" : "text-[#595959]"}>{day}</span>
                                         <span className={open ? "text-[#333333] font-bold" : "text-[#595959]"}>
-                                            {open ? `${formatTime(open.opens)} – ${formatTime(open.closes)}` : "Closed"}
+                                            {open ? `${formatTime(open.opens)} – ${formatTime(open.closes)}` : "No appointments"}
                                         </span>
                                     </div>
                                 )
                             })}
                         </div>
+
+                        <FrontOfficeHours className="mt-6" />
 
                         <a
                             href={office.directionsUrl}

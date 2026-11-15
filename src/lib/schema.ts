@@ -6,7 +6,7 @@
 // articles) and review/rating markup (Google doesn't show stars from a site's own testimonials).
 
 import { SITE_URL } from "@/lib/seo"
-import { offices, PHONE, FAX, type Office } from "@/lib/site"
+import { offices, PHONE, FAX, FRONT_OFFICE_HOURS, type Office } from "@/lib/site"
 import { BLOG_AUTHOR, type BlogPost } from "@/lib/blogPosts"
 
 const url = (path: string) => new URL(path, SITE_URL).toString()
@@ -85,7 +85,9 @@ export function clinicSchema(office: Office) {
       postalCode: office.zip,
       addressCountry: "US",
     },
-    openingHoursSpecification: office.hours.map((h) => ({
+    // Front office hours (Mon-Fri), matching the Google Business Profile. The days the
+    // doctor sees patients here are shown on the office page itself.
+    openingHoursSpecification: FRONT_OFFICE_HOURS.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,
       opens: h.opens,

@@ -73,12 +73,12 @@ const pages: Record<string, PageSeo> = {
   "/maricopa-dermatologist": {
     title: `Dermatologist in Maricopa, AZ | ${BRAND}`,
     description:
-      "Board-certified dermatologist on John Wayne Pkwy in Maricopa, AZ, open Wednesdays and Fridays. Skin cancer screening, surgery, acne, and eczema.",
+      "Board-certified dermatologist on John Wayne Pkwy in Maricopa, AZ, seeing patients Wednesdays and Fridays. Skin cancer screening, surgery, acne and eczema.",
   },
   "/chandler-dermatologist": {
     title: `Dermatologist in Chandler, AZ | ${BRAND}`,
     description:
-      "Board-certified dermatologist on S Alma School Rd in Chandler, AZ, open Mon, Tue and Thu. Skin cancer screening, Mohs surgery, acne, eczema and cosmetics.",
+      "Board-certified dermatologist on S Alma School Rd in Chandler, AZ, seeing patients Mon, Tue and Thu. Skin cancer screening, Mohs surgery, acne and cosmetics.",
   },
   "/insurance-accepted": {
     title: `Insurance & Self-Pay Prices | ${BRAND}`,

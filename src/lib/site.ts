@@ -35,6 +35,9 @@ export type Office = {
   suite: string;
   city: string;
   zip: string;
+  // Appointment hours: the days the doctor sees patients at this office.
+  // The office is closed on other days, but the front office still answers the phone
+  // (see FRONT_OFFICE_HOURS below).
   hours: OpenHours[];
   directionsUrl: string;
   // Used by the office pages (/maricopa-dermatologist, /chandler-dermatologist)
@@ -85,6 +88,20 @@ export const offices: Office[] = [
     nearby: ["Maricopa", "Casa Grande", "Stanfield", "Ak-Chin", "Hidden Valley"],
   },
 ];
+
+// Front office hours: when patients can call or text (480) 418-3314 about either office.
+// The same for both offices. Google's data for each office uses these hours too, to match
+// the Google Business Profiles (which show Monday-Friday).
+export const FRONT_OFFICE_HOURS: OpenHours[] = (
+  ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] as Day[]
+).map((day) => ({ day, opens: "08:30", closes: "16:30" }));
+
+// "Monday–Friday, 8:30 AM – 4:30 PM" (assumes the front office keeps the same hours every day it's open)
+export function frontOfficeHoursText(): string {
+  const first = FRONT_OFFICE_HOURS[0];
+  const last = FRONT_OFFICE_HOURS[FRONT_OFFICE_HOURS.length - 1];
+  return `${first.day}–${last.day}, ${formatTime(first.opens)} – ${formatTime(first.closes)}`;
+}
 
 // "08:30" -> "8:30 AM"
 export function formatTime(t: string): string {
