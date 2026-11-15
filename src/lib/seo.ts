@@ -100,11 +100,6 @@ const pages: Record<string, PageSeo> = {
     description:
       "Pay your Desert Oasis Dermatology bill securely online or by phone, and find answers to common billing questions.",
   },
-  "/billing-questions": {
-    title: `Billing Questions | ${BRAND}`,
-    description:
-      "How to reach the Desert Oasis Dermatology billing team with questions about your statement, insurance or payment options.",
-  },
   "/chat-with-us": {
     title: `Text or Chat With Us | ${BRAND}`,
     description:

@@ -4,7 +4,6 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import icon1 from "@/../../public/icon/icon1.png";
 import icon2 from "@/../../public/icon/icon2.png";
-import icon3 from "@/../../public/icon/icon3.png";
 import icon4 from "@/../../public/icon/icon4.png";
 import icon5 from "@/../../public/icon/icon5.png";
 import icon6 from "@/../../public/icon/icon6.png";
@@ -22,7 +21,7 @@ const OurServices = () => {
         subtitle="Welcome to your one-stop hub for managing your dermatology care."
       />
       <div className=" container mt-[60px]">
-        <div className="flex justify-between flex-wrap gap-y-[50px] mt-[60px]">
+        <div className="flex justify-center flex-wrap gap-y-[50px] md:gap-x-[4%] lg:gap-x-[5%] mt-[60px]">
           {/* =================================card1=============================== */}
           <div className=" w-full md:w-[48%] lg:w-[30%] border border-[#A66A47] rounded-[10px] p-5 group hover:bg-[#C7925B] transition-all duration-300">
             <div className="flex justify-center">
@@ -65,29 +64,6 @@ const OurServices = () => {
                      group-hover:bg-white group-hover:text-[#C7925B]/80"
                 >
                   Pay Bill
-                </Button>
-              </Link>
-            </div>
-          </div>
-          {/* =================================card3=============================== */}
-          <div className=" w-full md:w-[48%] lg:w-[30%] border border-[#A66A47] rounded-[10px] p-5 group hover:bg-[#C7925B] transition-all duration-300">
-            <div className="flex justify-center">
-              <Image src={icon3} alt="placeholder" width={60} height={60} />
-            </div>
-            <h3 className="text-[24px] text-[#A66A47] font-semibold text-center mt-[30px] group-hover:text-white">
-              Billing Questions
-            </h3>
-            <p className="h-[96px] text-xl text-[#698B8F] font-normal text-center mt-5 group-hover:text-white">
-              Download and complete all necessary forms ahead of your visit for
-              a smooth check-in process.
-            </p>
-            <div className="flex justify-center mt-[54px]">
-              <Link href="/billing-questions">
-                <Button
-                  className="bg-[#C7925B] text-base font-midium text-white px-[25px] py-[10px] mt-5 transition-all duration-300 
-            group-hover:bg-white group-hover:text-[#C7925B]/80"
-                >
-                  View Forms
                 </Button>
               </Link>
             </div>
