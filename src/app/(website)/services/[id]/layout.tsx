@@ -1,7 +1,6 @@
 import { serviceMeta } from "@/lib/seo";
 
-// The service details page is a client component, so each service's title and
-// description are set here instead.
+// Each service page's title and description (from seo.ts).
 export function generateMetadata({ params }: { params: { id: string } }) {
   return serviceMeta(params.id);
 }

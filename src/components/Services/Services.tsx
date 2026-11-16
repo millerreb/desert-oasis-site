@@ -26,20 +26,20 @@ export default function Services({ initialCategory = "Medical" }: { initialCateg
 
   const categories: Record<TreatmentCategory, Treatment[]> = {
     Medical: [
-      { id: "skin-cancer-screening", name: "Skin Cancer screening" },
+      { id: "skin-cancer-screening", name: "Skin Cancer Screening" },
       { id: "acne", name: "Acne" },
       { id: "eczema", name: "Eczema" },
       { id: "hand-dermatitis", name: "Hand Dermatitis" },
       { id: "warts", name: "Warts" },
       { id: "excessive-sweating", name: "Excessive Sweating" },
       { id: "hair-loss", name: "Hair Loss" },
-      { id: "dark-spots", name: "Dark spots" },
-      { id: "allergic-reactions", name: "Allergic reactions on skin" },
-      { id: "molluscum", name: "Molluscum " },
+      { id: "dark-spots", name: "Dark Spots" },
+      { id: "allergic-reactions", name: "Skin Allergies" },
+      { id: "molluscum", name: "Molluscum" },
       { id: "dandruff", name: "Dandruff" },
       { id: "vitiligo", name: "Vitiligo" },
       { id: "psoriasis", name: "Psoriasis" },
-      { id: "rosaceae", name: "Rosaceae" },
+      { id: "rosaceae", name: "Rosacea" },
       { id: "actinic-keratosis", name: "Actinic Keratosis (Precancerous Spots)" },
       { id: "mole-evaluation", name: "Mole Evaluation" },
       { id: "rash-evaluation", name: "Rash Evaluation" },
@@ -50,16 +50,16 @@ export default function Services({ initialCategory = "Medical" }: { initialCateg
     ],
     Surgical: [
       { id: "mohs-surgery", name: "Mohs Surgery" },
-      { id: "excision", name: "Excision (removal of cancer or growth)" },
-      { id: "cyst-drainage", name: "Cyst drainage" },
+      { id: "excision", name: "Excision (Removal of Cancer or Growth)" },
+      { id: "cyst-drainage", name: "Cyst Drainage" },
       { id: "skin-biopsy", name: "Skin Biopsy" },
       { id: "cryotherapy", name: "Cryotherapy (Liquid Nitrogen)" },
       { id: "benign-growth-removal", name: "Skin Tag & Benign Growth Removal" },
     ],
     Cosmetic: [
       { id: "botox", name: "Neurotoxins (Botox)" },
-      { id: "chemical-peels", name: "Chemical Peels " },
-      { id: "microneedling", name: "Microneedling (acne scars)" },
+      { id: "chemical-peels", name: "Chemical Peels" },
+      { id: "microneedling", name: "Microneedling (Acne Scars)" },
     ],
   }
 

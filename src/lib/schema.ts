@@ -8,6 +8,8 @@
 import { SITE_URL } from "@/lib/seo"
 import { offices, PHONE, FAX, FRONT_OFFICE_HOURS, type Office } from "@/lib/site"
 import { BLOG_AUTHOR, type BlogPost } from "@/lib/blogPosts"
+import type { ServiceData } from "@/lib/mokdata"
+import { plainText } from "@/components/Blog/RichText"
 
 const url = (path: string) => new URL(path, SITE_URL).toString()
 
@@ -32,6 +34,7 @@ const officeProfiles: Record<Office["key"], string[]> = {
 // Where each piece appears (each fact in one place):
 //   homepage            -> websiteSchema + organizationSchema
 //   each office page    -> clinicSchema for that office
+//   each service page   -> servicePageSchema (breadcrumb + FAQ)
 
 // The site's name, so Google can show "Desert Oasis Dermatology" as the site name in results
 export function websiteSchema() {
@@ -124,4 +127,32 @@ export function blogPostingSchema(post: BlogPost) {
     },
     publisher: { "@id": ORGANIZATION_ID },
   }
+}
+
+// A service page (/services/[id]): the breadcrumb trail (Home > Services > Medical) and
+// the page's questions and answers. Shown on the service page itself.
+export function servicePageSchema(service: ServiceData) {
+  const pageUrl = url(`/services/${service.id}`)
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: url("/") },
+      { "@type": "ListItem", position: 2, name: "Services", item: url("/services") },
+      { "@type": "ListItem", position: 3, name: service.category, item: url(`/services?category=${service.category}`) },
+      { "@type": "ListItem", position: 4, name: service.serviceName, item: pageUrl },
+    ],
+  }
+  if (service.faqs.length === 0) return [breadcrumb]
+  const faq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: pageUrl,
+    mainEntity: service.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: plainText(f.a) },
+    })),
+  }
+  return [breadcrumb, faq]
 }

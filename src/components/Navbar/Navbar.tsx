@@ -91,8 +91,9 @@ export default function Navbar() {
             <Popover open={servicesPopoverOpen} onOpenChange={setServicesPopoverOpen}>
               <PopoverTrigger asChild>
                 <Link
-                  href=""
+                  href="/services?category=Medical"
                   className={`text-sm font-normal text-[#363636] hover:text-amber-700 flex items-center gap-1 ${isActive("/services") ? "text-amber-700 font-bold" : ""}`}
+                  onClick={() => setTimeout(() => setServicesPopoverOpen(false), 100)}
                 >
                   Services
                 </Link>
@@ -444,9 +445,9 @@ export default function Navbar() {
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-between">
                       <Link
-                        href="/services"
+                        href="/services?category=Medical"
                         className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/services") ? "text-amber-700 font-bold" : ""}`}
-                        onClick={() => {}}
+                        onClick={() => setIsOpen(false)}
                       >
                         Services
                       </Link>
