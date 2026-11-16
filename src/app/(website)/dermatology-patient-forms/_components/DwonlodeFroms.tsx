@@ -16,14 +16,7 @@ const formGroups = [
         title: "Treatment & Skin Care Guides",
         forms: [
             { label: "Topical 5-FU Cream Patient Guide", file: "5-FU-Cream-Patient-Guide.pdf" },
-            { label: "Acne Treatment Plan", file: "Acne-Treatment-Plan.pdf" },
             { label: "Sensitive Skin Care Guide", file: "Sensitive-Skin-Care-Guide.pdf" },
-        ],
-    },
-    {
-        title: "Billing",
-        forms: [
-            { label: "Understanding Your Estimated Payment", file: "Estimated-Payment-Guide.pdf" },
         ],
     },
 ];
