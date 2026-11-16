@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import Logo from "@/../../Public/image/Logo.png"
+import Logo from "@/../../public/image/Logo.png"
 
 export default function Footer() {
   const pathname = usePathname()

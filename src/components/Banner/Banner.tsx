@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { ChevronLeft } from "lucide-react"
 import { IoIosArrowForward } from "react-icons/io"
-import banner from "@/../../Public/image/amt.jpg"
-import banner2 from "@/../../Public/image/banner222.jpg"
-import banner3 from "@/../../Public/image/new banner 333.jpg"
-import banner4 from "@/../../Public/image/banner45.jpg"
-import banner5 from "@/../../Public/image/banner26.jpg"
+import banner from "@/../../public/image/amt.jpg"
+import banner2 from "@/../../public/image/banner222.jpg"
+import banner3 from "@/../../public/image/new banner 333.jpg"
+import banner4 from "@/../../public/image/banner45.jpg"
+import banner5 from "@/../../public/image/banner26.jpg"
 
 interface SlideContent {
   id: number

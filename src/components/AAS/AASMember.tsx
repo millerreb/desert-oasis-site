@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import AASLogo from "@/../../Public/icon/AASlogo.png";
+import AASLogo from "@/../../public/icon/AASlogo.png";
 
 const AASMember = () => {
   return (
