@@ -198,6 +198,26 @@ const serviceDescriptions: Record<string, string> = {
     "Botox and neurotoxin injections to smooth lines and wrinkles, performed by a board-certified dermatologist in Maricopa and Chandler, AZ.",
   microneedling:
     "Microneedling to improve acne scars, fine lines and skin texture, performed by a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "actinic-keratosis":
+    "Treatment for actinic keratoses (rough, precancerous sun spots) with cryotherapy and prescription creams, in Maricopa and Chandler, AZ.",
+  "mole-evaluation":
+    "Evaluation of new or changing moles, plus in-office biopsy and mole removal, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "rash-evaluation":
+    "Diagnosis and treatment of rashes that won't go away, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "skin-infections":
+    "Diagnosis and treatment of fungal and bacterial skin infections, including ringworm, impetigo and folliculitis, in Maricopa and Chandler, AZ.",
+  "nail-conditions":
+    "Treatment for nail fungus, ingrown and discolored nails, and other nail problems from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "hidradenitis-suppurativa":
+    "Hidradenitis suppurativa (HS) treatment, from medicated washes to biologics, with a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "pediatric-dermatology":
+    "Gentle care for children's and teens' skin, including eczema, warts, molluscum, rashes and acne, in Maricopa and Chandler, AZ.",
+  "skin-biopsy":
+    "Quick in-office skin biopsies to diagnose suspicious spots, moles and rashes, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  cryotherapy:
+    "Liquid nitrogen cryotherapy for precancerous spots, warts and benign growths, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "benign-growth-removal":
+    "Removal of skin tags, seborrheic keratoses, cherry angiomas and other benign growths by a board-certified dermatologist in Maricopa and Chandler, AZ.",
 };
 
 // Shorter names for search-result titles, where the page's full service name is too long.
@@ -208,6 +228,10 @@ const serviceTitleNames: Record<string, string> = {
   molluscum: "Molluscum Treatment",
   microneedling: "Microneedling",
   "hand-dermatitis": "Hand Dermatitis Treatment",
+  "actinic-keratosis": "Actinic Keratosis Treatment",
+  "hidradenitis-suppurativa": "Hidradenitis Suppurativa Treatment",
+  cryotherapy: "Cryotherapy",
+  "benign-growth-removal": "Skin Tag & Growth Removal",
 };
 
 export function serviceMeta(id: string): Metadata {

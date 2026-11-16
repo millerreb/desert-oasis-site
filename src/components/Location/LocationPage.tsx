@@ -42,6 +42,9 @@ const chandlerServiceGroups = [
             "Arizona has some of the highest UV exposure in the country, which makes regular skin checks especially important. Services include:",
         links: [
             { href: "/services/skin-cancer-screening", label: "Full-body skin cancer screenings" },
+            { href: "/services/actinic-keratosis", label: "Precancerous spots (actinic keratosis)" },
+            { href: "/services/mole-evaluation", label: "Mole evaluation and removal" },
+            { href: "/services/skin-biopsy", label: "Skin biopsies" },
             { href: "/services/mohs-surgery", label: "Mohs surgery" },
             { href: "/services/excision", label: "Removal of skin cancers and growths" },
             { href: "/services/cyst-drainage", label: "Cyst drainage" },
@@ -84,6 +87,9 @@ const maricopaServiceGroups = [
             "Arizona has some of the highest UV exposure in the country, which makes regular skin checks especially important. Services include:",
         links: [
             { href: "/services/skin-cancer-screening", label: "Full-body skin cancer screenings" },
+            { href: "/services/actinic-keratosis", label: "Precancerous spots (actinic keratosis)" },
+            { href: "/services/mole-evaluation", label: "Mole evaluation and removal" },
+            { href: "/services/skin-biopsy", label: "Skin biopsies" },
             { href: "/services/excision", label: "Removal of skin cancers and growths" },
             { href: "/services/cyst-drainage", label: "Cyst drainage" },
         ],

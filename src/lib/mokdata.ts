@@ -366,6 +366,176 @@ export const servicesData: ServiceData[] = [
   },
 
   // Surgical treatments
+
+  // Added services (medical)
+  {
+    id: "actinic-keratosis",
+    serviceName: "Actinic Keratosis (Precancerous Spots)",
+    category: "Medical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Rough Spots From Years of Sun",
+        content:
+          "Actinic keratoses are rough, scaly or crusty spots that develop on sun-exposed skin such as the face, scalp, ears, forearms and hands. They are very common in Arizona and are a sign of long-term sun damage.",
+      },
+      {
+        title: "Why Treatment Matters",
+        content:
+          "Actinic keratoses are considered precancerous because a small percentage can turn into squamous cell carcinoma, a type of skin cancer. Treating them early lowers that risk, and a regular skin exam helps us catch new spots as they appear.",
+      },
+      {
+        title: "Treatment Options",
+        content:
+          "Individual spots are often treated in the office with liquid nitrogen (cryotherapy). When there are many spots, we may recommend a prescription cream such as 5-fluorouracil (5-FU), which treats both the visible spots and early sun damage you can't see yet.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "mole-evaluation",
+    serviceName: "Mole Evaluation & Removal",
+    category: "Medical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "When a Mole Needs a Closer Look",
+        content:
+          "Most moles are harmless, but a mole that is new, changing, itching, bleeding or looks different from your other moles should be checked. Dermatologists look for the ABCDE warning signs: asymmetry, irregular borders, uneven color, a diameter larger than a pencil eraser, and evolving size, shape or color.",
+      },
+      {
+        title: "A Careful Exam",
+        content:
+          "We examine concerning moles with dermoscopy, a magnified view of the skin's surface. If a mole looks suspicious, we perform a quick biopsy in the office so it can be examined under a microscope.",
+      },
+      {
+        title: "Mole Removal",
+        content:
+          "Moles can be removed for medical reasons or because they catch on clothing or bother you cosmetically. Depending on the mole, removal may be done with a shave or a small excision, and we'll discuss the best option for your skin.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "rash-evaluation",
+    serviceName: "Rash Evaluation",
+    category: "Medical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Answers for Rashes That Won't Go Away",
+        content:
+          "A rash that is itchy, painful, spreading or not improving with over-the-counter creams deserves a closer look. Many different conditions can look similar, so getting the right diagnosis is the first step to getting the right treatment.",
+      },
+      {
+        title: "Finding the Cause",
+        content:
+          "We start with a careful exam and questions about your symptoms, products, medications and exposures. When needed, we may perform a simple in-office test, such as a skin scraping, culture or biopsy, to confirm the diagnosis.",
+      },
+      {
+        title: "Targeted Treatment",
+        content:
+          "Once we know the cause, whether it's eczema, an allergic reaction, an infection or another condition, we build a treatment plan to calm your skin and help keep the rash from coming back.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "skin-infections",
+    serviceName: "Skin Infections",
+    category: "Medical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Common Skin Infections",
+        content:
+          "Skin infections can be caused by fungi, bacteria or viruses. Common examples include ringworm, athlete's foot, tinea versicolor, impetigo and folliculitis (infected hair follicles).",
+      },
+      {
+        title: "Accurate Diagnosis",
+        content:
+          "Many infections look like other rashes, and the wrong cream can make some of them worse. We can often confirm the cause in the office with a quick skin scraping or culture so you get the right treatment from the start.",
+      },
+      {
+        title: "Effective Treatment",
+        content:
+          "Depending on the cause, treatment may include prescription creams, washes or oral medications. We'll also share tips to help prevent the infection from returning or spreading.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "nail-conditions",
+    serviceName: "Nail Conditions",
+    category: "Medical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Nails Are Part of Your Skin",
+        content:
+          "Dermatologists treat nail problems as well as skin and hair. Common concerns include nail fungus, thick or discolored nails, brittle or splitting nails, ingrown nails, and nail changes caused by conditions such as psoriasis.",
+      },
+      {
+        title: "Changes Worth Checking",
+        content:
+          "A new dark streak in a nail, a nail that lifts or changes shape, or redness and swelling around the nail should be evaluated. While most nail changes are harmless, some can be a sign of infection or, rarely, skin cancer under the nail.",
+      },
+      {
+        title: "Treatment Options",
+        content:
+          "Treatment depends on the cause and may include prescription topical or oral medications, in-office procedures, and guidance on nail care. Because nails grow slowly, improvement often takes several months.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "hidradenitis-suppurativa",
+    serviceName: "Hidradenitis Suppurativa",
+    category: "Medical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Understanding Hidradenitis Suppurativa",
+        content:
+          "Hidradenitis suppurativa (HS) is a chronic inflammatory condition that causes painful bumps, boils and abscesses, usually in the armpits, groin, buttocks and under the breasts. It is not caused by poor hygiene and is not contagious.",
+      },
+      {
+        title: "Why Early Care Matters",
+        content:
+          "Without treatment, HS can lead to tunnels under the skin and scarring. Starting treatment early can reduce flares, ease pain and help prevent the condition from progressing.",
+      },
+      {
+        title: "Treatment Options",
+        content:
+          "We tailor treatment to the severity of your HS. Options may include medicated washes, topical and oral antibiotics, in-office injections for painful flares, and biologic medications for moderate to severe cases.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "pediatric-dermatology",
+    serviceName: "Pediatric Dermatology",
+    category: "Medical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Skin Care for Children and Teens",
+        content:
+          "Children's skin has its own needs. We care for many common pediatric skin conditions, including eczema, warts, molluscum contagiosum, birthmarks, rashes and acne in teens.",
+      },
+      {
+        title: "Gentle, Kid-Friendly Care",
+        content:
+          "We take time to explain each step to children and parents and choose treatments that are gentle and appropriate for a child's age.",
+      },
+      {
+        title: "Support for Parents",
+        content:
+          "We'll help you understand your child's condition and give you a clear plan for everyday skin care at home, so you know what to do between visits.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
   {
     id: "mohs-surgery",
     serviceName: "Mohs Surgery",
@@ -450,6 +620,80 @@ export const servicesData: ServiceData[] = [
   },
 
   // Cosmetic treatments
+
+  // Added services (procedures)
+  {
+    id: "skin-biopsy",
+    serviceName: "Skin Biopsy",
+    category: "Surgical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "What Is a Skin Biopsy?",
+        content:
+          "A skin biopsy removes a small sample of skin so it can be examined under a microscope. It is the most reliable way to diagnose a suspicious spot or mole, or a rash that doesn't have a clear cause.",
+      },
+      {
+        title: "A Quick In-Office Procedure",
+        content:
+          "The area is numbed with a small injection, so the biopsy itself is not painful. Depending on the spot, we take a thin shave of skin or a small round sample, which may be closed with a few stitches. Most biopsies take just a few minutes.",
+      },
+      {
+        title: "Aftercare and Results",
+        content:
+          "We'll give you simple wound care instructions to follow at home. Results usually take 1 to 2 weeks, and our office will contact you once they're in. If you had stitches, they are typically removed 10 to 14 days later.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "cryotherapy",
+    serviceName: "Cryotherapy (Liquid Nitrogen)",
+    category: "Surgical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Freezing Away Unwanted Spots",
+        content:
+          "Cryotherapy uses liquid nitrogen to freeze and destroy abnormal skin cells. It is a fast, effective in-office treatment for precancerous spots (actinic keratoses), warts and certain benign growths such as seborrheic keratoses.",
+      },
+      {
+        title: "What to Expect",
+        content:
+          "Treatment takes only seconds per spot and feels like a brief, cold sting. Afterward, the area may be red and swollen, and a blister can form within a day or two. This is a normal part of healing.",
+      },
+      {
+        title: "Healing",
+        content:
+          "The treated spot usually forms a scab that falls off on its own within 1 to 3 weeks, revealing new skin. Some spots, especially thick warts, may need more than one treatment.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
+  {
+    id: "benign-growth-removal",
+    serviceName: "Skin Tag & Benign Growth Removal",
+    category: "Surgical",
+    mainImage: "/placeholder.svg?height=500&width=500",
+    paragraphs: [
+      {
+        title: "Common Harmless Growths",
+        content:
+          "Many skin growths are harmless, including skin tags, seborrheic keratoses (waxy, \"stuck-on\" spots), cherry angiomas (small red bumps) and other benign lesions. They often become more common with age.",
+      },
+      {
+        title: "Making Sure It's Benign",
+        content:
+          "Some growths can look like skin cancer, so we always examine a spot before removing it. If anything looks unusual, we may perform a biopsy to be certain.",
+      },
+      {
+        title: "Removal Options",
+        content:
+          "Growths that are irritated, bleeding, catching on clothing or bothering you cosmetically can be removed in the office, typically with freezing, a shave or snipping. When removal is purely cosmetic, insurance usually doesn't cover it, and we'll discuss any costs with you beforehand.",
+      },
+    ],
+    callToAction: commonCallToAction,
+  },
   {
     id: "chemical-peels",
     serviceName: "Chemical Peels",
