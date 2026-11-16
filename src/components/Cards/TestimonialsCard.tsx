@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, } from "@/components/ui/carousel"
 import { ArrowRight, Star } from "lucide-react"
 // import Image from "next/image"
-// import reveiwimge from "@/../../Public/image/reveiw-image.png"
+// import reveiwimge from "@/../../public/image/reveiw-image.png"
 import { Button } from "../ui/button"
 import Link from "next/link"
 

@@ -2,12 +2,12 @@
 
 import { useState } from "react"
 import ServicesCard from "../Cards/ServicesCard"
-import icon1 from "@/../../Public/icon/service-icon/services-icon-1.png"
-import icon2 from "@/../../Public/icon/service-icon/services-icon-2.png"
-import icon3 from "@/../../Public/icon/service-icon/services-icon-3.png"
-import icon4 from "@/../../Public/icon/service-icon/services-icon-4.png"
-import icon5 from "@/../../Public/icon/service-icon/services-icon-5.png"
-import icon6 from "@/../../Public/icon/service-icon/services-icon-6.png"
+import icon1 from "@/../../public/icon/service-icon/services-icon-1.png"
+import icon2 from "@/../../public/icon/service-icon/services-icon-2.png"
+import icon3 from "@/../../public/icon/service-icon/services-icon-3.png"
+import icon4 from "@/../../public/icon/service-icon/services-icon-4.png"
+import icon5 from "@/../../public/icon/service-icon/services-icon-5.png"
+import icon6 from "@/../../public/icon/service-icon/services-icon-6.png"
 import { Button } from "../ui/button"
 import { ArrowRight } from "lucide-react"
 

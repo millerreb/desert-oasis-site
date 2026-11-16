@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import cardimg from "@/../../Public/image/banner.jpg"
+import cardimg from "@/../../public/image/banner.jpg"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 

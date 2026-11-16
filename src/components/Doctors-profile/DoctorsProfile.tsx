@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import doctorsimge from "@/../../Public/image/tall.png";
+import doctorsimge from "@/../../public/image/tall.png";
 import Link from "next/link";
 
 export default function DoctorProfile() {

@@ -1,11 +1,11 @@
 import Image from "next/image"
-import doctor from "@/../../Public/image/doctor-cropped.png"
-import logo1 from "@/../../Public/image/about-logo-1.png"
-import logo2 from "@/../../Public/image/about-logo-2.png"
-import logo3 from "@/../../Public/image/about-logo-3.png"
-import logo4 from "@/../../Public/image/about-logo-4.png"
-import logo5 from "@/../../Public/image/about-logo-5.png"
-import logo6 from "@/../../Public/image/about-logo-6.png"
+import doctor from "@/../../public/image/doctor-cropped.png"
+import logo1 from "@/../../public/image/about-logo-1.png"
+import logo2 from "@/../../public/image/about-logo-2.png"
+import logo3 from "@/../../public/image/about-logo-3.png"
+import logo4 from "@/../../public/image/about-logo-4.png"
+import logo5 from "@/../../public/image/about-logo-5.png"
+import logo6 from "@/../../public/image/about-logo-6.png"
 
 
 

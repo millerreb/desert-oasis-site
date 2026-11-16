@@ -6,8 +6,8 @@ import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-reac
 import { cn } from "@/lib/utils"
 import type { Button } from "@/components/ui/button"
 import Image from "next/image"
-import righticon from "@/../../Public/image/arrow-right.png"
-import lefticon from "@/../../Public/image/arrow-left.png"
+import righticon from "@/../../public/image/arrow-right.png"
+import lefticon from "@/../../public/image/arrow-left.png"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
