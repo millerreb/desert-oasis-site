@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { productImages } from "./productImages";
 import products from "./products.json";
 
 const categories = [
@@ -76,7 +75,7 @@ export default function ProductCatalog() {
             <article key={product.id} className="flex flex-col overflow-hidden rounded-lg border border-[#C7925B]/30 bg-white shadow-sm">
               <div className="relative flex h-56 items-center justify-center bg-[#FAF5EF] p-6">
                 <Image
-                  src={productImages[product.image]}
+                  src={`/recommended-products/${product.image}`}
                   alt={product.name}
                   width={240}
                   height={176}

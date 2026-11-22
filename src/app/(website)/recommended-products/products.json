@@ -7,7 +7,7 @@
     "description": "A moisturizing cream for your everyday skin care routine.",
     "category": "gentle",
     "url": "https://link.amazon/B08BmtJdd",
-    "image": "assets/product-0.webp"
+    "image": "product-0.webp"
   },
   {
     "id": 1,
@@ -17,7 +17,7 @@
     "description": "An ointment option for dry skin care.",
     "category": "gentle",
     "url": "https://link.amazon/B0doSZx6y",
-    "image": "assets/product-1.webp"
+    "image": "product-1.webp"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
     "description": "A cleansing bar for a simple daily routine.",
     "category": "gentle",
     "url": "https://link.amazon/B0fQZrBID",
-    "image": "assets/product-2.webp"
+    "image": "product-2.webp"
   },
   {
     "id": 3,
@@ -37,7 +37,7 @@
     "description": "A two-in-one cleanser for baby\u2019s skin and hair.",
     "category": "gentle",
     "url": "https://link.amazon/B00MAIM83",
-    "image": "assets/product-3.webp"
+    "image": "product-3.webp"
   },
   {
     "id": 4,
@@ -47,7 +47,7 @@
     "description": "A shampoo option for your gentle hair care routine.",
     "category": "gentle",
     "url": "https://link.amazon/B0325nB8L",
-    "image": "assets/product-4.webp"
+    "image": "product-4.webp"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "description": "Pair with shampoo to complete your hair care routine.",
     "category": "gentle",
     "url": "https://link.amazon/B0b9kt4UH",
-    "image": "assets/product-5.webp"
+    "image": "product-5.webp"
   },
   {
     "id": 6,
@@ -67,7 +67,7 @@
     "description": "An option for your daily underarm care routine.",
     "category": "gentle",
     "url": "https://link.amazon/B01C0l3Q8",
-    "image": "assets/product-6.webp"
+    "image": "product-6.webp"
   },
   {
     "id": 7,
@@ -77,7 +77,7 @@
     "description": "A laundry option to complement your gentle skin care routine.",
     "category": "gentle",
     "url": "https://link.amazon/B01dSOIj6",
-    "image": "assets/product-7.webp"
+    "image": "product-7.webp"
   },
   {
     "id": 8,
@@ -87,7 +87,7 @@
     "description": "Facial moisturizer with built-in sun protection.",
     "category": "gentle",
     "url": "https://link.amazon/B0giN31hb",
-    "image": "assets/product-8.webp"
+    "image": "product-8.webp"
   },
   {
     "id": 9,
@@ -97,7 +97,7 @@
     "description": "The 4% wash from our facial acne care list.",
     "category": "acne",
     "url": "https://link.amazon/B0dfXWlh6",
-    "image": "assets/product-9.webp"
+    "image": "product-9.webp"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "description": "The 10% wash from our body acne care list.",
     "category": "acne",
     "url": "https://link.amazon/B05cYeixN",
-    "image": "assets/product-10.webp"
+    "image": "product-10.webp"
   },
   {
     "id": 11,
@@ -117,7 +117,7 @@
     "description": "A tinted mineral option for your sun protection routine.",
     "category": "sun",
     "url": "https://link.amazon/B030q0tKx",
-    "image": "assets/product-11.webp"
+    "image": "product-11.webp"
   },
   {
     "id": 12,
@@ -127,7 +127,7 @@
     "description": "A tinted option for everyday sun protection.",
     "category": "sun",
     "url": "https://link.amazon/B08SpOJXQ",
-    "image": "assets/product-12.webp"
+    "image": "product-12.webp"
   },
   {
     "id": 13,
@@ -137,6 +137,6 @@
     "description": "A mineral sunscreen option for your daily routine.",
     "category": "sun",
     "url": "https://link.amazon/B0bLgA9Vf",
-    "image": "assets/product-13.webp"
+    "image": "product-13.webp"
   }
 ]
