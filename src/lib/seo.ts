@@ -19,7 +19,6 @@ export const hiddenFromSearch = [
   "/future-comming-soon",
   "/maricopa-survey-redirect",
   "/chandler-survey-redirect",
-  "/reviews",
   "/patient-portal",
   "/recommended-products",
 ];
