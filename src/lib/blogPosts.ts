@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     "description": "How much SPF you really need, why zinc oxide matters for wrinkles and dark spots, and whether sunscreen chemicals are safe. A dermatologist answers.",
     "category": "Sun Protection",
     "date": "2026-05-04",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/sunscreen-101.jpg",
     "blocks": [
       {
         "type": "p",
@@ -154,7 +154,7 @@ export const blogPosts: BlogPost[] = [
     "description": "Can you burn through a T-shirt? What UPF ratings mean, how to choose sun-protective clothing, and why winter sun in Arizona still counts.",
     "category": "Sun Protection",
     "date": "2026-11-02",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/sun-protection-clothing-upf-winter-sun.jpg",
     "blocks": [
       {
         "type": "p",
@@ -266,7 +266,7 @@ export const blogPosts: BlogPost[] = [
     "description": "Why darker skin still needs sunscreen, and how tinted sunscreens with iron oxide blend in without a white cast while helping prevent dark spots.",
     "category": "Sun Protection",
     "date": "2026-06-15",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/sunscreen-for-darker-skin-tones.jpg",
     "blocks": [
       {
         "type": "p",
@@ -353,7 +353,7 @@ export const blogPosts: BlogPost[] = [
     "description": "The three main types of skin cancer, the ABCDE warning signs of melanoma, and why regular skin checks matter in sunny Arizona.",
     "category": "Skin Cancer & Spots",
     "date": "2026-02-09",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/skin-cancer-101.jpg",
     "blocks": [
       {
         "type": "p",
@@ -490,7 +490,7 @@ export const blogPosts: BlogPost[] = [
     "description": "Seborrheic keratoses, cherry angiomas, skin tags, sun spots and more: a guide to common skin growths and the warning signs worth a skin check.",
     "category": "Skin Cancer & Spots",
     "date": "2026-04-06",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/what-is-this-spot-on-my-skin.jpg",
     "blocks": [
       {
         "type": "p",
@@ -611,7 +611,7 @@ export const blogPosts: BlogPost[] = [
     "description": "A dermatologist's answers to common acne questions, from the best over-the-counter routine to prescription options like spironolactone.",
     "category": "Skin Conditions",
     "date": "2026-01-12",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/acne-101.jpg",
     "blocks": [
       {
         "type": "p",
@@ -850,7 +850,7 @@ export const blogPosts: BlogPost[] = [
     "description": "What causes eczema, how to bathe and moisturize to calm it, and the treatments that help when itchy, irritated skin won't settle down.",
     "category": "Skin Conditions",
     "date": "2026-02-23",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/eczema-101.jpg",
     "blocks": [
       {
         "type": "p",
@@ -1002,7 +1002,7 @@ export const blogPosts: BlogPost[] = [
     "description": "What rosacea looks like, what causes facial redness and flushing, common triggers to avoid, and the treatments that keep it under control.",
     "category": "Skin Conditions",
     "date": "2026-03-23",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/rosacea-101.jpg",
     "blocks": [
       {
         "type": "p",
@@ -1144,7 +1144,7 @@ export const blogPosts: BlogPost[] = [
     "description": "Simple fixes for itchy, tight, flaky skin: which moisturizers work, when to apply them, and the shower habits that make dry skin worse.",
     "category": "Skin Conditions",
     "date": "2026-10-05",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/dry-skin-101.jpg",
     "blocks": [
       {
         "type": "p",
@@ -1274,7 +1274,7 @@ export const blogPosts: BlogPost[] = [
     "description": "Do biotin supplements work for thinning hair? What to know about minoxidil, finasteride and other proven treatments for male pattern hair loss.",
     "category": "Hair & Scalp",
     "date": "2026-08-24",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/thinning-hair-in-men.jpg",
     "blocks": [
       {
         "type": "p",
@@ -1400,7 +1400,7 @@ export const blogPosts: BlogPost[] = [
     "description": "What causes dandruff, which over-the-counter shampoos work best, and how to use them for the cheapest, most effective results.",
     "category": "Hair & Scalp",
     "date": "2026-09-21",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/dandruff-treatment.jpg",
     "blocks": [
       {
         "type": "p",
@@ -1516,7 +1516,7 @@ export const blogPosts: BlogPost[] = [
     "description": "Most anti-aging serums lack strong evidence. A dermatologist explains the two products proven to prevent and reduce signs of aging.",
     "category": "Skincare",
     "date": "2026-03-09",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/anti-aging-skincare.jpg",
     "blocks": [
       {
         "type": "p",
@@ -1632,7 +1632,7 @@ export const blogPosts: BlogPost[] = [
     "description": "What's the difference between a lotion, a cream and an ointment, and which moisturizer should you use for dry skin, your face or eczema?",
     "category": "Skincare",
     "date": "2026-07-13",
-    "image": "/image/sevicesDetais.png",
+    "image": "/blog/lotion-cream-or-ointment.jpg",
     "blocks": [
       {
         "type": "p",
