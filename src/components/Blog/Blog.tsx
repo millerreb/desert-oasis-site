@@ -1,89 +1,33 @@
-
 import BlogCard from "@/components/Cards/BlogCard"
 import Header from "@/components/Headers/Header"
+import { blogCategories, blogPosts, postsByDate } from "@/lib/blogPosts"
 
-// This would typically come from a database or API
-const data = [
-    {
-        slug: "the-ultimate-skincare-routine",
-        imgSrc: "/images/blog1.png",
-        title: "The Ultimate Skincare Routine",
-        description: "Discover the best skincare routine for glowing and healthy skin.",
-    },
-    {
-        slug: "top-5-acne-fighting-ingredients",
-        imgSrc: "/images/blog2.png",
-        title: "Top 5 Acne-Fighting Ingredients",
-        description: "Learn about the most effective ingredients to combat acne.",
-    },
-    {
-        slug: "how-to-keep-your-skin-hydrated",
-        imgSrc: "/images/blog3.png",
-        title: "How to Keep Your Skin Hydrated",
-        description: "Expert tips on maintaining skin hydration throughout the year.",
-    },
-    {
-        slug: "the-benefits-of-anti-aging-treatments",
-        imgSrc: "/images/blog4.png",
-        title: "The Benefits of Anti-Aging Treatments",
-        description: "Explore the latest anti-aging treatments and their effectiveness.",
-    },
-    {
-        slug: "natural-remedies-for-glowing-skin",
-        imgSrc: "/images/blog5.png",
-        title: "Natural Remedies for Glowing Skin",
-        description: "Try these natural skincare remedies for a radiant complexion.",
-    },
-    {
-        slug: "understanding-your-skin-type",
-        imgSrc: "/images/blog6.png",
-        title: "Understanding Your Skin Type",
-        description: "A guide to identifying your skin type and the best products for it.",
-    },
-    {
-        slug: "the-benefits-of-anti-aging-treatments-2",
-        imgSrc: "/images/blog4.png",
-        title: "The Benefits of Anti-Aging Treatments",
-        description: "Explore the latest anti-aging treatments and their effectiveness.",
-    },
-    {
-        slug: "natural-remedies-for-glowing-skin-2",
-        imgSrc: "/images/blog5.png",
-        title: "Natural Remedies for Glowing Skin",
-        description: "Try these natural skincare remedies for a radiant complexion.",
-    },
-    {
-        slug: "understanding-your-skin-type-2",
-        imgSrc: "/images/blog6.png",
-        title: "Understanding Your Skin Type",
-        description: "A guide to identifying your skin type and the best products for it.",
-    },
-]
-
+// The blog page: every post from blogPosts.ts, grouped by category, newest first.
 const Blog = () => {
+    const sections = blogCategories
+        .map((category) => ({ category, posts: postsByDate(blogPosts.filter((p) => p.category === category)) }))
+        .filter((section) => section.posts.length > 0)
+
     return (
-        <section className="">
+        <section>
             <Header
                 title="Blog Articles"
-                subtitle="Stay informed with the latest insights on skin care, treatments, and wellness from our experts."
+                subtitle="Straightforward answers to the skin questions our patients ask most, written by a board-certified dermatologist."
             />
-            <div className="container">
-                <div className="flex flex-wrap gap-y-[50px] justify-between mt-[60px]">
-                    {data.map((item, index) => (
-                        <div className="w-full md:w-[48%] lg:w-[30%]" key={index}>
-                           
-                            <BlogCard imgSrc={item.imgSrc} title={item.title} description={item.description} slug={item.slug}  />
-                           
+            <div className="container pb-[60px] md:pb-[100px]">
+                {sections.map(({ category, posts }) => (
+                    <div key={category} className="mt-[60px]">
+                        <h2 className="text-[24px] md:text-[32px] font-semibold text-primary">{category}</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-6">
+                            {posts.map((post) => (
+                                <BlogCard key={post.slug} post={post} />
+                            ))}
                         </div>
-                    ))}
-
-                    <div className="w-full md:w-[30%]"> </div>
-                    <div className="w-full md:w-[30%]"> </div>
-                </div>
+                    </div>
+                ))}
             </div>
         </section>
     )
 }
 
 export default Blog
-

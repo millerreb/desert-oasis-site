@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation"
 import { getServiceById, servicesData } from "@/lib/mokdata"
+import { servicePageSchema } from "@/lib/schema"
+import JsonLd from "@/components/JsonLd/JsonLd"
 import ServicesDetailsCard from "@/app/(website)/services/Service-details"
 
 // Build every service page ahead of time, so its full content is in the page
@@ -18,5 +20,10 @@ export default function ServiceDetailsPage({ params }: { params: { id: string } 
         notFound()
     }
 
-    return <ServicesDetailsCard serviceData={serviceData} />
+    return (
+        <>
+            <JsonLd data={servicePageSchema(serviceData)} />
+            <ServicesDetailsCard serviceData={serviceData} />
+        </>
+    )
 }

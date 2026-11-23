@@ -53,7 +53,7 @@ export default function Navbar() {
   const isActive = (href: string) => pathname === href
 
   return (
-    <header className="w-full border-b bg-white sticky top-0 z-50 ">
+    <header className="w-full sticky top-0 z-50 border-b border-t-4 border-t-primary bg-background">
       <div className="container flex items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -65,7 +65,7 @@ export default function Navbar() {
               width={70}
               height={60}
             />
-            <span className=" sm:inline text-base md:text-base lg:text-[18px] font-normal text-[#A66A47]">
+            <span className=" sm:inline text-base md:text-base lg:text-[18px] font-normal tracking-wider text-copper-text">
               DESERT OASIS
               <br />
               DERMATOLOGY
@@ -77,7 +77,7 @@ export default function Navbar() {
         <nav className="hidden items-center justify-center space-x-4 lg:space-x-10 md:flex">
           <Link
             href="/"
-            className={`text-sm font-normal text-[#363636] hover:text-amber-700 ${isActive("/") ? "text-amber-700 font-bold" : ""}`}
+            className={`text-sm font-normal text-foreground hover:text-primary-hover ${isActive("/") ? "text-primary font-bold" : ""}`}
           >
             Home
           </Link>
@@ -91,8 +91,9 @@ export default function Navbar() {
             <Popover open={servicesPopoverOpen} onOpenChange={setServicesPopoverOpen}>
               <PopoverTrigger asChild>
                 <Link
-                  href=""
-                  className={`text-sm font-normal text-[#363636] hover:text-amber-700 flex items-center gap-1 ${isActive("/services") ? "text-amber-700 font-bold" : ""}`}
+                  href="/services?category=Medical"
+                  className={`text-sm font-normal text-foreground hover:text-primary-hover flex items-center gap-1 ${isActive("/services") ? "text-primary font-bold" : ""}`}
+                  onClick={() => setTimeout(() => setServicesPopoverOpen(false), 100)}
                 >
                   Services
                 </Link>
@@ -107,7 +108,7 @@ export default function Navbar() {
                 <div className="flex flex-col gap-2">
                   <Link
                     href="/services?category=Medical"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setServicesPopoverOpen(false), 100)
@@ -117,7 +118,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/services?category=Surgical"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setServicesPopoverOpen(false), 100)
@@ -127,7 +128,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/services?category=Cosmetic"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setServicesPopoverOpen(false), 100)
@@ -150,7 +151,7 @@ export default function Navbar() {
               <PopoverTrigger asChild>
                 <Link
                   href=""
-                  className={`text-sm font-normal text-[#363636] hover:text-amber-700 flex items-center gap-1 ${isActive("/about") ? "text-amber-700 font-bold" : ""}`}
+                  className={`text-sm font-normal text-foreground hover:text-primary-hover flex items-center gap-1 ${isActive("/about") ? "text-primary font-bold" : ""}`}
                 >
                   About
                 </Link>
@@ -165,7 +166,7 @@ export default function Navbar() {
                 <div className="flex flex-col gap-2">
                   <Link
                     href="/about"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setAboutPopoverOpen(false), 100)
@@ -175,7 +176,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/blog"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setAboutPopoverOpen(false), 100)
@@ -198,7 +199,7 @@ export default function Navbar() {
               <PopoverTrigger asChild>
                 <Link
                   href="/patient-info"
-                  className={`text-sm font-normal text-[#363636] hover:text-amber-700 flex items-center gap-1 ${isActive("/patient-info") ? "text-amber-700 font-bold" : ""}`}
+                  className={`text-sm font-normal text-foreground hover:text-primary-hover flex items-center gap-1 ${isActive("/patient-info") ? "text-primary font-bold" : ""}`}
                 >
                   Patient Info
                 </Link>
@@ -214,7 +215,7 @@ export default function Navbar() {
                   <a
                     href="https://l.klara.com/JKkUeq7HEnFzXBDj"
                     target="_blank"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     rel="noreferrer"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -222,7 +223,7 @@ export default function Navbar() {
                   </a>
                   <Link
                     href="/pay-bill"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
@@ -232,7 +233,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/chat-with-us"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
@@ -244,7 +245,7 @@ export default function Navbar() {
                     href="https://dodermatology.ema.md"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
@@ -254,7 +255,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/dermatology-patient-forms"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
@@ -264,7 +265,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/insurance-accepted"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
@@ -274,7 +275,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/recommended-products"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
@@ -284,7 +285,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     href="/hours-and-location"
-                    className="w-full text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md"
+                    className="w-full text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md"
                     onClick={(e) => {
                       e.stopPropagation()
                       setTimeout(() => setPatientInfoPopoverOpen(false), 100)
@@ -306,7 +307,7 @@ export default function Navbar() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="h-7 text-xs lg:text-sm border-[#C7925B] text-[#C7925B] hover:bg-amber-50 hover:text-amber-900 hover:border-amber-700"
+                  className="h-7 text-sm border text-primary hover:bg-sand hover:text-primary-hover hover:border-primary"
                 >
                   Schedule Appointment
                 </Button>
@@ -315,7 +316,7 @@ export default function Navbar() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="h-7 text-xs lg:text-sm border-[#C7925B] text-[#C7925B] hover:bg-amber-50 hover:text-amber-900 hover:border-amber-700"
+                  className="h-7 text-sm border text-primary hover:bg-sand hover:text-primary-hover hover:border-primary"
                 >
                   Pay Online
                 </Button>
@@ -342,10 +343,10 @@ export default function Navbar() {
                 </PopoverTrigger>
                 <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
                   <div className="flex flex-col gap-1">
-                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Maricopa/@33.0739956,-112.0454332,17z/data=!4m8!3m7!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!9m1!1b1!16s%2Fg%2F11m6sg0qh8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Maricopa/@33.0739956,-112.0454332,17z/data=!4m8!3m7!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!9m1!1b1!16s%2Fg%2F11m6sg0qh8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md transition-colors">
                       Maricopa location
                     </Link>
-                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Chandler/@33.2642304,-111.8608164,17z/data=!3m1!4b1!4m6!3m5!1s0x872b01d61f9ee563:0xbefb48eebcc53c32!8m2!3d33.2642304!4d-111.8608164!16s%2Fg%2F11ymhcdzl8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Chandler/@33.2642304,-111.8608164,17z/data=!3m1!4b1!4m6!3m5!1s0x872b01d61f9ee563:0xbefb48eebcc53c32!8m2!3d33.2642304!4d-111.8608164!16s%2Fg%2F11ymhcdzl8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md transition-colors">
                       Chandler location
                     </Link>
                   </div>
@@ -386,10 +387,10 @@ export default function Navbar() {
                 </PopoverTrigger>
                 <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
                   <div className="flex flex-col gap-1">
-                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" target="_blank" className="text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md transition-colors">
                      Maricopa location
                     </Link>
-                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-chandler" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-chandler" target="_blank" className="text-sm text-foreground hover:bg-sand hover:text-primary-hover p-2 rounded-md transition-colors">
                       Chandler location
                     </Link>
                   </div>
@@ -434,7 +435,7 @@ export default function Navbar() {
                 <nav className="flex flex-col gap-4">
                   <Link
                     href="/"
-                    className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/") ? "text-amber-700 font-bold" : ""}`}
+                    className={`text-base xs:text-lg font-medium text-amber-900 hover:text-primary-hover ${isActive("/") ? "text-primary font-bold" : ""}`}
                     onClick={() => setIsOpen(false)}
                   >
                     Home
@@ -444,51 +445,51 @@ export default function Navbar() {
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-between">
                       <Link
-                        href="/services"
-                        className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/services") ? "text-amber-700 font-bold" : ""}`}
-                        onClick={() => {}}
+                        href="/services?category=Medical"
+                        className={`text-base xs:text-lg font-medium text-amber-900 hover:text-primary-hover ${isActive("/services") ? "text-primary font-bold" : ""}`}
+                        onClick={() => setIsOpen(false)}
                       >
                         Services
                       </Link>
                     </div>
                     <div className="flex flex-col pl-4 gap-2">
-                      <Link href="/services?category=Medical" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Medical</Link>
-                      <Link href="/services?category=Surgical" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Surgical</Link>
-                      <Link href="/services?category=Cosmetic" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Cosmetic</Link>
+                      <Link href="/services?category=Medical" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Medical</Link>
+                      <Link href="/services?category=Surgical" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Surgical</Link>
+                      <Link href="/services?category=Cosmetic" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Cosmetic</Link>
                     </div>
                   </div>
 
                   {/* About dropdown for mobile */}
                   <div className="flex flex-col gap-1">
-                    <Link href="" className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/about") ? "text-amber-700 font-bold" : ""}`} onClick={() => setIsOpen(false)}>About</Link>
+                    <Link href="" className={`text-base xs:text-lg font-medium text-amber-900 hover:text-primary-hover ${isActive("/about") ? "text-primary font-bold" : ""}`} onClick={() => setIsOpen(false)}>About</Link>
                     <div className="flex flex-col pl-4 gap-2">
-                      <Link href="/about" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Meet Dr. Lavian</Link>
-                      <Link href="/blog" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Blog</Link>
+                      <Link href="/about" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Meet Dr. Lavian</Link>
+                      <Link href="/blog" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Blog</Link>
                     </div>
                   </div>
 
                   {/* Patient Info dropdown for mobile */}
                   <div className="flex flex-col gap-1">
-                    <Link href="/patient-info" className={`text-base xs:text-lg font-medium text-amber-900 hover:text-amber-700 ${isActive("/patient-info") ? "text-amber-700 font-bold" : ""}`} onClick={() => setIsOpen(false)}>Patient Info</Link>
+                    <Link href="/patient-info" className={`text-base xs:text-lg font-medium text-amber-900 hover:text-primary-hover ${isActive("/patient-info") ? "text-primary font-bold" : ""}`} onClick={() => setIsOpen(false)}>Patient Info</Link>
                     <div className="flex flex-col pl-4 gap-2">
-                      <a href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)} rel="noreferrer">Online Scheduling</a>
-                      <Link href="/pay-bill" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Payment and Billing</Link>
-                      <Link href="/chat-with-us" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Chat With Us</Link>
-                      <Link href="https://dodermatology.ema.md" rel="noreferrer" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Patient Portal</Link>
-                      <Link href="/dermatology-patient-forms" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Dermatology Patient Forms</Link>
-                      <Link href="/insurance-accepted" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Insurance Accepted</Link>
-                      <Link href="/recommended-products" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Recommended Products</Link>
-                      <Link href="/hours-and-location" className="text-sm xs:text-base font-normal text-amber-800 hover:text-amber-700" onClick={() => setIsOpen(false)}>Hours & Location</Link>
+                      <a href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)} rel="noreferrer">Online Scheduling</a>
+                      <Link href="/pay-bill" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Payment and Billing</Link>
+                      <Link href="/chat-with-us" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Chat With Us</Link>
+                      <Link href="https://dodermatology.ema.md" rel="noreferrer" target="_blank" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Patient Portal</Link>
+                      <Link href="/dermatology-patient-forms" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Dermatology Patient Forms</Link>
+                      <Link href="/insurance-accepted" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Insurance Accepted</Link>
+                      <Link href="/recommended-products" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Recommended Products</Link>
+                      <Link href="/hours-and-location" className="text-sm xs:text-base font-normal text-amber-800 hover:text-primary-hover" onClick={() => setIsOpen(false)}>Hours & Location</Link>
                     </div>
                   </div>
                 </nav>
 
                 <div className="flex flex-col gap-3">
                   <a href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" rel="noreferrer">
-                    <Button className="w-full bg-[#C7925B] text-white hover:bg-[#C7925B]/80">Schedule Appointment</Button>
+                    <Button className="w-full bg-primary text-white hover:bg-primary-hover">Schedule Appointment</Button>
                   </a>
                   <Link href="/chat-with-us">
-                    <Button variant="outline" className="w-full border-amber-500 text-amber-800 hover:bg-amber-50 hover:text-amber-900" onClick={() => setIsOpen(false)}>Chat With Us</Button>
+                    <Button variant="outline" className="w-full border-amber-500 text-amber-800 hover:bg-sand hover:text-primary-hover" onClick={() => setIsOpen(false)}>Chat With Us</Button>
                   </Link>
                 </div>
 

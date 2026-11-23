@@ -29,9 +29,9 @@ export default function DoctorProfileForAbout() {
 
                 {/* Bio section */}
                 <div className="w-full md:w-2/3 lg:w-3/4">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#A06A44] mb-10 pt-[50px]">Meet Dr. Lavian </h1>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal tracking-tight text-foreground mb-10 pt-[50px]">Meet Dr. Lavian </h1>
 
-                    <p className="text-[#333333]  text-base md:text-lg font-medium leading-[150%] mb-6 text-justify">
+                    <p className="text-foreground  text-base md:text-lg font-medium leading-[150%] mb-6 text-justify">
                         Dr. Jonathan Lavian is a highly accomplished physician with a passion for patient care and medical research. He earned his undergraduate degree from UC Berkeley, graduating Summa Cum Laude with highest honors in Integrative Biology. He then pursued his medical degree at the Zucker School of Medicine at Hofstra/Northwell in New York, where he was inducted into the prestigious Alpha Omega Alpha Honor Society.
                     </p>
                 </div>
@@ -41,11 +41,11 @@ export default function DoctorProfileForAbout() {
             <div className="">
                 {/* Additional bio */}
                 <div className=" order-2 md:order-1">
-                    <p className="text-[#333333] text-base md:text-lg leading-[150%] text-justify font-medium">
+                    <p className="text-foreground text-base md:text-lg leading-[150%] text-justify font-medium">
                         Dr. Lavian completed his internal medicine training at Lenox Hill Hospital in Manhattan, followed by a clinical research fellowship in cutaneous oncology at Columbia University. He then returned to the Zucker School of Medicine at Hofstra/Northwell to complete his residency, serving as chief resident and earning induction into the Gold Humanism Honor Society.
                     </p>
 
-                    <p className="text-[#333333] text-base md:text-lg leading-[150%] mt-6 text-justify font-medium ">
+                    <p className="text-foreground text-base md:text-lg leading-[150%] mt-6 text-justify font-medium ">
                         A dedicated researcher, Dr. Jonathan Lavian has been published in numerous esteemed peer-reviewed journals and has presented at various medical conferences. Outside of medicine, he enjoys spending time with his family and staying active through yoga, Pilates, and basketball.
                     </p>
                 </div>

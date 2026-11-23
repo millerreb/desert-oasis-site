@@ -1,35 +1,30 @@
-// import Consultation from '@/components/Consultation/Consultation'
-// import { Button } from '@/components/ui/button'
-import React from 'react';
-import Header from '@/components/Headers/Header'
-import { pageMeta } from "@/lib/seo";
+import type { Metadata } from "next";
+import Header from "@/components/Headers/Header";
+import ProductCatalog from "./ProductCatalog";
 
-export const metadata = pageMeta("/recommended-products");
+export const metadata: Metadata = {
+  title: "Recommended Products | Desert Oasis Dermatology",
+  description: "Explore our recommended skin care, acne care, and sun protection products.",
+};
 
-const page = () => {
+export default function RecommendedProductsPage() {
   return (
-    <section>
+    <main>
       <Header
-          title="Recommended Products"
-          subtitle="Skin care products recommended by our dermatology team."
+        title="Recommended Products"
+        subtitle="Explore everyday essentials for gentle skin care, acne care, and sun protection, selected by Desert Oasis Dermatology."
       />
-      <div className='container py-[60px] md:py-[270px]'>
-      <h3 className='text-[28px] md:text-[40px] text-[#A66A47] font-bold text-center'>Feature coming soon</h3>
+      <div className="container space-y-8 py-10 md:py-16">
+        <ProductCatalog />
+        <p className="text-sm text-muted-foreground">
+          These recommendations are general information and do not replace your
+          individualized treatment plan. Follow product labeling and your clinician’s instructions.
+        </p>
+        <p className="rounded-lg border bg-sand px-5 py-4 text-foreground">
+          As an Amazon Associate I earn from qualifying purchases. Purchases through
+          these links may support our practice at no additional cost to you.
+        </p>
       </div>
-    </section>
-    // <div>
-    //       <div>
-    //           <Header title='Recommended Products' subtitle='Discover our curated selection of skincare essentials and wellness products. Shop with confidence from our trusted partners.' />
-    //           <div className='container mt-[60px] pb-[60px]'>
-    //               <div className='flex flex-wrap justify-between items-center py-[100px] md:py-[250px] gap-y-5'>
-    //                   <p className='text-[24px] text-[#A66A47] font-midium'>Explore All the Recommended Products form trusted Store</p>
-    //                   <Button className='text-base text-[#FFFFFF] font-medium bg-[#C7925B] hover:bg-[#C7925B]/80 h-[43px]'>Explore Products </Button>
-    //               </div>
-    //           </div>
-    //           <Consultation/>
-    //    </div>
-    // </div>
-  )
+    </main>
+  );
 }
-
-export default page

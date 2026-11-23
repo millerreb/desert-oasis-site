@@ -125,8 +125,8 @@ const OurServices = () => {
     return (
         <section>
             <div className="container mt-[60px]">
-                <h2 className="text-[32px] text-[#A66A47] font-semibold text-center">Our Services</h2>
-                <p className="text-xl text-[#4D6A6E] font-normal text-center mt-5">
+                <h2 className="text-center text-[32px] font-normal text-primary-hover">Our Services</h2>
+                <p className="text-xl text-primary font-normal text-center mt-5">
                     At Desert Oasis Dermatology, we offer a comprehensive range of treatments tailored to your skin care needs.
                     Explore our key services below.
                 </p>
@@ -139,7 +139,7 @@ const OurServices = () => {
                 </div>
                 <div className="flex justify-center mt-[50px] pb-[60px]">
                     <Button
-                        className="bg-[#C7925B] text-base font-bold text-white px-[94px] h-[52px] mt-5 hover:bg-[#C7925B]/80"
+                        className="bg-primary text-base font-bold text-white px-[94px] h-[52px] mt-5 hover:bg-primary-hover"
                         onClick={() => setShowAll(!showAll)}
                     >
                         {showAll ? "Show Less" : "See More"}

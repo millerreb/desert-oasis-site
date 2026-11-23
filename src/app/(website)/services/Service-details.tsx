@@ -1,93 +1,196 @@
-"use client"
-
-import Image from "next/image"
-import { Phone } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import type { ServiceData } from "@/lib/mokdata"
-import serviceimage from "@/../../public/image/sevicesDetais.png"
-import eczemaservice from "@/../../public/image/eczema.jpg"
-import molloscumservice from "@/../../public/image/molloscum.jpg"
-import Consultation from "@/components/Consultation/Consultation"
 import Link from "next/link"
+import { CalendarDays, ChevronDown, ChevronRight, MapPin, Phone } from "lucide-react"
+import { getServiceById, type ServiceData } from "@/lib/mokdata"
+import { getPostBySlug } from "@/lib/blogPosts"
+import { BOOKING_URL, PHONE, PHONE_LINK, offices, openDaysText } from "@/lib/site"
+import RichText from "@/components/Blog/RichText"
+import Consultation from "@/components/Consultation/Consultation"
+
+// The layout for every service page (/services/[id]). The words come from mokdata.ts.
+
+const sectionId = (title: string) =>
+    title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
 
 export default function ServicesDetailsCard({ serviceData }: { serviceData: ServiceData }) {
-    const serviceImage = () => {
-        switch(serviceData.id) {
-            case "eczema":
-                return (
-                <Image
-                    src={eczemaservice}
-                    alt={serviceData.serviceName}
-                    width={500}
-                    height={400}
-                    className="w-full h-auto object-cover rounded-lg"
-                    priority
-                />
-            )
-            case "molluscum": 
-                return (
-                <Image
-                    src={molloscumservice}
-                    alt={serviceData.serviceName}
-                    width={500}
-                    height={400}
-                    className="w-full h-auto object-cover rounded-lg"
-                    priority
-                />
-            )
-            default:
-                return (
-                <Image
-                    src={serviceimage}
-                    alt={serviceData.serviceName}
-                    width={500}
-                    height={400}
-                    className="w-full h-auto object-cover rounded-lg"
-                    priority
-                />
-            )
-        }
-    }
+    const s = serviceData
+    const related = s.related.map(getServiceById).filter((r): r is ServiceData => Boolean(r))
+    const posts = (s.relatedPosts ?? []).map(getPostBySlug).filter((p) => p !== undefined)
+    const officesHere = offices.filter((o) => !s.offices || s.offices.includes(o.key))
 
     return (
         <section>
-        <div className="container mx-auto px-4 py-8 mt-[60px]">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-                {/* Left column - Image */}
-                <div className="relative w-full h-auto rounded-lg overflow-hidden text-center">
-                    {serviceImage()}
-                    {/* Call to Action Section */}
-                    <div className="mt-[60px] text-center ">
-                        <h2 className="text-2xl md:text-[32px] font-semibold text-[#A66A47] mb-2 ">{serviceData.callToAction.heading}</h2>
-                        <p className="text-xl text-[#A66A47] text-semibold mb-4">{serviceData.callToAction.subheading}</p>
-                        <div className="flex items-center justify-center lg:justify-center gap-2 mb-6">
-                            <Phone className="h-5 w-5 text-[#A67C52]" />
-                            <span className="font-medium">Phone: <a href="tel:+14804183314" className="hover:underline">{serviceData.callToAction.phone}</a></span>
-                        </div>
-                            <Link href="https://l.klara.com/JKkUeq7HEnFzXBDj" target="_blank" rel="noreferrer">
-                                <Button className="bg-[#C7925B] hover:bg-[#C7925B]/80 text-white px-6 py-3 rounded">
-                                    {serviceData.callToAction.buttonText}
-                                </Button>
-                            </Link>
+            {/* Banner: breadcrumb, page title, short intro and booking buttons */}
+            <div className="bg-primary text-white">
+                <div className="container py-8 md:py-12">
+                    <nav aria-label="Breadcrumb" className="text-sm text-white/85">
+                        <ol className="flex flex-wrap items-center gap-1">
+                            <li><Link href="/" className="hover:underline">Home</Link></li>
+                            <li aria-hidden="true"><ChevronRight className="h-4 w-4" /></li>
+                            <li><Link href="/services" className="hover:underline">Services</Link></li>
+                            <li aria-hidden="true"><ChevronRight className="h-4 w-4" /></li>
+                            <li>
+                                <Link href={`/services?category=${s.category}`} className="hover:underline">{s.category}</Link>
+                            </li>
+                        </ol>
+                    </nav>
+                    <h1 className="mt-4 text-[28px] md:text-[42px] font-semibold leading-[120%] max-w-[850px]">{s.serviceName}</h1>
+                    <p className="mt-4 max-w-[760px] text-base md:text-lg leading-relaxed text-white/95">
+                        <RichText text={s.intro} />
+                    </p>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                        <a
+                            href={BOOKING_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-2 rounded bg-white px-5 py-3 font-semibold text-primary hover:bg-sand"
+                        >
+                            <CalendarDays className="h-5 w-5" aria-hidden="true" />
+                            Schedule Appointment
+                        </a>
+                        <a
+                            href={PHONE_LINK}
+                            className="inline-flex items-center gap-2 rounded border border-white px-5 py-3 font-semibold text-white hover:bg-white/10"
+                        >
+                            <Phone className="h-5 w-5" aria-hidden="true" />
+                            Call {PHONE}
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                {/* Right column - Content */}
-                <div className="space-y-6">
-                    <h1 className="text-[25px] md:text-[32px] font-semibold text-[#A66A47]">{serviceData.serviceName}</h1>
+            <div className="container py-10 md:py-16">
+                <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 lg:gap-14 items-start">
+                    {/* Main content */}
+                    <article className="min-w-0">
+                        {s.paragraphs.length > 3 && (
+                            <nav aria-label="On this page" className="mb-10 rounded-lg border bg-sand p-5">
+                                <p className="font-semibold text-foreground">On this page</p>
+                                <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                                    {s.paragraphs.map((p) => (
+                                        <li key={p.title}>
+                                            <a href={`#${sectionId(p.title)}`} className="text-primary hover:underline">{p.title}</a>
+                                        </li>
+                                    ))}
+                                    {s.faqs.length > 0 && (
+                                        <li><a href="#faq" className="text-primary hover:underline">Frequently asked questions</a></li>
+                                    )}
+                                </ul>
+                            </nav>
+                        )}
 
-                    {serviceData.paragraphs.map((paragraph, index) => (
-                        <div key={index} className="space-y-2 !mt-[30px]">
-                            <h2 className="text-[18px] font-semibold text-[#333333]">{paragraph.title}</h2>
-                            <p className="text-[#333333] leading-relaxed  ">{paragraph.content}</p>
+                        <div className="space-y-10 text-base md:text-[17px] text-foreground">
+                            {s.paragraphs.map((p) => (
+                                <div key={p.title} id={sectionId(p.title)} className="scroll-mt-28">
+                                    <h2 className="text-[22px] md:text-[26px] font-semibold text-primary leading-snug">{p.title}</h2>
+                                    {p.content.split("\n\n").map((para, i) => (
+                                        <p key={i} className="mt-4 leading-relaxed"><RichText text={para} /></p>
+                                    ))}
+                                    {p.bullets && (
+                                        <ul className="mt-4 list-disc pl-6 space-y-2 leading-relaxed marker:text-primary">
+                                            {p.bullets.map((b, i) => <li key={i} className="pl-1"><RichText text={b} /></li>)}
+                                        </ul>
+                                    )}
+                                    {p.after && <p className="mt-4 leading-relaxed"><RichText text={p.after} /></p>}
+                                </div>
+                            ))}
                         </div>
-                    ))}
+
+                        {s.faqs.length > 0 && (
+                            <div id="faq" className="mt-14 scroll-mt-28">
+                                <h2 className="text-[22px] md:text-[26px] font-semibold text-primary leading-snug">Frequently asked questions</h2>
+                                <div className="mt-5 divide-y divide-[#E8D9CC] rounded-lg border border">
+                                    {s.faqs.map((f) => (
+                                        <details key={f.q} className="group px-5 py-4" open>
+                                            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold text-foreground [&::-webkit-details-marker]:hidden">
+                                                <h3 className="text-base md:text-[17px]">{f.q}</h3>
+                                                <ChevronDown className="mt-1 h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-180" aria-hidden="true" />
+                                            </summary>
+                                            <p className="mt-3 leading-relaxed text-foreground"><RichText text={f.a} /></p>
+                                        </details>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {(related.length > 0 || posts.length > 0) && (
+                            <div className="mt-14 grid gap-6 sm:grid-cols-2">
+                                {related.length > 0 && (
+                                    <div className="rounded-lg bg-sand p-5">
+                                        <h2 className="text-lg font-semibold text-foreground">Related services</h2>
+                                        <ul className="mt-3 space-y-2">
+                                            {related.map((r) => (
+                                                <li key={r.id}>
+                                                    <Link href={`/services/${r.id}`} className="text-primary hover:underline">{r.serviceName}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                                {posts.length > 0 && (
+                                    <div className="rounded-lg bg-sand p-5">
+                                        <h2 className="text-lg font-semibold text-foreground">From our blog</h2>
+                                        <ul className="mt-3 space-y-2">
+                                            {posts.map((p) => (
+                                                <li key={p!.slug}>
+                                                    <Link href={`/blog/${p!.slug}`} className="text-primary hover:underline">{p!.title}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+
+                        <p className="mt-10 text-sm text-[#666666] italic">
+                            This page is for general education and isn&apos;t a substitute for an exam or personal medical advice.
+                            If you have a medical emergency, call 911.
+                        </p>
+                    </article>
+
+                    {/* Sidebar: booking card. Stays in view on large screens. */}
+                    <aside className="space-y-6 lg:sticky lg:top-[120px]">
+                        <div className="rounded-lg border p-5">
+                            <h2 className="text-xl font-semibold text-primary">{s.callToAction.heading}</h2>
+                            <p className="mt-1 text-foreground">{s.callToAction.subheading}</p>
+                            <a
+                                href={BOOKING_URL}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="mt-4 flex w-full items-center justify-center gap-2 rounded bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-hover"
+                            >
+                                <CalendarDays className="h-5 w-5" aria-hidden="true" />
+                                {s.callToAction.buttonText}
+                            </a>
+                            <a href={PHONE_LINK} className="mt-3 flex items-center justify-center gap-2 font-semibold text-primary hover:underline">
+                                <Phone className="h-4 w-4" aria-hidden="true" />
+                                {PHONE}
+                            </a>
+
+                            <div className="mt-5 space-y-4 border-t pt-4">
+                                {s.offices && s.offices.length === 1 && (
+                                    <p className="text-sm text-foreground">Offered at our {officesHere[0].city} office.</p>
+                                )}
+                                {officesHere.map((o) => (
+                                    <div key={o.key} className="flex gap-3 text-sm text-foreground">
+                                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                                        <div>
+                                            <Link href={o.slug} className="font-semibold text-primary hover:underline">{o.city} office</Link>
+                                            <p>{o.street}, {o.suite}</p>
+                                            <p>Patients seen {openDaysText(o)}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                                <Link href="/insurance-accepted" className="block text-sm font-semibold text-primary hover:underline">
+                                    Insurance &amp; self-pay prices
+                                </Link>
+                            </div>
+                        </div>
+
+                    </aside>
                 </div>
             </div>
-            
-        </div>
-        <Consultation />
+
+            <Consultation />
         </section>
     )
 }
-

@@ -13,7 +13,7 @@ const page = () => {
                 subtitle="We're here to help—ask your questions and get personalized support in real-time."
             />
             <div className='container py-[60px] md:py-[270px]'>
-                <h3 className='text-[28px] md:text-[40px] text-[#A66A47] font-bold text-center'>Feature coming soon</h3>
+                <h3 className='text-[28px] md:text-[40px] text-primary font-bold text-center'>Feature coming soon</h3>
             </div>
         </section>
     )

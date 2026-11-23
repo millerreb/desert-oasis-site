@@ -1,0 +1,142 @@
+[
+  {
+    "id": 0,
+    "name": "CeraVe Moisturizing Cream",
+    "brand": "CeraVe",
+    "type": "Daily moisturizer",
+    "description": "A moisturizing cream for your everyday skin care routine.",
+    "category": "gentle",
+    "url": "https://link.amazon/B08BmtJdd",
+    "image": "product-0.webp"
+  },
+  {
+    "id": 1,
+    "name": "Cetaphil Healing Ointment",
+    "brand": "Cetaphil",
+    "type": "Protective ointment",
+    "description": "An ointment option for dry skin care.",
+    "category": "gentle",
+    "url": "https://link.amazon/B0doSZx6y",
+    "image": "product-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "CeraVe Hydrating Cleanser Bar",
+    "brand": "CeraVe",
+    "type": "Gentle cleansing bar",
+    "description": "A cleansing bar for a simple daily routine.",
+    "category": "gentle",
+    "url": "https://link.amazon/B0fQZrBID",
+    "image": "product-2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Aquaphor Baby Wash & Shampoo",
+    "brand": "Aquaphor",
+    "type": "Baby wash & shampoo",
+    "description": "A two-in-one cleanser for baby\u2019s skin and hair.",
+    "category": "gentle",
+    "url": "https://link.amazon/B00MAIM83",
+    "image": "product-3.webp"
+  },
+  {
+    "id": 4,
+    "name": "Vanicream Shampoo",
+    "brand": "Vanicream",
+    "type": "Hair care",
+    "description": "A shampoo option for your gentle hair care routine.",
+    "category": "gentle",
+    "url": "https://link.amazon/B0325nB8L",
+    "image": "product-4.webp"
+  },
+  {
+    "id": 5,
+    "name": "Vanicream Conditioner",
+    "brand": "Vanicream",
+    "type": "Hair care",
+    "description": "Pair with shampoo to complete your hair care routine.",
+    "category": "gentle",
+    "url": "https://link.amazon/B0b9kt4UH",
+    "image": "product-5.webp"
+  },
+  {
+    "id": 6,
+    "name": "Vanicream Deodorant",
+    "brand": "Vanicream",
+    "type": "Underarm care",
+    "description": "An option for your daily underarm care routine.",
+    "category": "gentle",
+    "url": "https://link.amazon/B01C0l3Q8",
+    "image": "product-6.webp"
+  },
+  {
+    "id": 7,
+    "name": "Tide Free & Gentle Laundry Detergent",
+    "brand": "Tide",
+    "type": "Laundry care",
+    "description": "A laundry option to complement your gentle skin care routine.",
+    "category": "gentle",
+    "url": "https://link.amazon/B01dSOIj6",
+    "image": "product-7.webp"
+  },
+  {
+    "id": 8,
+    "name": "Vanicream Facial Moisturizer with SPF",
+    "brand": "Vanicream",
+    "type": "Moisturizer + sunscreen",
+    "description": "Facial moisturizer with built-in sun protection.",
+    "category": "gentle",
+    "url": "https://link.amazon/B0giN31hb",
+    "image": "product-8.webp"
+  },
+  {
+    "id": 9,
+    "name": "PanOxyl 4% Acne Creamy Wash",
+    "brand": "PanOxyl",
+    "type": "For the face \u00b7 4% benzoyl peroxide",
+    "description": "The 4% wash from our facial acne care list.",
+    "category": "acne",
+    "url": "https://link.amazon/B0dfXWlh6",
+    "image": "product-9.webp"
+  },
+  {
+    "id": 10,
+    "name": "PanOxyl 10% Acne Foaming Wash",
+    "brand": "PanOxyl",
+    "type": "For the body \u00b7 10% benzoyl peroxide",
+    "description": "The 10% wash from our body acne care list.",
+    "category": "acne",
+    "url": "https://link.amazon/B05cYeixN",
+    "image": "product-10.webp"
+  },
+  {
+    "id": 11,
+    "name": "TIZO Tinted Mineral Sunscreen",
+    "brand": "TIZO",
+    "type": "Tinted mineral sunscreen",
+    "description": "A tinted mineral option for your sun protection routine.",
+    "category": "sun",
+    "url": "https://link.amazon/B030q0tKx",
+    "image": "product-11.webp"
+  },
+  {
+    "id": 12,
+    "name": "Eucerin Tinted Sunscreen",
+    "brand": "Eucerin",
+    "type": "Tinted sunscreen",
+    "description": "A tinted option for everyday sun protection.",
+    "category": "sun",
+    "url": "https://link.amazon/B08SpOJXQ",
+    "image": "product-12.webp"
+  },
+  {
+    "id": 13,
+    "name": "Neutrogena Purescreen Sunscreen",
+    "brand": "Neutrogena",
+    "type": "Mineral sunscreen",
+    "description": "A mineral sunscreen option for your daily routine.",
+    "category": "sun",
+    "url": "https://link.amazon/B0bLgA9Vf",
+    "image": "product-13.webp"
+  }
+]

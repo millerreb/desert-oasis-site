@@ -2,11 +2,14 @@
 // name, offices, addresses, hours and phone number in a format it reads directly.
 // Everything comes from site.ts, so updating hours or addresses there updates this too.
 //
-// Intentionally left out: individual physician entries (no names or credentials on the
-// site) and review/rating markup (Google doesn't show stars from a site's own testimonials).
+// Intentionally left out: individual physician entries (beyond the author named on blog
+// articles) and review/rating markup (Google doesn't show stars from a site's own testimonials).
 
 import { SITE_URL } from "@/lib/seo"
-import { offices, PHONE, FAX, type Office } from "@/lib/site"
+import { offices, PHONE, FAX, FRONT_OFFICE_HOURS, type Office } from "@/lib/site"
+import { BLOG_AUTHOR, type BlogPost } from "@/lib/blogPosts"
+import type { ServiceData } from "@/lib/mokdata"
+import { plainText } from "@/components/Blog/RichText"
 
 const url = (path: string) => new URL(path, SITE_URL).toString()
 
@@ -31,6 +34,7 @@ const officeProfiles: Record<Office["key"], string[]> = {
 // Where each piece appears (each fact in one place):
 //   homepage            -> websiteSchema + organizationSchema
 //   each office page    -> clinicSchema for that office
+//   each service page   -> servicePageSchema (breadcrumb + FAQ)
 
 // The site's name, so Google can show "Desert Oasis Dermatology" as the site name in results
 export function websiteSchema() {
@@ -84,7 +88,9 @@ export function clinicSchema(office: Office) {
       postalCode: office.zip,
       addressCountry: "US",
     },
-    openingHoursSpecification: office.hours.map((h) => ({
+    // Front office hours (Mon-Fri), matching the Google Business Profile. The days the
+    // doctor sees patients here are shown on the office page itself.
+    openingHoursSpecification: FRONT_OFFICE_HOURS.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,
       opens: h.opens,
@@ -100,4 +106,53 @@ export function clinicSchema(office: Office) {
       url: url("/"),
     },
   }
+}
+
+// A blog article: its headline, date and author (shown on the article itself)
+export function blogPostingSchema(post: BlogPost) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    url: url(`/blog/${post.slug}`),
+    mainEntityOfPage: url(`/blog/${post.slug}`),
+    ...(post.image ? { image: url(post.image) } : {}),
+    author: {
+      "@type": "Person",
+      name: BLOG_AUTHOR.name,
+      url: url(BLOG_AUTHOR.url),
+      jobTitle: "Board-Certified Dermatologist",
+    },
+    publisher: { "@id": ORGANIZATION_ID },
+  }
+}
+
+// A service page (/services/[id]): the breadcrumb trail (Home > Services > Medical) and
+// the page's questions and answers. Shown on the service page itself.
+export function servicePageSchema(service: ServiceData) {
+  const pageUrl = url(`/services/${service.id}`)
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: url("/") },
+      { "@type": "ListItem", position: 2, name: "Services", item: url("/services") },
+      { "@type": "ListItem", position: 3, name: service.category, item: url(`/services?category=${service.category}`) },
+      { "@type": "ListItem", position: 4, name: service.serviceName, item: pageUrl },
+    ],
+  }
+  if (service.faqs.length === 0) return [breadcrumb]
+  const faq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: pageUrl,
+    mainEntity: service.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: plainText(f.a) },
+    })),
+  }
+  return [breadcrumb, faq]
 }

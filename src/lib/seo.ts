@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getServiceById } from "@/lib/mokdata";
+import { BLOG_AUTHOR, getPostBySlug } from "@/lib/blogPosts";
 
 // Page titles and descriptions for every page on the site.
 // Each page imports what it needs, e.g.  export const metadata = pageMeta("/about")
@@ -18,10 +19,8 @@ export const hiddenFromSearch = [
   "/future-comming-soon",
   "/maricopa-survey-redirect",
   "/chandler-survey-redirect",
-  "/reviews",
   "/patient-portal",
   "/recommended-products",
-  "/blog",
 ];
 
 export function isHiddenFromSearch(path: string): boolean {
@@ -49,7 +48,7 @@ const AREA = "Maricopa & Chandler, AZ";
 export const defaultSeo: PageSeo = {
   title: `${BRAND} | ${AREA}`,
   description:
-    "Board-certified dermatology and Mohs surgery in Maricopa and Chandler, AZ, treating acne, eczema, skin cancer and more. Most insurances accepted.",
+    "Board-certified dermatology and Mohs surgery in Arizona, treating acne, eczema, skin cancer and more. Most insurances accepted.",
 };
 
 const pages: Record<string, PageSeo> = {
@@ -63,7 +62,7 @@ const pages: Record<string, PageSeo> = {
   "/services": {
     title: `Dermatology Services in ${AREA}`,
     description:
-      "Medical, surgical and cosmetic dermatology in Maricopa and Chandler, AZ: skin cancer screening, Mohs surgery, acne, eczema, psoriasis, Botox, peels and more.",
+      "Medical, surgical and cosmetic dermatology in Maricopa and Chandler, AZ: skin cancer screening, Mohs surgery in Chandler location, acne, eczema, psoriasis, Botox, peels and more.",
   },
   "/hours-and-location": {
     title: `Office Hours & Locations | ${AREA}`,
@@ -73,12 +72,12 @@ const pages: Record<string, PageSeo> = {
   "/maricopa-dermatologist": {
     title: `Dermatologist in Maricopa, AZ | ${BRAND}`,
     description:
-      "Board-certified dermatologist on John Wayne Pkwy in Maricopa, AZ, open Wednesdays and Fridays. Skin cancer screening, Mohs surgery, acne, eczema and cosmetics.",
+      "Board-certified dermatologist on John Wayne Pkwy in Maricopa, AZ, seeing patients Wednesdays and Fridays. Skin cancer screening, surgery, acne and eczema.",
   },
   "/chandler-dermatologist": {
     title: `Dermatologist in Chandler, AZ | ${BRAND}`,
     description:
-      "Board-certified dermatologist on S Alma School Rd in Chandler, AZ, open Mon, Tue and Thu. Skin cancer screening, Mohs surgery, acne, eczema and cosmetics.",
+      "Board-certified dermatologist on S Alma School Rd in Chandler, AZ, seeing patients Mon, Tue and Thu. Skin cancer screening, Mohs surgery, acne and cosmetics.",
   },
   "/insurance-accepted": {
     title: `Insurance & Self-Pay Prices | ${BRAND}`,
@@ -99,11 +98,6 @@ const pages: Record<string, PageSeo> = {
     title: `Pay Your Bill Online | ${BRAND}`,
     description:
       "Pay your Desert Oasis Dermatology bill securely online or by phone, and find answers to common billing questions.",
-  },
-  "/billing-questions": {
-    title: `Billing Questions | ${BRAND}`,
-    description:
-      "How to reach the Desert Oasis Dermatology billing team with questions about your statement, insurance or payment options.",
   },
   "/chat-with-us": {
     title: `Text or Chat With Us | ${BRAND}`,
@@ -157,8 +151,7 @@ const pages: Record<string, PageSeo> = {
 export const pagePaths = Object.keys(pages);
 
 export function pageMeta(path: string): Metadata {
-  // Blog articles share the blog's title until they have their own.
-  const seo = pages[path] ?? (path.startsWith("/blog/") ? pages["/blog"] : defaultSeo);
+  const seo = pages[path] ?? defaultSeo;
   return { title: seo.title, description: seo.description, ...searchTags(path) };
 }
 
@@ -193,7 +186,7 @@ const serviceDescriptions: Record<string, string> = {
   rosaceae:
     "Rosacea treatment to reduce facial redness, flushing and bumps, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
   "mohs-surgery":
-    "Mohs surgery for skin cancer by a double board-certified Mohs surgeon in Maricopa and Chandler, AZ. High cure rates with maximum healthy skin preserved.",
+    "Mohs surgery for skin cancer by a double board-certified Mohs surgeon in Chandler, AZ. High cure rates with maximum healthy skin preserved.",
   excision:
     "Surgical removal of skin cancers, cysts, moles and other growths by a board-certified dermatologic surgeon in Maricopa and Chandler, AZ.",
   "cyst-drainage":
@@ -204,6 +197,26 @@ const serviceDescriptions: Record<string, string> = {
     "Botox and neurotoxin injections to smooth lines and wrinkles, performed by a board-certified dermatologist in Maricopa and Chandler, AZ.",
   microneedling:
     "Microneedling to improve acne scars, fine lines and skin texture, performed by a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "actinic-keratosis":
+    "Treatment for actinic keratoses (rough, precancerous sun spots) with cryotherapy and prescription creams, in Maricopa and Chandler, AZ.",
+  "mole-evaluation":
+    "Evaluation of new or changing moles, plus in-office biopsy and mole removal, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "rash-evaluation":
+    "Diagnosis and treatment of rashes that won't go away, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "skin-infections":
+    "Diagnosis and treatment of fungal and bacterial skin infections, including ringworm, impetigo and folliculitis, in Maricopa and Chandler, AZ.",
+  "nail-conditions":
+    "Treatment for nail fungus, ingrown and discolored nails, and other nail problems from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "hidradenitis-suppurativa":
+    "Hidradenitis suppurativa (HS) treatment, from medicated washes to biologics, with a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "pediatric-dermatology":
+    "Gentle care for children's and teens' skin, including eczema, warts, molluscum, rashes and acne, in Maricopa and Chandler, AZ.",
+  "skin-biopsy":
+    "Quick in-office skin biopsies to diagnose suspicious spots, moles and rashes, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  cryotherapy:
+    "Liquid nitrogen cryotherapy for precancerous spots, warts and benign growths, from a board-certified dermatologist in Maricopa and Chandler, AZ.",
+  "benign-growth-removal":
+    "Removal of skin tags, seborrheic keratoses, cherry angiomas and other benign growths by a board-certified dermatologist in Maricopa and Chandler, AZ.",
 };
 
 // Shorter names for search-result titles, where the page's full service name is too long.
@@ -214,6 +227,10 @@ const serviceTitleNames: Record<string, string> = {
   molluscum: "Molluscum Treatment",
   microneedling: "Microneedling",
   "hand-dermatitis": "Hand Dermatitis Treatment",
+  "actinic-keratosis": "Actinic Keratosis Treatment",
+  "hidradenitis-suppurativa": "Hidradenitis Suppurativa Treatment",
+  cryotherapy: "Cryotherapy",
+  "benign-growth-removal": "Skin Tag & Growth Removal",
 };
 
 export function serviceMeta(id: string): Metadata {
@@ -226,5 +243,26 @@ export function serviceMeta(id: string): Metadata {
       serviceDescriptions[id] ??
       `${service.serviceName} from a board-certified dermatologist in Maricopa and Chandler, AZ.`,
     ...searchTags(`/services/${id}`),
+  };
+}
+
+// Blog articles (/blog/[slug]): title, description and date come from blogPosts.ts.
+export function blogPostMeta(slug: string): Metadata {
+  const post = getPostBySlug(slug);
+  if (!post) return pageMeta("/blog");
+  return {
+    // No practice name here: Google shows the site name above each result
+    title: post.title,
+    description: post.description,
+    authors: [{ name: BLOG_AUTHOR.name, url: new URL(BLOG_AUTHOR.url, SITE_URL).toString() }],
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.description,
+      url: new URL(`/blog/${slug}`, SITE_URL).toString(),
+      publishedTime: post.date,
+      ...(post.image ? { images: [post.image] } : {}),
+    },
+    ...searchTags(`/blog/${slug}`),
   };
 }

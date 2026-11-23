@@ -11,6 +11,10 @@ const config: Config = {
     extend: {
       colors: {
         background: "hsl(var(--background))",
+        sand: "hsl(var(--sand))",
+        copper: "hsl(var(--copper))",
+        "copper-text": "hsl(var(--copper-text))",
+        "primary-hover": "hsl(var(--primary-hover))",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",
