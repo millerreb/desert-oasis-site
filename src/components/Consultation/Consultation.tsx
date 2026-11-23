@@ -161,7 +161,7 @@ export default function Consultation() {
   }
 
   return (
-    <div className=" bg-[#C7925B] py-[60px]">
+    <div className=" bg-primary py-[60px]">
       <div className="container  grid md:grid-cols-2 gap-8">
         {/* Left Column */}
         <div className="text-white ">
@@ -261,7 +261,7 @@ export default function Consultation() {
                   className={`w-full px-4 py-3 rounded-md border focus:outline-none focus:ring-2 ${errors.firstName ? "border-red-300 focus:ring-red-200" : "border-gray-300 focus:ring-[#c69c6d]"
                     }`}
                 />
-                {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
+                {errors.firstName && <p className="text-[#A13D32] text-sm mt-1">{errors.firstName}</p>}
               </div>
 
               <div className="space-y-2">
@@ -278,7 +278,7 @@ export default function Consultation() {
                   className={`w-full px-4 py-3 rounded-md border focus:outline-none focus:ring-2 ${errors.lastName ? "border-red-300 focus:ring-red-200" : "border-gray-300 focus:ring-[#c69c6d]"
                     }`}
                 />
-                {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
+                {errors.lastName && <p className="text-[#A13D32] text-sm mt-1">{errors.lastName}</p>}
               </div>
             </div>
 
@@ -304,7 +304,7 @@ export default function Consultation() {
                     }`}
                 />
               </div>
-              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+              {errors.email && <p className="text-[#A13D32] text-sm mt-1">{errors.email}</p>}
             </div>
 
             <div className="space-y-2">
@@ -332,7 +332,7 @@ export default function Consultation() {
                     }`}
                 />
               </div>
-              {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+              {errors.phone && <p className="text-[#A13D32] text-sm mt-1">{errors.phone}</p>}
             </div>
 
             <div className="space-y-2">
@@ -349,7 +349,7 @@ export default function Consultation() {
                 className={`w-full px-4 py-3 rounded-md border focus:outline-none focus:ring-2 ${errors.message ? "border-red-300 focus:ring-red-200" : "border-gray-300 focus:ring-[#c69c6d]"
                   }`}
               ></textarea>
-              {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+              {errors.message && <p className="text-[#A13D32] text-sm mt-1">{errors.message}</p>}
             </div>
 
             <div className="">
@@ -368,7 +368,7 @@ export default function Consultation() {
             <button
               type="submit"
               disabled={isSubmitting || !captchaVerified}
-              className="w-full py-3 px-4 bg-[#C7925B] text-white font-medium rounded-md hover:bg-[#C7925B]/80 transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
+              className="w-full py-3 px-4 bg-primary text-white font-medium rounded-md hover:bg-primary-hover transition-colors disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
             >
               {isSubmitting ? (
                 <>
@@ -417,10 +417,10 @@ export default function Consultation() {
                 </PopoverTrigger>
                 <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
                   <div className="flex flex-col gap-1">
-                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Maricopa/@33.0739956,-112.0454332,17z/data=!4m8!3m7!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!9m1!1b1!16s%2Fg%2F11m6sg0qh8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Maricopa/@33.0739956,-112.0454332,17z/data=!4m8!3m7!1s0x872afb13db300289:0xa1cbdb5513efe36f!8m2!3d33.0739956!4d-112.0454332!9m1!1b1!16s%2Fg%2F11m6sg0qh8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-foreground hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
                       Maricopa location
                     </Link>
-                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Chandler/@33.2642304,-111.8608164,17z/data=!3m1!4b1!4m6!3m5!1s0x872b01d61f9ee563:0xbefb48eebcc53c32!8m2!3d33.2642304!4d-111.8608164!16s%2Fg%2F11ymhcdzl8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.google.com/maps/place/Desert+Oasis+Dermatology+-+Chandler/@33.2642304,-111.8608164,17z/data=!3m1!4b1!4m6!3m5!1s0x872b01d61f9ee563:0xbefb48eebcc53c32!8m2!3d33.2642304!4d-111.8608164!16s%2Fg%2F11ymhcdzl8?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank" className="text-sm text-foreground hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
                       Chandler location
                     </Link>
                   </div>
@@ -466,10 +466,10 @@ export default function Consultation() {
                 </PopoverTrigger>
                 <PopoverContent className="w-44 p-2 bg-white border shadow-md" align="end">
                   <div className="flex flex-col gap-1">
-                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-maricopa" target="_blank" className="text-sm text-foreground hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
                      Maricopa location
                     </Link>
-                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-chandler" target="_blank" className="text-sm text-[#363636] hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
+                    <Link href="https://www.yelp.com/biz/desert-oasis-dermatology-chandler" target="_blank" className="text-sm text-foreground hover:bg-amber-50 hover:text-amber-700 p-2 rounded-md transition-colors">
                       Chandler location
                     </Link>
                   </div>

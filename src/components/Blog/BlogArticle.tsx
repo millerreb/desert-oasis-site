@@ -9,35 +9,35 @@ import { BLOG_AUTHOR, formatPostDate, relatedPosts, type BlogBlock, type BlogPos
 function Block({ block }: { block: BlogBlock }) {
     switch (block.type) {
         case "h2":
-            return <h2 className="text-[22px] md:text-[26px] font-semibold text-[#A66A47] leading-snug !mt-10">{block.text}</h2>
+            return <h2 className="text-[22px] md:text-[26px] font-semibold text-primary leading-snug !mt-10">{block.text}</h2>
         case "h3":
-            return <h3 className="text-[18px] md:text-[20px] font-semibold text-[#333333] leading-snug !mt-8">{block.text}</h3>
+            return <h3 className="text-[18px] md:text-[20px] font-semibold text-foreground leading-snug !mt-8">{block.text}</h3>
         case "p":
-            return <p className="text-[#333333] leading-relaxed"><RichText text={block.text} /></p>
+            return <p className="text-foreground leading-relaxed"><RichText text={block.text} /></p>
         case "ul":
             return (
-                <ul className="list-disc pl-6 space-y-2 text-[#333333] leading-relaxed marker:text-[#C7925B]">
+                <ul className="list-disc pl-6 space-y-2 text-foreground leading-relaxed marker:text-primary">
                     {block.items.map((item, i) => <li key={i} className="pl-1"><RichText text={item} /></li>)}
                 </ul>
             )
         case "ol":
             return (
-                <ol className="list-decimal pl-6 space-y-2 text-[#333333] leading-relaxed marker:text-[#A66A47] marker:font-semibold">
+                <ol className="list-decimal pl-6 space-y-2 text-foreground leading-relaxed marker:text-primary marker:font-semibold">
                     {block.items.map((item, i) => <li key={i} className="pl-1"><RichText text={item} /></li>)}
                 </ol>
             )
         case "table":
             return (
                 <div className="overflow-x-auto">
-                    <table className="w-full max-w-[560px] border-collapse text-left text-[#333333]">
+                    <table className="w-full max-w-[560px] border-collapse text-left text-foreground">
                         <thead>
-                            <tr className="bg-[#A66A47] text-white">
+                            <tr className="bg-primary text-white">
                                 {block.head.map((cell, i) => <th key={i} scope="col" className="px-4 py-3 font-semibold">{cell}</th>)}
                             </tr>
                         </thead>
                         <tbody>
                             {block.rows.map((row, r) => (
-                                <tr key={r} className="border-b border-[#E8D9CC] even:bg-[#FBF6F2]">
+                                <tr key={r} className="border-b border even:bg-sand">
                                     {row.map((cell, c) => <td key={c} className="px-4 py-3"><RichText text={cell} /></td>)}
                                 </tr>
                             ))}
@@ -57,7 +57,7 @@ export default function BlogArticle({ post }: { post: BlogPost }) {
 
             <div className="container py-[40px] md:py-[60px]">
                 <article className="max-w-[780px] mx-auto">
-                    <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-[#8A5536] hover:text-[#A66A47]">
+                    <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary">
                         <ArrowLeft className="h-4 w-4" aria-hidden="true" />
                         All articles
                     </Link>
@@ -65,7 +65,7 @@ export default function BlogArticle({ post }: { post: BlogPost }) {
                     <p className="mt-5 text-sm text-[#555555] flex flex-wrap gap-x-2 gap-y-1">
                         <span>
                             By{" "}
-                            <Link href={BLOG_AUTHOR.url} className="font-semibold text-[#A66A47] hover:underline">
+                            <Link href={BLOG_AUTHOR.url} className="font-semibold text-primary hover:underline">
                                 {BLOG_AUTHOR.name}
                             </Link>
                         </span>
@@ -90,7 +90,7 @@ export default function BlogArticle({ post }: { post: BlogPost }) {
 
                 {more.length > 0 && (
                     <div className="mt-[60px] md:mt-[80px]">
-                        <h2 className="text-[24px] md:text-[32px] font-semibold text-[#A66A47] text-center">More from our blog</h2>
+                        <h2 className="text-[24px] md:text-[32px] font-semibold text-primary text-center">More from our blog</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] mt-8">
                             {more.map((p) => <BlogCard key={p.slug} post={p} />)}
                         </div>

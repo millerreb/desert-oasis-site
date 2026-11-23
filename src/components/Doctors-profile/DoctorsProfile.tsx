@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function DoctorProfile() {
   return (
-    <section className="bg-[#C7925B] text-white py-12 px-4 md:px-8 lg:px-12">
+    <section className="bg-primary text-white py-12 px-4 md:px-8 lg:px-12">
       <div className="container ">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
           {/* Doctor Image */}
@@ -62,7 +62,7 @@ export default function DoctorProfile() {
               <Link href="/about">
                 <Button
                   variant="outline"
-                  className="bg-white h-[43px] px-[24px] text-[#C7925B] hover:bg-gray-100 border-white hover:text-[#c69c6d] font-medium"
+                  className="bg-white h-[43px] px-[24px] text-primary hover:bg-gray-100 border-white hover:text-primary-hover font-medium"
                 >
                   Learn More About Dr. Lavian
                 </Button>

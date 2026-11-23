@@ -67,15 +67,15 @@ export default function FromUplode() {
 
   return (
     <div className=" container px-4 py-8">
-      <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-[#A66A47] mb-10">
+      <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-primary mb-10">
         UPLOAD FORM
       </h2>
 
-      <p className="text-xl md:text-[24px] text-[#A66A47] font-semibold mb-2">
+      <p className="text-xl md:text-[24px] text-primary font-semibold mb-2">
         Upload your completed forms using the secure form below.
       </p>
 
-      <p className="text-base md:text-[18px] text-[#698B8F] mb-6">
+      <p className="text-base md:text-[18px] text-primary mb-6">
         Accepted file formats: PDF. Maximum file size: 5MB.
       </p>
 
@@ -101,15 +101,15 @@ export default function FromUplode() {
           onChange={handleFileChange}
         />
 
-        <Upload className="w-10 h-10 text-[#B27C50] mb-4" />
+        <Upload className="w-10 h-10 text-copper-text mb-4" />
 
         {file ? (
           <div className="text-center">
-            <p className="font-medium text-[#B27C50]">File selected:</p>
+            <p className="font-medium text-copper-text">File selected:</p>
             <p className="text-gray-600">{file.name}</p>
           </div>
         ) : (
-          <p className="text-[#B27C50] text-center">
+          <p className="text-copper-text text-center">
             Drag and Drop File Upload Area
           </p>
         )}
@@ -117,7 +117,7 @@ export default function FromUplode() {
 
       <div className="">
         <button
-          className="bg-[#C7925B] hover:bg-[#C7925B]/80 text-base md:text-[18px] text-white font-medium py-2 px-6 rounded-md transition-colors"
+          className="bg-primary hover:bg-primary-hover text-base md:text-[18px] text-white font-medium py-2 px-6 rounded-md transition-colors"
           onClick={handleSubmit}
         >
           Upload & Submit

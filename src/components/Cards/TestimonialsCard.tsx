@@ -28,7 +28,7 @@ export default function TestimonialCarousel() {
 
             <div className='flex justify-center mt-[50px] pb-[60px]'>
                 <Link href="/reviews">
-                    <Button className='bg-[#C7925B] text-base font-bold text-white px-[94px] h-[52px] mt-5 hover:bg-[#C7925B]/80 '>
+                    <Button className='bg-primary text-base font-bold text-white px-[94px] h-[52px] mt-5 hover:bg-primary-hover '>
                         See All
                         <span>
                             <ArrowRight />

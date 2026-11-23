@@ -171,29 +171,29 @@ export default function JobApplicationForm() {
       <div className="container px-4 py-12 md:py-16 lg:py-20">
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
-            <h1 className="text-3xl md:text-[32px] font-semibold text-[#C7925B] mb-[30px]">Join Our Team</h1>
-            <p className="text-base text-[#333333] font-normal mb-[30px]">
+            <h1 className="text-3xl md:text-[32px] font-semibold text-primary mb-[30px]">Join Our Team</h1>
+            <p className="text-base text-foreground font-normal mb-[30px]">
               We are looking for dedicated professionals to join our team in the following roles:
             </p>
             <ul className="space-y-3 mb-[30px]">
               {["Medical Assistant", "Front Office", "Medical Billing/Prior Authorization", "Office Manager"].map(
                 (role) => (
                   <li key={role} className="flex items-start">
-                    <div className="mr-2 mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#A66A47] flex items-center justify-center">
+                    <div className="mr-2 mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
                       <Check className="h-3 w-3 text-[#FFFFFF]" />
                     </div>
-                    <span className="text-base text-[#333333] font-medium">{role}</span>
+                    <span className="text-base text-foreground font-medium">{role}</span>
                   </li>
                 ),
               )}
             </ul>
-            <p className="text-base text-[#333333] font-normal">
+            <p className="text-base text-foreground font-normal">
               If you are passionate about patient care and have the required skills, we would love to hear from you.
             </p>
           </div>
 
           <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#A66A47] mb-8">Apply for a Position</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">Apply for a Position</h2>
 
             {error && <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md text-red-700">{error}</div>}
 
@@ -204,10 +204,10 @@ export default function JobApplicationForm() {
                   name="position"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm text-[#698B8F] font-medium">Position</FormLabel>
+                      <FormLabel className="text-sm text-primary font-medium">Position</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="border-[#698B8F] focus:ring-[#698B8F] h-[50px]">
+                          <SelectTrigger className="border-primary focus:ring-[#698B8F] h-[50px]">
                             <SelectValue placeholder="Select Position" />
                           </SelectTrigger>
                         </FormControl>
@@ -228,9 +228,9 @@ export default function JobApplicationForm() {
                   name="fullName"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm text-[#698B8F] font-medium">Full Name</FormLabel>
+                      <FormLabel className="text-sm text-primary font-medium">Full Name</FormLabel>
                       <FormControl>
-                        <Input {...field} className="border-[#698B8F] focus:ring-[#698B8F] h-[50px]" />
+                        <Input {...field} className="border-primary focus:ring-[#698B8F] h-[50px]" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -242,9 +242,9 @@ export default function JobApplicationForm() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm text-[#698B8F] font-medium">Email Address</FormLabel>
+                      <FormLabel className="text-sm text-primary font-medium">Email Address</FormLabel>
                       <FormControl>
-                        <Input type="email" {...field} className="border-[#698B8F] focus:ring-[#698B8F] h-[50px]" />
+                        <Input type="email" {...field} className="border-primary focus:ring-[#698B8F] h-[50px]" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -256,9 +256,9 @@ export default function JobApplicationForm() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm text-[#698B8F] font-medium">Phone Number</FormLabel>
+                      <FormLabel className="text-sm text-primary font-medium">Phone Number</FormLabel>
                       <FormControl>
-                        <Input {...field} className="border-[#698B8F] focus:ring-[#698B8F] h-[50px]" />
+                        <Input {...field} className="border-primary focus:ring-[#698B8F] h-[50px]" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -270,9 +270,9 @@ export default function JobApplicationForm() {
                   name="coverLetter"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm text-[#698B8F] font-medium">Cover Letter</FormLabel>
+                      <FormLabel className="text-sm text-primary font-medium">Cover Letter</FormLabel>
                       <FormControl>
-                        <Textarea className="min-h-[120px] border-[#698B8F] focus:ring-[#698B8F]" {...field} />
+                        <Textarea className="min-h-[120px] border-primary focus:ring-[#698B8F]" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -284,7 +284,7 @@ export default function JobApplicationForm() {
                   name="recaptcha"
                   render={() => (
                     <FormItem>
-                      <FormLabel className="text-sm text-[#698B8F] font-medium">Verification</FormLabel>
+                      <FormLabel className="text-sm text-primary font-medium">Verification</FormLabel>
                       <FormControl>
                         <div className="flex justify-start">
                           <ReCAPTCHA
@@ -303,7 +303,7 @@ export default function JobApplicationForm() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-[#C7925B] hover:bg-[#C7925B]/80 text-base h-[51px] font-midium text-white"
+                  className="w-full bg-primary hover:bg-primary-hover text-base h-[51px] font-midium text-white"
                   disabled={isSubmitting || !captchaValue}
                 >
                   {isSubmitting ? "Submitting..." : "Submit Application"}

@@ -28,7 +28,7 @@ function parse(text: string, keyPrefix: string): ReactNode[] {
         } else if (italic) {
             out.push(<em key={key}>{parse(italic, key)}</em>)
         } else if (linkText) {
-            const linkClass = "text-[#8A5536] underline underline-offset-2 hover:text-[#A66A47]"
+            const linkClass = "text-primary underline underline-offset-2 hover:text-primary"
             if (href === "booking") {
                 out.push(
                     <a key={key} href={BOOKING_URL} target="_blank" rel="noreferrer" className={linkClass}>

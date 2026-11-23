@@ -78,8 +78,8 @@ export default function Services({ initialCategory = "Medical" }: { initialCateg
             key={category}
             onClick={() => handleCategoryChange(category)}
             className={cn(
-              "py-2 px-4 rounded text-center transition-colors text-sm md:text-xl font-semibold text-[#333333]",
-              activeCategory === category ? "bg-[#A66A47] text-white" : "bg-[#C7925B99] text-gray-800",
+              "py-2 px-4 rounded text-center transition-colors text-sm md:text-xl font-semibold text-foreground",
+              activeCategory === category ? "bg-primary text-white" : "bg-accent text-gray-800",
             )}
           >
             {category}
@@ -99,7 +99,7 @@ export default function Services({ initialCategory = "Medical" }: { initialCateg
             <Link
               key={treatment.id}
               href={`/services/${treatment.id}`}
-              className="block border border-[#A66A47] rounded py-[15.5px] w-full sm:w-[300px]  xl:w-[350px] text-center hover:border-[#A66A47] transition-colors text-base font-semibold text-[#333333] mx-auto"
+              className="block border rounded py-[15.5px] w-full sm:w-[300px]  xl:w-[350px] text-center hover:border transition-colors text-base font-semibold text-foreground mx-auto"
             >
               <span className="text-sm sm:text-base">{treatment.name}</span>
             </Link>

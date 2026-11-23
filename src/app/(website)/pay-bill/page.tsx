@@ -19,28 +19,28 @@ const Page = () => {
     return (
       <div className="flex flex-col gap-5 w-full">
         {/* ==========card1========== */}
-        <div className="border border-[#A66A47] rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
+        <div className="border rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
           <div className="flex flex-col md:flex-row gap-5 text-center md:text-left items-center md:items-start sm:justify-center">
             <Image src={cardicon1} alt="Credit Card Icon" width={30} height={24} className="w-6 h-6" />
             <div>
-              <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">Pay online</h5>
-              <p className="text-[18px] text-[#698B8F] font-normal mt-1">
+              <h5 className="text-primary text-lg md:text-xl font-semibold">Pay online</h5>
+              <p className="text-[18px] text-primary font-normal mt-1">
                 Our new billing company is Arizona Advanced Surgery in conjunction with Healow pay.
               </p>
             </div>
           </div>
-          <Button asChild className="text-sm md:text-base text-white font-medium px-6 py-2 bg-[#C7925B] hover:bg-[#C7925B]/80">
+          <Button asChild className="text-sm md:text-base text-white font-medium px-6 py-2 bg-primary hover:bg-primary-hover">
             <Link href="https://www.healowpay.com/HealowPay/jsp/healow/login.jsp" rel="noreferrer" target="_blank">Pay Online</Link>
           </Button>
         </div>
 
         {/* ==========card2========== */}
-        <div className="border border-[#A66A47] rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
+        <div className="border rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
           <div className="flex flex-col md:flex-row gap-5 text-center md:text-left items-center md:items-start sm:justify-center">
             <Image src={cardicon2} alt="Credit Card Icon" width={30} height={24} className="w-6 h-6" />
             <div>
-              <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">Pay by check</h5>
-              <p className="text-[18px] text-[#698B8F] font-normal mt-1">
+              <h5 className="text-primary text-lg md:text-xl font-semibold">Pay by check</h5>
+              <p className="text-[18px] text-primary font-normal mt-1">
                 Pay your bill by mailing a check to: <br />
                 Arizona Advanced Surgery <br />
                 PO Box 9244 <br />
@@ -53,30 +53,30 @@ const Page = () => {
         </div>
 
         {/* ==========card3========== */}
-        <div className="border border-[#A66A47] rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
+        <div className="border rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
           <div className="flex flex-col md:flex-row gap-5 text-center md:text-left items-center md:items-start sm:justify-center">
             <Image src={cardicon3} alt="Credit Card Icon" width={30} height={24} className="w-6 h-6" />
             <div>
-              <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">Pay by phone</h5>
-              <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                Call us at <a href="tel:+16026492007" className="text-[#698B8F] underline">(602) 649-2007</a> to pay your bill over the phone with a credit or debit card.
+              <h5 className="text-primary text-lg md:text-xl font-semibold">Pay by phone</h5>
+              <p className="text-[18px] text-primary font-normal mt-1">
+                Call us at <a href="tel:+16026492007" className="text-primary underline">(602) 649-2007</a> to pay your bill over the phone with a credit or debit card.
               </p>
             </div>
           </div>
         </div>
 
         {/* ==========card4========== */}
-        <div className="border border-[#A66A47] rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
+        <div className="border rounded-xl p-5 flex flex-col md:flex-row justify-between items-center gap-5">
           <div className="flex flex-col md:flex-row gap-5 text-center md:text-left items-center md:items-start sm:justify-center">
             <Image src={icon3} alt="Billing Questions Icon" width={30} height={24} className="w-6 h-6" />
             <div>
-              <h5 className="text-[#A66A47] text-lg md:text-xl font-semibold">Questions?</h5>
-              <p className="text-[18px] text-[#698B8F] font-normal mt-1">
-                Please email us at <Link className="text-[#8A5536] underline" href="mailto:billing@AZAdvanced.com">billing@AZAdvanced.com</Link> with any payment or billing related questions.
+              <h5 className="text-primary text-lg md:text-xl font-semibold">Questions?</h5>
+              <p className="text-[18px] text-primary font-normal mt-1">
+                Please email us at <Link className="text-primary underline" href="mailto:billing@AZAdvanced.com">billing@AZAdvanced.com</Link> with any payment or billing related questions.
                 Include your full name, date of birth, and phone number in the message.
                 <br />
                 <br />
-                You can also call us at <a href={PHONE_LINK} className="text-[#8A5536] underline">{PHONE}</a> with billing questions.
+                You can also call us at <a href={PHONE_LINK} className="text-primary underline">{PHONE}</a> with billing questions.
               </p>
             </div>
           </div>

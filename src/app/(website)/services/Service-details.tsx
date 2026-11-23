@@ -20,7 +20,7 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
     return (
         <section>
             {/* Banner: breadcrumb, page title, short intro and booking buttons */}
-            <div className="bg-[#A66A47] text-white">
+            <div className="bg-primary text-white">
                 <div className="container py-8 md:py-12">
                     <nav aria-label="Breadcrumb" className="text-sm text-white/85">
                         <ol className="flex flex-wrap items-center gap-1">
@@ -42,7 +42,7 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
                             href={BOOKING_URL}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded bg-white px-5 py-3 font-semibold text-[#8A5536] hover:bg-[#FBF6F2]"
+                            className="inline-flex items-center gap-2 rounded bg-white px-5 py-3 font-semibold text-primary hover:bg-sand"
                         >
                             <CalendarDays className="h-5 w-5" aria-hidden="true" />
                             Schedule Appointment
@@ -63,30 +63,30 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
                     {/* Main content */}
                     <article className="min-w-0">
                         {s.paragraphs.length > 3 && (
-                            <nav aria-label="On this page" className="mb-10 rounded-lg border border-[#E8D9CC] bg-[#FBF6F2] p-5">
-                                <p className="font-semibold text-[#333333]">On this page</p>
+                            <nav aria-label="On this page" className="mb-10 rounded-lg border bg-sand p-5">
+                                <p className="font-semibold text-foreground">On this page</p>
                                 <ul className="mt-3 grid gap-2 sm:grid-cols-2">
                                     {s.paragraphs.map((p) => (
                                         <li key={p.title}>
-                                            <a href={`#${sectionId(p.title)}`} className="text-[#8A5536] hover:underline">{p.title}</a>
+                                            <a href={`#${sectionId(p.title)}`} className="text-primary hover:underline">{p.title}</a>
                                         </li>
                                     ))}
                                     {s.faqs.length > 0 && (
-                                        <li><a href="#faq" className="text-[#8A5536] hover:underline">Frequently asked questions</a></li>
+                                        <li><a href="#faq" className="text-primary hover:underline">Frequently asked questions</a></li>
                                     )}
                                 </ul>
                             </nav>
                         )}
 
-                        <div className="space-y-10 text-base md:text-[17px] text-[#333333]">
+                        <div className="space-y-10 text-base md:text-[17px] text-foreground">
                             {s.paragraphs.map((p) => (
                                 <div key={p.title} id={sectionId(p.title)} className="scroll-mt-28">
-                                    <h2 className="text-[22px] md:text-[26px] font-semibold text-[#A66A47] leading-snug">{p.title}</h2>
+                                    <h2 className="text-[22px] md:text-[26px] font-semibold text-primary leading-snug">{p.title}</h2>
                                     {p.content.split("\n\n").map((para, i) => (
                                         <p key={i} className="mt-4 leading-relaxed"><RichText text={para} /></p>
                                     ))}
                                     {p.bullets && (
-                                        <ul className="mt-4 list-disc pl-6 space-y-2 leading-relaxed marker:text-[#C7925B]">
+                                        <ul className="mt-4 list-disc pl-6 space-y-2 leading-relaxed marker:text-primary">
                                             {p.bullets.map((b, i) => <li key={i} className="pl-1"><RichText text={b} /></li>)}
                                         </ul>
                                     )}
@@ -97,15 +97,15 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
 
                         {s.faqs.length > 0 && (
                             <div id="faq" className="mt-14 scroll-mt-28">
-                                <h2 className="text-[22px] md:text-[26px] font-semibold text-[#A66A47] leading-snug">Frequently asked questions</h2>
-                                <div className="mt-5 divide-y divide-[#E8D9CC] rounded-lg border border-[#E8D9CC]">
+                                <h2 className="text-[22px] md:text-[26px] font-semibold text-primary leading-snug">Frequently asked questions</h2>
+                                <div className="mt-5 divide-y divide-[#E8D9CC] rounded-lg border border">
                                     {s.faqs.map((f) => (
                                         <details key={f.q} className="group px-5 py-4" open>
-                                            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold text-[#333333] [&::-webkit-details-marker]:hidden">
+                                            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold text-foreground [&::-webkit-details-marker]:hidden">
                                                 <h3 className="text-base md:text-[17px]">{f.q}</h3>
-                                                <ChevronDown className="mt-1 h-5 w-5 shrink-0 text-[#A66A47] transition-transform group-open:rotate-180" aria-hidden="true" />
+                                                <ChevronDown className="mt-1 h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-180" aria-hidden="true" />
                                             </summary>
-                                            <p className="mt-3 leading-relaxed text-[#333333]"><RichText text={f.a} /></p>
+                                            <p className="mt-3 leading-relaxed text-foreground"><RichText text={f.a} /></p>
                                         </details>
                                     ))}
                                 </div>
@@ -115,24 +115,24 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
                         {(related.length > 0 || posts.length > 0) && (
                             <div className="mt-14 grid gap-6 sm:grid-cols-2">
                                 {related.length > 0 && (
-                                    <div className="rounded-lg bg-[#FBF6F2] p-5">
-                                        <h2 className="text-lg font-semibold text-[#333333]">Related services</h2>
+                                    <div className="rounded-lg bg-sand p-5">
+                                        <h2 className="text-lg font-semibold text-foreground">Related services</h2>
                                         <ul className="mt-3 space-y-2">
                                             {related.map((r) => (
                                                 <li key={r.id}>
-                                                    <Link href={`/services/${r.id}`} className="text-[#8A5536] hover:underline">{r.serviceName}</Link>
+                                                    <Link href={`/services/${r.id}`} className="text-primary hover:underline">{r.serviceName}</Link>
                                                 </li>
                                             ))}
                                         </ul>
                                     </div>
                                 )}
                                 {posts.length > 0 && (
-                                    <div className="rounded-lg bg-[#FBF6F2] p-5">
-                                        <h2 className="text-lg font-semibold text-[#333333]">From our blog</h2>
+                                    <div className="rounded-lg bg-sand p-5">
+                                        <h2 className="text-lg font-semibold text-foreground">From our blog</h2>
                                         <ul className="mt-3 space-y-2">
                                             {posts.map((p) => (
                                                 <li key={p!.slug}>
-                                                    <Link href={`/blog/${p!.slug}`} className="text-[#8A5536] hover:underline">{p!.title}</Link>
+                                                    <Link href={`/blog/${p!.slug}`} className="text-primary hover:underline">{p!.title}</Link>
                                                 </li>
                                             ))}
                                         </ul>
@@ -149,38 +149,38 @@ export default function ServicesDetailsCard({ serviceData }: { serviceData: Serv
 
                     {/* Sidebar: booking card. Stays in view on large screens. */}
                     <aside className="space-y-6 lg:sticky lg:top-[120px]">
-                        <div className="rounded-lg border border-[#A66A47] p-5">
-                            <h2 className="text-xl font-semibold text-[#A66A47]">{s.callToAction.heading}</h2>
-                            <p className="mt-1 text-[#333333]">{s.callToAction.subheading}</p>
+                        <div className="rounded-lg border p-5">
+                            <h2 className="text-xl font-semibold text-primary">{s.callToAction.heading}</h2>
+                            <p className="mt-1 text-foreground">{s.callToAction.subheading}</p>
                             <a
                                 href={BOOKING_URL}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="mt-4 flex w-full items-center justify-center gap-2 rounded bg-[#C7925B] px-5 py-3 font-semibold text-white hover:bg-[#C7925B]/85"
+                                className="mt-4 flex w-full items-center justify-center gap-2 rounded bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-hover"
                             >
                                 <CalendarDays className="h-5 w-5" aria-hidden="true" />
                                 {s.callToAction.buttonText}
                             </a>
-                            <a href={PHONE_LINK} className="mt-3 flex items-center justify-center gap-2 font-semibold text-[#8A5536] hover:underline">
+                            <a href={PHONE_LINK} className="mt-3 flex items-center justify-center gap-2 font-semibold text-primary hover:underline">
                                 <Phone className="h-4 w-4" aria-hidden="true" />
                                 {PHONE}
                             </a>
 
-                            <div className="mt-5 space-y-4 border-t border-[#E8D9CC] pt-4">
+                            <div className="mt-5 space-y-4 border-t pt-4">
                                 {s.offices && s.offices.length === 1 && (
-                                    <p className="text-sm text-[#333333]">Offered at our {officesHere[0].city} office.</p>
+                                    <p className="text-sm text-foreground">Offered at our {officesHere[0].city} office.</p>
                                 )}
                                 {officesHere.map((o) => (
-                                    <div key={o.key} className="flex gap-3 text-sm text-[#333333]">
-                                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#A66A47]" aria-hidden="true" />
+                                    <div key={o.key} className="flex gap-3 text-sm text-foreground">
+                                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
                                         <div>
-                                            <Link href={o.slug} className="font-semibold text-[#8A5536] hover:underline">{o.city} office</Link>
+                                            <Link href={o.slug} className="font-semibold text-primary hover:underline">{o.city} office</Link>
                                             <p>{o.street}, {o.suite}</p>
                                             <p>Patients seen {openDaysText(o)}</p>
                                         </div>
                                     </div>
                                 ))}
-                                <Link href="/insurance-accepted" className="block text-sm font-semibold text-[#8A5536] hover:underline">
+                                <Link href="/insurance-accepted" className="block text-sm font-semibold text-primary hover:underline">
                                     Insurance &amp; self-pay prices
                                 </Link>
                             </div>

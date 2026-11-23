@@ -13,7 +13,7 @@ const page = () => {
           <div >
               <Header title='Hours & Location' subtitle='Plan your visit easily. Find our office hours, location, and directions below.' />
         <div className='container mt-[60px] pb-[60px] lg:pb-[238px] '>
-          <h3 className='text-[28px] md:text-[32px]  text-[#A66A47] font-semibold text-center'>OFFICE HOURS</h3>
+          <h3 className='text-[28px] md:text-[32px]  text-primary font-semibold text-center'>OFFICE HOURS</h3>
           <BusinessHours/>
               </div>
                <Consultation/>

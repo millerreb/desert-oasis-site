@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Poppins } from "next/font/google";
+import { DM_Sans, Libre_Caslon_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
@@ -8,10 +8,17 @@ import { defaultSeo, SITE_URL } from "@/lib/seo";
 
 
 
-const poppins = Poppins({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+
+const libreCaslon = Libre_Caslon_Display({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-libre-caslon",
 });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body
-        className={`${poppins.variable} antialiased`}
+        className={`${dmSans.variable} ${libreCaslon.variable} antialiased`}
       >
         <Navbar />
         {children}

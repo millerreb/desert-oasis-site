@@ -24,17 +24,17 @@ const formGroups = [
 export default function DownloadForms() {
     return (
         <div className="w-full max-w-7xl mx-auto px-4 py-8">
-            <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-[#A66A47] mb-8">DOWNLOAD FORMS</h2>
+            <h2 className="text-center text-[24px] md:text-[32px] font-semibold text-primary mb-8">DOWNLOAD FORMS</h2>
             <div className="space-y-10">
                 {formGroups.map((group) => (
                     <div key={group.title}>
-                        <h3 className="text-[20px] md:text-[24px] font-semibold text-[#333333] mb-4">{group.title}</h3>
+                        <h3 className="text-[20px] md:text-[24px] font-semibold text-foreground mb-4">{group.title}</h3>
                         <ul className="space-y-4">
                             {group.forms.map((form) => (
                                 <li key={form.file} className="flex items-center gap-4">
-                                    <HiOutlineDownload className="shrink-0 text-[#A66A47] w-5 h-5 md:w-7 md:h-7" aria-hidden="true" />
+                                    <HiOutlineDownload className="shrink-0 text-primary w-5 h-5 md:w-7 md:h-7" aria-hidden="true" />
                                     <a
-                                        className="text-[18px] md:text-[22px] text-[#A66A47] font-semibold underline hover:text-[#8A5536]"
+                                        className="text-[18px] md:text-[22px] text-primary font-semibold underline hover:text-primary"
                                         href={`/documents/${form.file}`}
                                         download
                                     >

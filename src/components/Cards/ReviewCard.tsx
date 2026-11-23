@@ -5,14 +5,14 @@ import { officeLocation, type Review } from "@/lib/reviews"
 // Used on /reviews and in the homepage testimonials carousel.
 export default function ReviewCard({ review }: { review: Review }) {
     return (
-        <figure className="border border-[#A66A47] rounded-lg bg-white p-6 flex flex-col h-full hover:shadow-4xl hover:border-transparent duration-500 transition-all">
+        <figure className="border rounded-lg bg-white p-6 flex flex-col h-full hover:shadow-4xl hover:border-transparent duration-500 transition-all">
             <div className="flex items-center mb-4" aria-label="5 out of 5 stars" role="img">
                 {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} aria-hidden="true" className="w-5 h-5 text-[#A66A47] fill-[#A66A47]" />
+                    <Star key={i} aria-hidden="true" className="w-5 h-5 text-primary fill-[#A66A47]" />
                 ))}
             </div>
-            <blockquote className="text-[#333333] flex-grow mb-4">{review.text}</blockquote>
-            <figcaption className="text-base text-[#A66A47] font-normal">
+            <blockquote className="text-foreground flex-grow mb-4">{review.text}</blockquote>
+            <figcaption className="text-base text-primary font-normal">
                 {review.name}, {officeLocation(review.office)}
             </figcaption>
         </figure>

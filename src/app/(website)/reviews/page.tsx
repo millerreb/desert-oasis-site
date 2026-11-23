@@ -23,10 +23,10 @@ const page = () => {
                     const office = getOffice(key)
                     return (
                         <div key={key}>
-                            <h2 className='text-[28px] md:text-[32px] text-[#A66A47] font-semibold text-center'>
+                            <h2 className='text-[28px] md:text-[32px] text-primary font-semibold text-center'>
                                 {office.name}
                             </h2>
-                            <p className='text-base md:text-lg text-[#333333] text-center mt-2'>
+                            <p className='text-base md:text-lg text-foreground text-center mt-2'>
                                 {office.street}, {office.city}, AZ
                             </p>
                             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
@@ -39,7 +39,7 @@ const page = () => {
                                     href={googleReviewsUrl(key)}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className='inline-flex items-center gap-2 bg-[#C7925B] hover:bg-[#C7925B]/80 text-white text-base font-bold px-8 h-[52px] rounded-md transition-colors'
+                                    className='inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-white text-base font-bold px-8 h-[52px] rounded-md transition-colors'
                                 >
                                     Read all {office.city} reviews on Google
                                     <ArrowRight className='w-5 h-5' aria-hidden="true" />

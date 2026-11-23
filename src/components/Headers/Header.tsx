@@ -7,11 +7,11 @@ interface Props {
 
 const Header = ({ title, subtitle }: Props) => {
   return (
-    <section className="bg-[#A66A47]">
-      <div className=" container  py-5 md:py-10">
-        <h1 className="w-full md:w-[750px] text-[25px] md:text-[40px] text-[#FFFFFF] font-semibold text-center mx-auto leading-[120%]">{title}</h1>
+    <section className="border-b bg-sand">
+      <div className="container py-12 text-center md:py-20">
+        <h1 className="mx-auto max-w-4xl text-4xl font-normal leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">{title}</h1>
         {subtitle && ( 
-          <p className="w-full md:w-[650px] mx-auto text-sm md:text-base text-[#FFFFFF] font-semibold text-center mt-5 md:mt-[30px]">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             {subtitle}
           </p>
         )}
